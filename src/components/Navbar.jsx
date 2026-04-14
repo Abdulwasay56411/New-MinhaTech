@@ -3,6 +3,7 @@ import { MdEmail } from "react-icons/md";
 import { IoMdCall } from "react-icons/io";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { IoMdArrowForward } from "react-icons/io";
+import { IoMdMenu } from "react-icons/io";
 
 const Navbar = () => {
   const [isCursor, setIsCursor] = useState(false);
@@ -51,7 +52,7 @@ const Navbar = () => {
         </div>
       </div>
       {/* Navbar */}
-      <div className={`flex w-full items-center pb-3 justify-between px-14 ${isScroll ? "shadow-2xl bg-[#09182B]": ""}`}>
+      <div className={`flex w-full items-center pb-3 justify-between px-4 md:px-12 lg:px-14 ${isScroll ? "shadow-2xl bg-[#09182B]/80 backdrop-blur-3xl": ""}`}>
         <img className="w-26 h-17" src="/MinhaTech.png" alt="" />
         <div className="hidden md:flex md:justify-center md:w-95 lg:w-158 bg-[#06B8FF33] rounded-[40px] mt-4 mb-2 py-2 px-4 text-[#FFFFFF] md:gap-8 lg:gap-16">
           {navbarLink.map((item) => (
@@ -66,14 +67,14 @@ const Navbar = () => {
         <div
           onMouseEnter={() => setIsCursor(true)}
           onMouseLeave={() => setIsCursor(false)}
-          className="flex group cursor-pointer relative items-center"
+          className="hidden md:flex group cursor-pointer relative items-center"
         >
-          <button className="text-white cursor-pointer bg-linear-to-r from-[#00FB94] to-[#06B8FF]  w-38 rounded-3xl h-10 border border-[#00FB94] font-medium transition-all duration-300 z-10">
+          <button className="text-white cursor-pointer bg-linear-to-r from-[#00FB94] to-[#06B8FF] md:w-30  lg:w-38 rounded-3xl h-10 border border-[#00FB94] font-medium transition-all duration-300 z-10">
             Contact Us
           </button>
 
-          <div className="absolute -right-11 w-11 h-11 bg-transparent"></div>
-          <div className="absolute -right-11 bg-linear-to-r from-[#00FB94] to-[#06B8FF] w-11 h-11 flex items-center justify-center rounded-full transition-all duration-300 group-hover:-translate-x-49">
+          <div className="absolute md:-right-9 -right-11 md:w-9 md:h-9 lg:h-11 lg:w-11  bg-transparent"></div>
+          <div className="absolute md:-right-9 lg:-right-11 bg-linear-to-r from-[#00FB94] to-[#06B8FF] md:w-9 md:h-9 lg:w-11 lg:h-11 flex items-center justify-center rounded-full transition-all duration-300 group-hover:-translate-x-49">
             <IoMdArrowForward
               size={24}
               className={`transition-transform duration-300 ${
@@ -81,6 +82,9 @@ const Navbar = () => {
               }`}
             />
           </div>
+        </div>
+        <div className="block md:hidden">
+         <IoMdMenu size={40} className="text-white"/>
         </div>
       </div>
     </div>
