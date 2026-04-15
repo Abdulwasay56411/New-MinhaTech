@@ -26,7 +26,7 @@ const HeroSection = () => {
         </div>
 
         {/* TEXT + BUTTONS (MOBILE ROW) */}
-        <div className="order-2 w-full flex flex-wrap  flex-row justify-center md:justify-between px-5 py-5 sm:py-16 lg:hidden">
+        <div className="order-2 w-full flex flex-wrap  flex-row justify-center gap-5 md:justify-between px-5 py-5 sm:py-16 lg:hidden">
           <div className="w-full sm:max-w-[50%] text-center sm:text-left">
             <h1 className="font-montserrat text-[#F3F4F5] text-xl leading-tight">
               From concept to launch we simplify your app journey and build what
@@ -41,10 +41,10 @@ const HeroSection = () => {
                 onMouseEnter={() => setIsHover(item.id)}
                 onMouseLeave={() => setIsHover(null)}
                 key={item.id}
-                className={`w-65 h-13 rounded-[40px] text-sm text-white font-Montserrat cursor-pointer hover:scale-105 ${
+                className={`w-65 h-13 rounded-[40px] text-sm text-white font-montserrat cursor-pointer hover:scale-105 ${
                   isHover === item.id
                     ? "bg-linear-to-r from-[#00FB94] to-[#00FB94]"
-                    : "bg-linear-to-r from-[#0d3b4a] to-[#09182B]"
+                    : "bg-linear-to-r from-[#00FB94] to-[#06B8FF]"
                 }`}
               >
                 {item.text}
@@ -68,10 +68,10 @@ const HeroSection = () => {
               onMouseEnter={() => setIsHover(item.id)}
               onMouseLeave={() => setIsHover(null)}
               key={item.id}
-              className={`w-62 h-14 rounded-[40px] text-base text-white font-Montserrat cursor-pointer hover:scale-105 ${
+              className={`w-62 h-14 rounded-[40px] text-base text-white font-montserrat cursor-pointer hover:scale-105 ${
                 isHover === item.id
                   ? "bg-linear-to-r from-[#00FB94] to-[#00FB94]"
-                  : "bg-linear-to-r from-[#0d3b4a] to-[#09182B]"
+                  : "bg-linear-to-r from-[#00FB94] to-[#06B8FF]"
               }`}
             >
               {item.text}
@@ -85,7 +85,7 @@ const HeroSection = () => {
         className="flex w-fit mx-auto group cursor-pointer justify-center relative items-center mt-10"
       >
         <button
-          className={`text-white font-Montserrat cursor-pointer w-64 sm:w-72 md:w-80 rounded-4xl h-14 border border-[#00FB94] font-medium transition-all duration-300 z-10 ${
+          className={`text-white font-montserrat cursor-pointer w-64 sm:w-72 md:w-80 rounded-4xl h-14 border border-[#00FB94] font-medium transition-all duration-300 z-10 ${
             isCursor
               ? "bg-linear-to-r from-[#00FB94] to-[#00FB94]"
               : "bg-linear-to-r from-[#00FB94] to-[#06B8FF]"
