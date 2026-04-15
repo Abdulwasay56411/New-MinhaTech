@@ -7,22 +7,22 @@ import { IoMdMenu } from "react-icons/io";
 
 const Navbar = () => {
   const [isCursor, setIsCursor] = useState(false);
-  const [isScroll, setIsScroll] = useState(false)
+  const [isScroll, setIsScroll] = useState(false);
 
-  useEffect(() =>{
-    const handleScroll = () =>{
+  useEffect(() => {
+    const handleScroll = () => {
       if (window.scrollY > 50) {
-        setIsScroll(true)
-      } else{
-        setIsScroll(false)
+        setIsScroll(true);
+      } else {
+        setIsScroll(false);
       }
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
-    return () =>{
-      window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
     };
-  }, [])
+  }, []);
 
   return (
     <div className="sticky font-montserrat top-0 left-0 z-50 w-full mx-auto">
@@ -52,7 +52,9 @@ const Navbar = () => {
         </div>
       </div>
       {/* Navbar */}
-      <div className={`flex w-full items-center pb-3 justify-between px-4 md:px-12 lg:px-14 ${isScroll ? "shadow-2xl bg-[#09182B]/80 backdrop-blur-3xl": ""}`}>
+      <div
+        className={`flex w-full items-center pb-3 justify-between px-4 md:px-12 lg:px-14 ${isScroll ? "shadow-2xl bg-[#09182B]/80 backdrop-blur-3xl" : ""}`}
+      >
         <img className="w-26 h-17" src="/MinhaTech.png" alt="" />
         <div className="hidden md:flex md:justify-center md:w-95 lg:w-158 bg-[#06B8FF33] rounded-[40px] mt-4 mb-2 py-2 px-4 text-[#FFFFFF] md:gap-8 lg:gap-16">
           {navbarLink.map((item) => (
@@ -69,22 +71,35 @@ const Navbar = () => {
           onMouseLeave={() => setIsCursor(false)}
           className="hidden md:flex group cursor-pointer relative items-center"
         >
-          <button className="text-white cursor-pointer bg-linear-to-r from-[#00FB94] to-[#06B8FF] md:w-30  lg:w-38 rounded-3xl h-10 border border-[#00FB94] font-medium transition-all duration-300 z-10">
+          {/* Button */}
+          <button
+            className={`text-white cursor-pointer md:w-30 lg:w-38 rounded-3xl h-10 border border-[#00FB94] font-medium transition-all duration-300 z-10 ${
+              isCursor
+                ? "bg-linear-to-r from-[#00FB94] to-[#00FB94]"
+                : "bg-linear-to-r from-[#00FB94] to-[#06B8FF]"
+            }`}
+          >
             Contact Us
           </button>
 
-          <div className="absolute md:-right-9 -right-11 md:w-9 md:h-9 lg:h-11 lg:w-11  bg-transparent"></div>
-          <div className="absolute md:-right-9 lg:-right-11 bg-linear-to-r from-[#00FB94] to-[#06B8FF] md:w-9 md:h-9 lg:w-11 lg:h-11 flex items-center justify-center rounded-full transition-all duration-300 group-hover:-translate-x-49">
+          <div className="absolute md:-right-9 -right-11 md:w-9 md:h-9 lg:h-11 lg:w-11 bg-transparent"></div>
+          <div
+            className={`absolute md:-right-9 lg:-right-11 md:w-9 md:h-9 lg:w-11 lg:h-11 flex items-center justify-center rounded-full transition-all duration-300 md:group-hover:-translate-x-39 lg:group-hover:-translate-x-49 ${
+              isCursor
+                ? "bg-[#00FB94]"
+                : "bg-linear-to-r from-[#00FB94] to-[#06B8FF]"
+            }`}
+          >
             <IoMdArrowForward
               size={24}
               className={`transition-transform duration-300 ${
-                isCursor ? "-rotate-45" : "rotate-0"
+                isCursor ? "rotate-0" : "-rotate-45"
               }`}
             />
           </div>
         </div>
         <div className="block md:hidden">
-         <IoMdMenu size={40} className="text-white"/>
+          <IoMdMenu size={40} className="text-white" />
         </div>
       </div>
     </div>
