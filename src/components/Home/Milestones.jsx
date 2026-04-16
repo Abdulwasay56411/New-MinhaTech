@@ -37,10 +37,12 @@ const Counter = ({ endValue, suffix }) => {
   return <span ref={elementRef}>{count}{suffix}</span>;
 };
 
+
+
 const Milestones = () => {
   return (
     <div>
-      <div className="flex items-center p-10 ">
+      <div className="flex items-center p-10 max-w-350 mx-auto ">
         <img className="w-10 h-10" src="/star.png" alt="" />
         <h1 className="font-montserrat text-2xl md:text-4xl font-semibold text-white">
           Milestones Unlocked
@@ -55,9 +57,9 @@ const Milestones = () => {
       </div>
       
       
-      <div className="flex flex-wrap justify-center gap-4 px-5 py-10">
-        <div className="w-90 h-80 rounded-3xl bg-[#06B8FF6B] text-[#00FB94]">
-          <h1 className="font-poppins font-bold text-[#00FB94] text-6xl py-20 pl-26">
+      <div className="flex flex-wrap justify-center  gap-4 px-5 py-10">
+        <div className="w-75 h-80 rounded-3xl bg-[#06B8FF6B] text-[#00FB94]">
+          <h1 className="font-poppins font-bold text-[#00FB94] text-6xl py-20 pl-20">
             <Counter endValue={5} suffix="B+" />
           </h1>
           <p className="font-montserrat text-[28px] pt-10 text-center">
@@ -65,8 +67,8 @@ const Milestones = () => {
           </p>
         </div>
 
-        <div className="w-90 h-61 rounded-3xl mt-20 bg-[#06B8FF6B] text-[#00FB94]">
-          <h1 className="font-poppins font-bold text-[#00FB94] text-6xl py-10 pl-12">
+        <div className="w-75 h-61 rounded-3xl mt-20 bg-[#06B8FF6B] text-[#00FB94]">
+          <h1 className="font-poppins font-bold text-[#00FB94] text-6xl py-10 pl-8">
             <Counter endValue={98} suffix="%" />
           </h1>
           <p className="font-montserrat text-[28px] pt-10 text-center">
@@ -74,8 +76,8 @@ const Milestones = () => {
           </p>
         </div>
 
-        <div className="w-90 h-80 rounded-3xl bg-[#06B8FF6B] text-[#00FB94]">
-          <h1 className="font-poppins font-bold text-[#00FB94] text-6xl py-20 pl-12">
+        <div className="w-75 h-80 rounded-3xl bg-[#06B8FF6B] text-[#00FB94]">
+          <h1 className="font-poppins font-bold text-[#00FB94] text-6xl py-20 pl-10">
             <Counter endValue={900} suffix="+" />
           </h1>
           <p className="font-montserrat text-[28px] pt-10 text-center">
@@ -83,11 +85,11 @@ const Milestones = () => {
           </p>
         </div>
 
-        <div className="w-90 h-61 rounded-3xl bg-[#06B8FF6B] text-[#00FB94]">
-          <h1 className="font-poppins font-bold text-[#00FB94] text-6xl py-10 pl-20">
+        <div className="w-75 h-61 rounded-3xl bg-[#06B8FF6B] text-[#00FB94]">
+          <h1 className="font-poppins font-bold text-[#00FB94] text-6xl py-10 pl-16">
             <Counter endValue={300} suffix="+" />
           </h1>
-          <p className="font-montserrat text-[28px] pt-10 pl-20">Partners</p>
+          <p className="font-montserrat text-[28px] pt-10 pl-16">Partners</p>
         </div>
       </div>
     </div>
