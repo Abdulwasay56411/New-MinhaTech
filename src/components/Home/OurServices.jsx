@@ -4,7 +4,7 @@ const OurServices = () => {
   const [open, setOpen] = useState(null);
 
   return (
-    <div className="max-w-350 mx-auto">
+    <div id="services" className="max-w-350 mx-auto">
       <div className="mx-5 mt-12 sm:mx-7 lg:mx-10">
         <div className="flex items-center gap-2 mb-6">
           <img src="/star.png" className="w-7 h-7" alt="star" />

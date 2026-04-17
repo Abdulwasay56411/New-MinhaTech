@@ -4,6 +4,7 @@ import { IoMdCall } from "react-icons/io";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { IoMdArrowForward } from "react-icons/io";
 import { IoMdMenu } from "react-icons/io";
+import { HashLink } from "react-router-hash-link";
 
 const Navbar = () => {
   const [isCursor, setIsCursor] = useState(false);
@@ -53,15 +54,19 @@ const Navbar = () => {
       </div>
       {/* Navbar */}
       <div
-        className={`flex w-full items-center pb-3 justify-between px-4 md:px-12 lg:px-14 ${isScroll ? "shadow-2xl bg-[#09182B]/80 backdrop-blur-3xl" : ""}`}
+        className={`flex w-full items-center pb-3 justify-between px-4 md:px-12 lg:px-14 ${
+          isScroll ? "shadow-2xl bg-[#09182B]/80 backdrop-blur-3xl" : ""
+        }`}
       >
         <img className="w-26 h-17" src="/MinhaTech.png" alt="" />
         <div className="hidden md:flex md:justify-center md:w-95 lg:w-158 bg-[#06B8FF33] rounded-[40px] mt-4 mb-2 py-2 px-4 text-[#FFFFFF] md:gap-8 lg:gap-16">
           {navbarLink.map((item) => (
             <ul key={item.id} className="group relative py-2">
-              <li className="md:text-sm lg:text-xl cursor-pointer text-center font-medium">
-                {item.name}
-              </li>
+              <HashLink smooth to={item.to}>
+                <li className="md:text-sm lg:text-xl cursor-pointer text-center font-medium">
+                  {item.name}
+                </li>
+              </HashLink>
               <span className="absolute w-0 h-0.5 left-0 bottom-0 group-hover:w-full transition-all duration-300 bg-linear-to-r from-[#00FB94] to-[#06B8FF]"></span>
             </ul>
           ))}
@@ -112,17 +117,21 @@ const navbarLink = [
   {
     id: 1,
     name: "Home",
+    to: "/#home",
   },
   {
     id: 2,
     name: "Projects",
+    to: "/#project",
   },
   {
     id: 3,
     name: "Services",
+    to: "/#services",
   },
   {
     id: 4,
     name: "About Us",
+    to: "/#about us",
   },
 ];
