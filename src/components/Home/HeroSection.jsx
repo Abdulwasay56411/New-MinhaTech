@@ -89,7 +89,7 @@ const HeroSection = () => {
           className="flex w-fit mx-auto group cursor-pointer justify-center relative items-center mt-10"
         >
           <button
-            className={`text-white text-sm sm:text-base font-montserrat cursor-pointer w-52 sm:w-72 md:w-80 rounded-4xl h-14 border border-[#00FB94] font-medium transition-all duration-300 z-10 ${
+            className={`text-[#09182B] text-sm sm:text-base md:text-xl font-montserrat cursor-pointer w-52 sm:w-72 md:w-80 rounded-4xl h-14 border border-[#00FB94] font-medium transition-all duration-300 z-10 ${
               isCursor
                 ? "bg-linear-to-r from-[#00FB94] to-[#00FB94]"
                 : "bg-linear-to-r from-[#00FB94] to-[#06B8FF]"

@@ -76,7 +76,7 @@ const Navbar = () => {
         <div
           onMouseEnter={() => setIsCursor(true)}
           onMouseLeave={() => setIsCursor(false)}
-          className="hidden md:flex group cursor-pointer relative items-center mr-10"
+          className="hidden md:flex group cursor-pointer relative items-center mr-5"
         >
           {/* Button */}
           <button
@@ -89,9 +89,9 @@ const Navbar = () => {
             Contact Us
           </button>
 
-          <div className="absolute md:-right-9 -right-11 md:w-9 md:h-9 lg:h-11 lg:w-11 bg-transparent"></div>
+          <div className="absolute md:-right-9 -right-11 md:w-9 md:h-9 lg:h-10 lg:w-10 bg-transparent"></div>
           <div
-            className={`absolute md:-right-9 lg:-right-11 md:w-9 md:h-9 lg:w-11 lg:h-11 flex items-center justify-center rounded-full transition-all duration-300 md:group-hover:-translate-x-39 lg:group-hover:-translate-x-49 ${
+            className={`absolute md:-right-9 lg:-right-10 md:w-9 md:h-9 lg:w-10 lg:h-10 flex items-center justify-center rounded-full transition-all duration-300 md:group-hover:-translate-x-39 lg:group-hover:-translate-x-48 ${
               isCursor
                 ? "bg-[#00FB94]"
                 : "bg-linear-to-r from-[#00FB94] to-[#06B8FF]"
@@ -111,20 +111,40 @@ const Navbar = () => {
           onClick={() => setIsOpen(!isOpen)}
           className="block relative md:hidden"
         >
-          <div className="flex items-center gap-2 rounded-4xl p-2 cursor-pointer select-none bg-[#06B8FF]">
-            <h1 className="text-white font-bold text-sm">Menu</h1>
-            <div>
-              <FaPlus
-                className={`text-sm text-white transform transition-all duration-300 ${isOpen ? "rotate-45" : "rotate-0"}`}
-              />
+          <div className="group relative flex items-center gap-2 rounded-4xl px-3 py-2 cursor-pointer select-none bg-[#06B8FF] overflow-hidden h-8">
+            <div className="relative h-5 overflow-hidden">
+              <span
+                className="block text-white font-bold text-sm
+                     transition-all duration-300
+                     group-hover:-translate-y-full"
+              >
+                Menu
+              </span>
+              <span
+                className="absolute left-0 top-0 text-white font-bold text-sm
+                     translate-y-full
+                     group-hover:translate-y-0
+                     transition-all duration-300"
+              >
+                Menu
+              </span>
             </div>
+
+            <FaPlus
+              className={`text-xs text-white transition-all duration-300 ${
+                isOpen ? "rotate-45" : "rotate-0"
+              }`}
+            />
           </div>
           <div
-            className={`absolute right-8 top-14 w-41 h-auto shadow-2xl rounded-lg px-5 py-4 text-white bg-[#0A1E38] transform transition-all duration-300 z-50 ${isOpen ? "translate-x-0 opacity-100 scale-100" : "translate-x-10 opacity-0 scale-95 pointer-events-none"}`}
+            className={`absolute right-8 top-10 w-41 h-auto shadow-2xl rounded-lg px-5 py-4 text-white bg-[#0A1E38] transform transition-all duration-300 z-50 ${isOpen ? "translate-x-0 opacity-100 scale-100" : "translate-x-10 opacity-0 scale-95 pointer-events-none"}`}
           >
             {navbarLink.map((item) => (
               <HashLink key={item.id} smooth to={item.Link}>
-                <h1 className="leading-10 hover:font-bold hover:text-[#00FB94] duration-300 transition-all">
+                <h1
+                  onClick={() => setIsOpen(false)}
+                  className="leading-10 hover:font-bold hover:text-[#00FB94] duration-300 transition-all"
+                >
                   {item.name}
                 </h1>
               </HashLink>
