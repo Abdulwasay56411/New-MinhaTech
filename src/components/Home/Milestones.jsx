@@ -43,7 +43,7 @@ const Counter = ({ endValue, suffix }) => {
 
 const Milestones = () => {
   return (
-    <div>
+    <div className="max-w-350 mx-auto">
       <div className="flex items-center p-10 max-w-350 mx-auto ">
         <img className="w-10 h-10" src="/star.png" alt="" />
         <h1 className="font-montserrat text-2xl md:text-4xl font-semibold text-white">

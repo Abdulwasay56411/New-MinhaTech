@@ -6,7 +6,7 @@ const HeroSection = () => {
   const [isCursor, setIsCursor] = useState(false);
 
   return (
-    <div id="home" className='pt-10 px-4 py-5 bg-[#09182B] w-full min-h-screen bg-[url("/square.png")] bg-cover bg-center bg-no-repeat'>
+    <div id="home" className='pt-10 px-4 py-5 bg-[#09182B] w-full h-auto bg-[url("/square.png")] bg-cover bg-center bg-no-repeat'>
       <div className="max-w-350 mx-auto">
         <div className="text-center">
           <p className="text-white font-poppins text-xl">

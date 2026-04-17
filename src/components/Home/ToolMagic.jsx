@@ -1,42 +1,45 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { div } from "framer-motion/m";
 
 const ToolMagic = () => {
- 
   const duplicatedTools = [...toolImages, ...toolImages];
 
   return (
-    <div className="mx-5 overflow-hidden py-10">
-      <div className="flex items-center mt-5 my-10">
-        <img className="w-10 h-10" src="/star.png" alt="" />
-        <h1 className="text-white font-semibold sm:font-bold text-2xl sm:text-4xl font-montserrat">Tools Behind The Magic</h1>
-      </div>
-      <motion.div
-        className="flex gap-5 w-fit" 
-        animate={{ x: ["0%", "-50%"] }} 
-        transition={{
-          repeat: Infinity,
-          duration: 20, 
-          ease: "linear",
-          repeatType: "loop",
-        }}
-      >
-        {duplicatedTools.map((item, index) => (
-          <div
-            key={index}
-            
-            className="min-w-24.5 md:min-w-94 h-20 md:h-42 shrink-0 flex justify-center items-center rounded-2xl p-0.5 bg-linear-to-r from-[#06B8FF] to-[#00FB94]"
-          >
-            <div className="bg-[#09182B] w-full h-full rounded-2xl flex justify-center items-center">
-              <img
-                className="w-7 h-7 md:w-24 md:h-24 object-contain"
-                src={item.image}
-                alt={`Tool ${item.id}`}
-              />
+    <div className="max-w-350 mx-auto">
+      <div className="mx-5 overflow-hidden py-10">
+        <div className="flex items-center mt-5 my-10">
+          <img className="w-10 h-10" src="/star.png" alt="" />
+          <h1 className="text-white font-semibold sm:font-bold text-2xl sm:text-4xl font-montserrat">
+            Tools Behind The Magic
+          </h1>
+        </div>
+        <motion.div
+          className="flex gap-5 w-fit"
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{
+            repeat: Infinity,
+            duration: 20,
+            ease: "linear",
+            repeatType: "loop",
+          }}
+        >
+          {duplicatedTools.map((item, index) => (
+            <div
+              key={index}
+              className="min-w-24.5 md:min-w-94 h-20 md:h-42 shrink-0 flex justify-center items-center rounded-2xl p-0.5 bg-linear-to-r from-[#06B8FF] to-[#00FB94]"
+            >
+              <div className="bg-[#09182B] w-full h-full rounded-2xl flex justify-center items-center">
+                <img
+                  className="w-7 h-7 md:w-24 md:h-24 object-contain"
+                  src={item.image}
+                  alt={`Tool ${item.id}`}
+                />
+              </div>
             </div>
-          </div>
-        ))}
-      </motion.div>
+          ))}
+        </motion.div>
+      </div>
     </div>
   );
 };
