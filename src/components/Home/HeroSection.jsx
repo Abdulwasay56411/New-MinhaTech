@@ -6,7 +6,10 @@ const HeroSection = () => {
   const [isCursor, setIsCursor] = useState(false);
 
   return (
-    <div id="home" className='pt-10 px-4 py-5 bg-[#09182B] w-full h-auto bg-[url("/square.png")] bg-cover bg-center bg-no-repeat'>
+    <div
+      id="home"
+      className='pt-10 px-4 py-5 bg-[#09182B] w-full h-auto bg-[url("/square.png")] bg-cover bg-center bg-no-repeat'
+    >
       <div className="max-w-350 mx-auto">
         <div className="text-center">
           <p className="text-white font-poppins text-xl">
@@ -105,11 +108,12 @@ const HeroSection = () => {
         isCursor ? "bg-[#00FB94]" : "bg-linear-to-r from-[#00FB94] to-[#06B8FF]"
       }`}
           >
-            <IoMdArrowForward
-              size={24}
-              className={`transition-transform duration-300 ${
-                isCursor ? "rotate-0" : "-rotate-45"
+            <img
+              className={`transition-transform duration-300 w-6 h-6 ${
+                isCursor ? "rotate-45" : "rotate-0"
               }`}
+              src="/Arrow.png"
+              alt=""
             />
           </div>
         </div>

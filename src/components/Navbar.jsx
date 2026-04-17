@@ -5,10 +5,12 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { IoMdArrowForward } from "react-icons/io";
 import { IoMdMenu } from "react-icons/io";
 import { HashLink } from "react-router-hash-link";
+import { FaPlus } from "react-icons/fa";
 
 const Navbar = () => {
   const [isCursor, setIsCursor] = useState(false);
   const [isScroll, setIsScroll] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,7 +30,7 @@ const Navbar = () => {
   return (
     <div className="sticky font-montserrat top-0 left-0 z-50 w-full mx-auto">
       {/* Blue Navbar */}
-      <div className="w-full sm:flex sm:flex-row sm:justify-between items-center flex flex-col justify-center px-4 md:px-8 lg:px-16 py-2 bg-[#076895] text-white">
+      <div className="w-full sm:flex sm:flex-row sm:justify-between items-center flex flex-col justify-center px-4 md:px-8 lg:px-16 py-1 bg-[#076895] text-white">
         <div className="flex flex-col items-center sm:gap-0 sm:w-100 sm:flex sm:flex-row sm:justify-between">
           <p className="flex text-sm sm:text-base items-center gap-3">
             {" "}
@@ -55,14 +57,14 @@ const Navbar = () => {
       {/* Navbar */}
       <div
         className={`flex w-full items-center pb-3 justify-between px-4 md:px-12 lg:px-14 ${
-          isScroll ? "shadow-2xl bg-[#09182B]/80 backdrop-blur-3xl" : ""
+          isScroll ? "shadow-2xl bg-[#09182B]/5 backdrop-blur-2xl" : ""
         }`}
       >
         <img className="w-26 h-17" src="/MinhaTech.png" alt="" />
-        <div className="hidden md:flex md:justify-center md:w-95 lg:w-158 bg-[#06B8FF33] rounded-[40px] mt-4 mb-2 py-2 px-4 text-[#FFFFFF] md:gap-8 lg:gap-16">
+        <div className="hidden md:flex md:justify-center md:w-95 lg:w-130 xl:w-158 bg-[#06B8FF33] rounded-[40px] mt-4 mb-2 py-2 px-4 text-[#FFFFFF] md:gap-8 lg:gap-10 xl:gap-16">
           {navbarLink.map((item) => (
             <ul key={item.id} className="group relative py-2">
-              <HashLink smooth to={item.to}>
+              <HashLink smooth to={item.Link}>
                 <li className="md:text-sm lg:text-xl cursor-pointer text-center font-medium">
                   {item.name}
                 </li>
@@ -74,11 +76,11 @@ const Navbar = () => {
         <div
           onMouseEnter={() => setIsCursor(true)}
           onMouseLeave={() => setIsCursor(false)}
-          className="hidden md:flex group cursor-pointer relative items-center"
+          className="hidden md:flex group cursor-pointer relative items-center mr-10"
         >
           {/* Button */}
           <button
-            className={`text-white cursor-pointer md:w-30 lg:w-38 rounded-3xl h-10 border border-[#00FB94] font-medium transition-all duration-300 z-10 ${
+            className={`text-[#09182B] cursor-pointer md:w-30 lg:w-38 rounded-3xl h-10 border border-[#00FB94] font-medium transition-all duration-300 z-10 ${
               isCursor
                 ? "bg-linear-to-r from-[#00FB94] to-[#00FB94]"
                 : "bg-linear-to-r from-[#00FB94] to-[#06B8FF]"
@@ -95,16 +97,39 @@ const Navbar = () => {
                 : "bg-linear-to-r from-[#00FB94] to-[#06B8FF]"
             }`}
           >
-            <IoMdArrowForward
-              size={24}
-              className={`transition-transform duration-300 ${
-                isCursor ? "rotate-0" : "-rotate-45"
+            <img
+              className={`transition-transform duration-300 w-5 h-5 ${
+                isCursor ? "rotate-45" : "rotate-0"
               }`}
+              src="/Arrow.png"
+              alt=""
             />
           </div>
         </div>
-        <div className="block md:hidden">
-          <IoMdMenu size={40} className="text-white" />
+        {/* Mobile Menu */}
+        <div
+          onClick={() => setIsOpen(!isOpen)}
+          className="block relative md:hidden"
+        >
+          <div className="flex items-center gap-2 rounded-4xl p-2 cursor-pointer select-none bg-[#06B8FF]">
+            <h1 className="text-white font-bold text-sm">Menu</h1>
+            <div>
+              <FaPlus
+                className={`text-sm text-white transform transition-all duration-300 ${isOpen ? "rotate-45" : "rotate-0"}`}
+              />
+            </div>
+          </div>
+          <div
+            className={`absolute right-8 top-14 w-41 h-auto shadow-2xl rounded-lg px-5 py-4 text-white bg-[#0A1E38] transform transition-all duration-300 z-50 ${isOpen ? "translate-x-0 opacity-100 scale-100" : "translate-x-10 opacity-0 scale-95 pointer-events-none"}`}
+          >
+            {navbarLink.map((item) => (
+              <HashLink key={item.id} smooth to={item.Link}>
+                <h1 className="leading-10 hover:font-bold hover:text-[#00FB94] duration-300 transition-all">
+                  {item.name}
+                </h1>
+              </HashLink>
+            ))}
+          </div>
         </div>
       </div>
     </div>
@@ -117,21 +142,21 @@ const navbarLink = [
   {
     id: 1,
     name: "Home",
-    to: "/#home",
+    Link: "/#home",
   },
   {
     id: 2,
     name: "Projects",
-    to: "/#project",
+    Link: "/#project",
   },
   {
     id: 3,
     name: "Services",
-    to: "/#services",
+    Link: "/#services",
   },
   {
     id: 4,
     name: "About Us",
-    to: "/#about us",
+    Link: "/#about us",
   },
 ];
