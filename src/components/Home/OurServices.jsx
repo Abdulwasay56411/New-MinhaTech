@@ -48,7 +48,7 @@ const OurServices = () => {
                             {[item.para, item.para1, item.para2, item.para3].map((text, idx) => (
                               <div key={idx} className="flex items-baseline sm:items-center gap-2">
                                 <div className="w-3 h-3 bg-[#00FB94] rounded-full shrink-0"></div>
-                                <p className="text-sm sm:text-xl text-[#FFFFFFD4] py-1">
+                                <p className="text-xs sm:text-xl text-[#FFFFFFD4] py-1">
                                   {text}
                                 </p>
                               </div>
