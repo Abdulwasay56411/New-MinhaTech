@@ -6,75 +6,66 @@ const OurServices = () => {
   return (
     <div className="max-w-350 mx-auto">
       <div className="mx-5 mt-12 sm:mx-7 lg:mx-10">
-       <div className="flex items-center gap-2">
-        <img src="/star.png" className="w-7 h-7" alt="" />
-        <h1 className="font-montserrat font-bold text-[#FFFFFF] text-4xl">Services</h1>
-       </div>
+        <div className="flex items-center gap-2 mb-6">
+          <img src="/star.png" className="w-7 h-7" alt="star" />
+          <h1 className="font-montserrat font-bold text-white text-4xl">Services</h1>
+        </div>
         {services.map((item) => (
           <div
             key={item.id}
-            className={`w-full my-10 px-5 lg:px-10  rounded-3xl py-3 lg:py-10 bg-[#06B8FF6B] ${
-              open === item.id ? "h-auto" : "h-auto"
-            }`}
+            className="w-full my-10 px-5 lg:px-10 rounded-3xl py-6 lg:py-10 bg-[#06B8FF6B]"
           >
-            <div className="flex justify-between  gap-2 sm:gap-10  md:gap-20 lg:gap-40">
-              <h1 className="font-montserrat font-semibold text-6xl text-[#FFFFFF6B]">
-                {item.number}
-              </h1>
-              <div>
-                <h2 className="font-montserrat font-bold pt-2 pl-2 text-xl sm:text-2xl md:text-3xl lg:text-4xl text-[#00FB94]">
-                  {item.heading}
-                </h2>
-                <p className=" text-sm md:text-base pl-2 lg:text-xl text-[#FFFFFFD4] pt-3">
-                  {item.text}
-                </p>
-                <div
-                  className={`flex flex-wrap gap-4 sm:gap-8 md:gap-10 lg:gap-14 my-8 ${
-                    open === item.id ? "block" : "hidden"
-                  }`}
-                >
-                  <img
-                    className="max-w-145 w-full h-auto object-cover"
-                    src={item.image}
-                    alt=""
-                  />
-                  <div>
-                    <h1 className="text-[#00FB94] font-montserrat font-bold text-xl">
-                      {item.head2}
-                    </h1>
-                    <div className="flex items-center gap-2">
-                      <h1 className="w-3 h-3 bg-[#00FB94] rounded-full"></h1>
-                      <p className="text-sm sm:text-xl text-[#FFFFFFD4] py-2 sm:py-3 ">
-                        {item.para}
-                      </p>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <h1 className="w-3 h-3 bg-[#00FB94] rounded-full"></h1>
-                      <p className="text-sm sm:text-xl text-[#FFFFFFD4] py-2 sm:py-3 ">
-                        {item.para1}
-                      </p>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <h1 className="w-3 h-3 bg-[#00FB94] rounded-full"></h1>
-                      <p className="text-sm sm:text-xl text-[#FFFFFFD4] py-2 sm:py-3 ">
-                        {item.para2}
-                      </p>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <h1 className="w-3 h-3 bg-[#00FB94] rounded-full"></h1>
-                      <p className="text-sm sm:text-xl text-[#FFFFFFD4] py-2 sm:py-3 ">
-                        {item.para3}
-                      </p>
+            <div className="flex justify-between gap-5 sm:gap-10">
+              <div className="flex gap-4 sm:gap-10">
+                <h1 className="font-montserrat font-semibold text-4xl md:text-6xl text-[#FFFFFF6B]">
+                  {item.number}
+                </h1>  
+                <div>
+                  <h2 className="font-montserrat font-bold pt-2 text-xl sm:text-2xl md:text-3xl lg:text-4xl text-[#00FB94]">
+                    {item.heading}
+                  </h2>
+                  <p className="text-sm md:text-base lg:text-xl text-[#FFFFFFD4] pt-3">
+                    {item.text}
+                  </p>
+                  <div 
+                    className={`grid transition-all duration-500 ease-in-out ${
+                      open === item.id ? "grid-rows-[1fr] opacity-100 mt-8" : "grid-rows-[0fr] opacity-0 mt-0"
+                    }`}
+                  >
+                    <div className="overflow-hidden">
+                      <div className="flex flex-col lg:flex-row gap-8 lg:gap-14 items-start">
+                        <img
+                          className="w-full lg:w-112.5 h-auto object-cover rounded-2xl"
+                          src={item.image}
+                          alt=""
+                        />
+                        
+                        <div className="flex-1">
+                          <h1 className="text-[#00FB94] font-montserrat font-bold text-xl mb-4">
+                            {item.head2}
+                          </h1>
+                          <div className="space-y-2">
+                            {[item.para, item.para1, item.para2, item.para3].map((text, idx) => (
+                              <div key={idx} className="flex items-baseline sm:items-center gap-2">
+                                <div className="w-3 h-3 bg-[#00FB94] rounded-full shrink-0"></div>
+                                <p className="text-sm sm:text-xl text-[#FFFFFFD4] py-1">
+                                  {text}
+                                </p>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
               <div
                 onClick={() => setOpen(open === item.id ? null : item.id)}
-                className="flex items-center cursor-pointer justify-center w-14 h-12 rounded-full bg-[#06B8FF6B] hover:bg-[#06B8FF] transition-all duration-300 select-none"
+                className="flex shrink-0 items-center cursor-pointer justify-center w-14 h-12 rounded-full bg-[#06B8FF6B] hover:bg-[#06B8FF] transition-all duration-300 select-none"
               >
                 <img
-                  className="w-7 mx-6 my-3 transition-all duration-300"
+                  className={`w-7 transition-all duration-300 ${open === item.id ? "rotate-180" : "rotate-0"}`}
                   src={open === item.id ? "/minus.png" : "/plus.png"}
                   alt="toggle"
                 />
