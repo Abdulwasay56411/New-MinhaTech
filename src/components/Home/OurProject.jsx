@@ -16,7 +16,7 @@ const OurProject = () => {
                 onMouseLeave={() => setIsEffect(null)}
                 className={`relative w-auto h-auto px-2 py-5 rounded-4xl transition-all duration-300 ${
                   isEffect === item.id
-                    ? "bg-linear-to-r from-[#00FB94] to-[#09182B] opacity-60 cursor-pointer"
+                    ? "bg-linear-to-t from-[#09182B] to-[#009558] opacity-80 cursor-pointer"
                     : "bg-[#00FB9440] opacity-100"
                 }`}
                 key={item.id}
