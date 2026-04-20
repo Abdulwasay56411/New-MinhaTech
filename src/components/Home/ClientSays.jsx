@@ -21,7 +21,7 @@ const ClientSays = () => {
   const item = ourClient[currentCard];
 
   return (
-    <div className="max-w-350 mx-auto">
+    <div className="max-w-350 mx-auto overflow-hidden">
       <div className="px-5 py-10">
         {/* Section Heading */}
         <Heading title="What Our Clients Saying"/>

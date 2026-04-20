@@ -63,7 +63,7 @@ const Milestones = () => {
               Downloads
             </p>
           </div>
-          <div className="w-full h-52 rounded-3xl lg:mt-11 bg-[#06B8FF6B] text-[#00FB94] flex flex-col justify-between py-8 items-center">
+          <div className="w-full h-52 rounded-3xl mt-11 bg-[#06B8FF6B] text-[#00FB94] flex flex-col justify-between py-8 items-center">
             <h1 className="font-poppins font-bold text-5xl md:text-6xl">
               <Counter endValue={98} suffix="%" />
             </h1>
@@ -80,7 +80,7 @@ const Milestones = () => {
             </p>
           </div>
 
-          <div className="w-full h-52 rounded-3xl mt-10 md:mt-0 lg:mb-11 bg-[#06B8FF6B] text-[#00FB94] flex flex-col justify-between py-8 items-center">
+          <div className="w-full h-52 rounded-3xl  md:mt-0 lg:mb-11 bg-[#06B8FF6B] text-[#00FB94] flex flex-col justify-between py-8 items-center">
             <h1 className="font-poppins font-bold text-5xl md:text-6xl">
               <Counter endValue={300} suffix="+" />
             </h1>
