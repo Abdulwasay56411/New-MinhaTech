@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Heading from "../Heading";
 
 const OurServices = () => {
   const [open, setOpen] = useState(null);
@@ -6,10 +7,7 @@ const OurServices = () => {
   return (
     <div id="services" className="max-w-350 mx-auto">
       <div className="mx-5 mt-12 sm:mx-7 lg:mx-10">
-        <div className="flex items-center gap-2 mb-6">
-          <img src="/star.png" className="w-7 h-7" alt="star" />
-          <h1 className="font-montserrat font-bold text-white text-4xl">Services</h1>
-        </div>
+        <Heading title="Our Services" />
         {services.map((item) => (
           <div
             key={item.id}

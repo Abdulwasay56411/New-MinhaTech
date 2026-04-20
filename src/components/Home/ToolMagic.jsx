@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { div } from "framer-motion/m";
+import Heading from "../Heading";
 
 const ToolMagic = () => {
   const duplicatedTools = [...toolImages, ...toolImages];
@@ -8,12 +9,7 @@ const ToolMagic = () => {
   return (
     <div className="max-w-350 mx-auto">
       <div className="mx-5 overflow-hidden py-10">
-        <div className="flex items-center mt-5 my-10">
-          <img className="w-10 h-10" src="/star.png" alt="" />
-          <h1 className="text-white font-semibold sm:font-bold text-2xl sm:text-4xl font-montserrat">
-            Tools Behind The Magic
-          </h1>
-        </div>
+        <Heading title="Tools Behind The Magic"/>
         <motion.div
           className="flex gap-5 w-fit"
           animate={{ x: ["0%", "-50%"] }}

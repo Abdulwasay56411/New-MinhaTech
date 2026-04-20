@@ -1,17 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import Heading from "../Heading";
 
 const ClientSays = () => {
+  const [currentCard, setCurrentCard] = useState(0);
+
+  const handleNext = () => {
+    if (currentCard < ourClient.length - 1) {
+      setCurrentCard((prev) => prev + 1);
+    }
+  };
+
+  const handleprev = () => {
+    if (currentCard > 0) {
+      setCurrentCard((prev) => prev - 1);
+    }
+  };
+
+  const item = ourClient[currentCard];
+
   return (
     <div className="max-w-350 mx-auto">
       <div className="px-5 py-10">
         {/* Section Heading */}
-        <div className="flex items-center gap-2 pb-12">
-          <img className="w-10 h-10" src="/star.png" alt="star" />
-          <h1 className="font-montserrat font-bold text-2xl md:text-4xl text-[#FFFFFF]">
-            What Our Clients Saying
-          </h1>
-        </div>
+        <Heading title="What Our Clients Saying"/>
 
         <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10 md:gap-16">
           <div className="relative w-80 h-80  flex shrink-0 items-center justify-center md:order-1">
@@ -41,14 +54,14 @@ const ClientSays = () => {
             <img src="/Vector.png" alt="quotes" className="w-24 h-auto z-10" />
           </div>
           <div className="max-w-190 px-2 md:px-5 lg:px-10 md:order-2">
-            {ourClient.map((item) => (
-              <div key={item.id} className="w-full">
-                <p className="text-[#FFFFFFD4] text-base md:text-2xl font-montserrat font-light leading-relaxed  md:text-left">
-                  {item.para}
-                </p>
+            <div key={item.id} className="w-full">
+              <p className="text-[#FFFFFFD4] text-base md:text-2xl font-montserrat font-light leading-relaxed  md:text-left">
+                {item.para}
+              </p>
 
-                <hr className="border-[#D9D9D987] mt-10 mb-8" />
+              <hr className="border-[#D9D9D987] mt-10 mb-8" />
 
+              <div className="flex gap-4 justify-end sm:justify-between flex-wrap">
                 <div className="flex gap-5">
                   <img
                     className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover border-2 border-[#00FB94]"
@@ -64,8 +77,31 @@ const ClientSays = () => {
                     </p>
                   </div>
                 </div>
+                <div className="flex flex-col justify-center items-center w-30 sm:w-40 h-11 rounded-4xl bg-[#06B8FF40]  ">
+                  <div className="flex items-center gap-5 select-none">
+                    <FaChevronLeft
+                      onClick={handleprev}
+                      className={`text-xl sm:text-2xl ${
+                        currentCard === 0
+                          ? "text-[#00FB9480]"
+                          : "text-[#00FB94] cursor-pointer"
+                      }`}
+                    />
+                    <h1 className="text-[#06B8FF]">
+                      {currentCard + 1} / {ourClient.length}
+                    </h1>
+                    <FaChevronRight
+                      onClick={handleNext}
+                      className={`text-xl sm:text-2xl ${
+                        currentCard === ourClient.length - 1
+                          ? "text-[#00FB9480] "
+                          : "text-[#00FB94] cursor-pointer"
+                      }`}
+                    />
+                  </div>
+                </div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </div>
@@ -79,6 +115,20 @@ const ourClient = [
   {
     id: 1,
     para: "“Working with MinhaTech Pub has been a game changer for us. Their expertise in app design and ideation helped us bring our vision to life, resulting in a product that exceeded our expectations”",
+    image: "/Client.png",
+    name: "Conor Bradley",
+    text: "Senior Marketing Specialist, TechNova",
+  },
+  {
+    id: 2,
+    para: "“ MinhaTech Pub has been a game changer for us. Their expertise in app design and ideation helped us bring our vision to life, resulting in a product that exceeded our expectations”",
+    image: "/Client.png",
+    name: "Conor Bradley",
+    text: "Senior Marketing Specialist, TechNova",
+  },
+  {
+    id: 3,
+    para: "“ This is 3rd MinhaTech Pub has been a game changer for us. Their expertise in app design and ideation helped us bring our vision to life, resulting in a product that exceeded our expectations”",
     image: "/Client.png",
     name: "Conor Bradley",
     text: "Senior Marketing Specialist, TechNova",
