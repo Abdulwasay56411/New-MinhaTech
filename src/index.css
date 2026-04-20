@@ -15,6 +15,6 @@ body {
   }
 }
 
-#home, #services {
+#home, #services, #project {
   scroll-margin-top: 140px;
 }

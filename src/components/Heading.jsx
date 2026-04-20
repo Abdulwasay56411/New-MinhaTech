@@ -5,7 +5,7 @@ const Heading = ({title, children}) => {
     <div>
       <div className='flex items-center gap-1 pb-10'>
         <img className='w-10 h-10' src="/star.png" alt="" />
-        <h1 className='text-2xl sm:text-4xl text-white font-bold font-montserrat '>{title}</h1>
+        <h1 className='text-xl sm:text-4xl text-white font-bold font-montserrat '>{title}</h1>
       </div>
     </div>
   )

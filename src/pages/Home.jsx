@@ -5,7 +5,7 @@ import OurServices from '../components/Home/OurServices'
 import ToolMagic from '../components/Home/ToolMagic'
 import ClientSays from '../components/Home/ClientSays'
 import OurProject from '../components/Home/OurProject'
-import Work from '../components/Home/Work'
+// import Work from '../components/Home/Work'
 
 const Home = () => {
   return (
@@ -16,7 +16,7 @@ const Home = () => {
       <ToolMagic/>
       <ClientSays/>
       <OurProject/>
-      <Work/>
+      {/* <Work/> */}
     </div>
   )
 }

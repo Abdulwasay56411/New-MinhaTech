@@ -5,7 +5,7 @@ const OurProject = () => {
   const [isEffect, setIsEffect] = useState(null);
 
   return (
-    <div className="max-w-350 mx-auto">
+    <div id="project" className="max-w-350 mx-auto">
       <div className="px-5 py-10">
         <Heading title="Our Latest Projects" />
         <div className="flex flex-wrap justify-center gap-5 my-5">
