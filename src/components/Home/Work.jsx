@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Heading from "../Heading";
+import { FaChevronDown } from "react-icons/fa";
 
 const Work = () => {
   const [isOpen, setIsOpen] = useState(null);
@@ -15,7 +16,7 @@ const Work = () => {
 
             <div
               onClick={() => setIsOpen(isOpen === item.id ? null : item.id)}
-              className={`w-full lg:w-55 rounded-lg py-3 px-4 ml-2 transition-all duration-200 cursor-pointer ${getTop(
+              className={`w-full lg:w-55 rounded-lg py-3 px-4 ml-2 transition-all duration-300 cursor-pointer ${getTop(
                 index
               )} ${
                 isOpen === item.id
@@ -23,9 +24,12 @@ const Work = () => {
                   : "h-16 bg-[#078ABE]"
               }`}
             >
+              <div className="flex justify-between items-center">
               <h1 className={`text-[28px] font-bold pb-1 ${isOpen === item.id ? "text-[#00FB94]" : "text-white"}`}>
                 {item.title}
               </h1>
+                <FaChevronDown className={`transition-all duration-300 ${isOpen === item.id ? "text-[#00FB94] -rotate-180" : "text-white rotate-0"}`}/>
+              </div>
               <div className={`${isOpen === item.id ? "block" : "hidden"}`}>
                 <hr className="border-[#06B8FF80] my-2" />
                 <p className="text-white text-sm ">{item.para}</p>
