@@ -6,6 +6,10 @@ import ToolMagic from '../components/Home/ToolMagic'
 import ClientSays from '../components/Home/ClientSays'
 import OurProject from '../components/Home/OurProject'
 import Work from '../components/Home/Work'
+import Faqs from '../components/Home/Faqs'
+import Plans from '../components/Home/Plans'
+import GetInTouch from '../components/Home/GetInTouch'
+import Footer from '../components/Footer'
 
 const Home = () => {
   return (
@@ -17,6 +21,10 @@ const Home = () => {
       <ClientSays/>
       <OurProject/>
       <Work/>
+      <Faqs/>
+      <Plans/>
+      <GetInTouch/>
+      <Footer/>
     </div>
   )
 }

@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { div } from "framer-motion/m";
 import Heading from "../Heading";
 
 const ToolMagic = () => {

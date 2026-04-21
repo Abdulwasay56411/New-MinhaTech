@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import { MdEmail } from "react-icons/md";
 import { IoMdCall } from "react-icons/io";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
-import { IoMdArrowForward } from "react-icons/io";
-import { IoMdMenu } from "react-icons/io";
 import { HashLink } from "react-router-hash-link";
 import { FaPlus } from "react-icons/fa";
 

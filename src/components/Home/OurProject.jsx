@@ -1,54 +1,48 @@
 import React, { useState } from "react";
 import Heading from "../Heading";
 
-
-
 const OurProject = () => {
   const [isEffect, setIsEffect] = useState(null);
 
   return (
-    <div id="project" className="max-w-350 mx-auto">
-      <div className="px-5 py-10">
-        <Heading title="Our Latest Projects" />
-        <div className="flex flex-wrap justify-center gap-5 my-5">
-          {project.map((item) => (
-            <div>
+    <div id="project" className="max-w-350 mx-auto px-5 py-10">
+      <Heading title="Our Latest Projects" />
+      <div className="flex flex-wrap justify-center gap-5 my-5">
+        {project.map((item) => (
+          <div>
+            <div
+              onMouseEnter={() => setIsEffect(item.id)}
+              onMouseLeave={() => setIsEffect(null)}
+              className={`relative w-auto h-auto px-2 py-5 rounded-4xl transition-all duration-300 ${
+                isEffect === item.id
+                  ? "bg-linear-to-t from-[#09182B] to-[#009558] opacity-80 cursor-pointer"
+                  : "bg-[#00FB9440] opacity-100"
+              }`}
+              key={item.id}
+            >
+              <img
+                className={`object-center w-full h-auto ${item.className} `}
+                src={item.image}
+                alt=""
+              />
               <div
-                onMouseEnter={() => setIsEffect(item.id)}
-                onMouseLeave={() => setIsEffect(null)}
-                className={`relative w-auto h-auto px-2 py-5 rounded-4xl transition-all duration-300 ${
-                  isEffect === item.id
-                    ? "bg-linear-to-t from-[#09182B] to-[#009558] opacity-80 cursor-pointer"
-                    : "bg-[#00FB9440] opacity-100"
+                className={`absolute inset-0 flex items-center justify-center ${
+                  isEffect === item.id ? "opacity-100" : "opacity-0 hidden"
                 }`}
-                key={item.id}
               >
-                <img
-                  className={`object-center w-full h-auto ${item.className} `}
-                  src={item.image}
-                  alt=""
-                />
-                <div
-                  className={`absolute inset-0 flex items-center justify-center ${
-                    isEffect === item.id ? "opacity-100" : "opacity-0 hidden"
-                  }`}
-                >
-                  <div className="bg-linear-to-r from-[#00FB94] to-[#06B8FF] rounded-full w-20 h-20 p-5 flex items-center justify-center">
-                    <img className="w-10 h-10" src="/Arrow.png" alt="arrow" />
-                  </div>
+                <div className="bg-linear-to-r from-[#00FB94] to-[#06B8FF] rounded-full w-20 h-20 p-5 flex items-center justify-center">
+                  <img className="w-10 h-10" src="/Arrow.png" alt="arrow" />
                 </div>
               </div>
-              <div className="text-[#FFFFFF] py-5 px-4">
-                <p className="font-montserrat text-sm sm:text-xl">
-                  {item.title}
-                </p>
-                <h1 className="text-lg sm:text-[28px] font-bold font-poppins">
-                  {item.name}
-                </h1>
-              </div>
             </div>
-          ))}
-        </div>
+            <div className="text-[#FFFFFF] py-5 px-4">
+              <p className="font-montserrat text-sm sm:text-xl">{item.title}</p>
+              <h1 className="text-lg sm:text-[28px] font-bold font-poppins">
+                {item.name}
+              </h1>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
