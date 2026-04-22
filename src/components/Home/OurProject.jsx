@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Heading from "../Heading";
+import { Link } from "react-router-dom";
 
 const OurProject = () => {
   const [isEffect, setIsEffect] = useState(null);
@@ -9,32 +10,34 @@ const OurProject = () => {
       <Heading title="Our Latest Projects" />
       <div className="flex flex-wrap justify-center gap-5 my-5">
         {project.map((item) => (
-          <div>
-            <div
-              onMouseEnter={() => setIsEffect(item.id)}
-              onMouseLeave={() => setIsEffect(null)}
-              className={`relative w-auto h-auto px-2 py-5 rounded-4xl transition-all duration-300 ${
-                isEffect === item.id
-                  ? "bg-linear-to-t from-[#09182B] to-[#009558] opacity-80 cursor-pointer"
-                  : "bg-[#00FB9440] opacity-100"
-              }`}
-              key={item.id}
-            >
-              <img
-                className={`object-center w-full h-auto ${item.className} `}
-                src={item.image}
-                alt=""
-              />
+          // Key yahan move kar di hai
+          <div key={item.id}>
+            <Link to={item.link}>
               <div
-                className={`absolute inset-0 flex items-center justify-center ${
-                  isEffect === item.id ? "opacity-100" : "opacity-0 hidden"
+                onMouseEnter={() => setIsEffect(item.id)}
+                onMouseLeave={() => setIsEffect(null)}
+                className={`relative w-auto h-auto px-2 py-5 rounded-4xl transition-all duration-300 ${
+                  isEffect === item.id
+                    ? "bg-linear-to-t from-[#09182B] to-[#009558] opacity-80 cursor-pointer"
+                    : "bg-[#00FB9440] opacity-100"
                 }`}
               >
-                <div className="bg-linear-to-r from-[#00FB94] to-[#06B8FF] rounded-full w-20 h-20 p-5 flex items-center justify-center">
-                  <img className="w-10 h-10" src="/Arrow.png" alt="arrow" />
+                <img
+                  className={`object-center w-full h-auto ${item.className} `}
+                  src={item.image}
+                  alt={item.name}
+                />
+                <div
+                  className={`absolute inset-0 flex items-center justify-center ${
+                    isEffect === item.id ? "opacity-100" : "opacity-0 hidden"
+                  }`}
+                >
+                  <div className="bg-linear-to-r from-[#00FB94] to-[#06B8FF] rounded-full w-20 h-20 p-5 flex items-center justify-center">
+                    <img className="w-10 h-10" src="/Arrow.png" alt="arrow" />
+                  </div>
                 </div>
               </div>
-            </div>
+            </Link>
             <div className="text-[#FFFFFF] py-5 px-4">
               <p className="font-montserrat text-sm sm:text-xl">{item.title}</p>
               <h1 className="text-lg sm:text-[28px] font-bold font-poppins">
@@ -57,6 +60,7 @@ const project = [
     title: "UI/ UX Design/ Development",
     name: "Draw House Planner",
     className: "sm:w-[590px] sm:h-[455px]",
+    link: "/aiImagegenaratorapp", 
   },
   {
     id: 2,
@@ -64,6 +68,7 @@ const project = [
     title: "UI/ UX Design/ Development",
     name: "Draw House Planner",
     className: "sm:w-[590px]",
+    link: "/house planner",
   },
   {
     id: 3,
@@ -71,6 +76,7 @@ const project = [
     title: "UI/ UX Design/ Development",
     name: "Phone Cleaner",
     className: "sm:w-[386px]",
+    link: "/phone cleaner", 
   },
   {
     id: 4,
@@ -78,6 +84,7 @@ const project = [
     title: "UI/ UX Design/ Development",
     name: "Video Player",
     className: "sm:w-[386px]",
+    link: "/video player", 
   },
   {
     id: 5,
@@ -85,5 +92,6 @@ const project = [
     title: "UI/ UX Design/ Development",
     name: "VPN",
     className: "sm:w-[386px]",
+    link: "/vpn", 
   },
 ];

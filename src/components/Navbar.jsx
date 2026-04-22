@@ -77,15 +77,17 @@ const Navbar = () => {
           className="hidden md:flex group cursor-pointer relative items-center mr-5"
         >
           {/* Button */}
-          <button
-            className={`text-[#09182B] cursor-pointer md:w-30 lg:w-38 rounded-3xl h-10 border border-[#00FB94] font-medium transition-all duration-300 z-10 ${
-              isCursor
-                ? "bg-linear-to-r from-[#00FB94] to-[#00FB94]"
-                : "bg-linear-to-r from-[#00FB94] to-[#06B8FF]"
-            }`}
-          >
-            Contact Us
-          </button>
+          <HashLink smooth to="/#contact">
+            <button
+              className={`text-[#09182B] cursor-pointer md:w-30 lg:w-38 rounded-3xl h-10 border border-[#00FB94] font-medium transition-all duration-300 z-10 ${
+                isCursor
+                  ? "bg-linear-to-r from-[#00FB94] to-[#00FB94]"
+                  : "bg-linear-to-r from-[#00FB94] to-[#06B8FF]"
+              }`}
+            >
+              Contact Us
+            </button>
+          </HashLink>
 
           <div className="absolute md:-right-9 -right-11 md:w-9 md:h-9 lg:h-10 lg:w-10 bg-transparent"></div>
           <div
@@ -135,15 +137,20 @@ const Navbar = () => {
             />
           </div>
           <div
-            className={`absolute right-8 top-10 w-41 h-auto shadow-2xl rounded-lg px-5 py-4 text-white bg-[#0A1E38] transform transition-all duration-300 z-50 ${isOpen ? "translate-x-0 opacity-100 scale-100" : "translate-x-10 opacity-0 scale-95 pointer-events-none"}`}
+            className={`absolute right-8 top-10 w-41 h-auto shadow-2xl rounded-lg px-5 py-4 text-white bg-[#0A1E38] transform transition-all duration-300 z-50 ${
+              isOpen
+                ? "translate-x-0 opacity-100 scale-100"
+                : "translate-x-10 opacity-0 scale-95 pointer-events-none"
+            }`}
           >
-            {navbarLink.map((item) => (
+            {menuNavbar.map((item) => (
               <HashLink key={item.id} smooth to={item.Link}>
                 <h1
                   onClick={() => setIsOpen(false)}
                   className="leading-10 hover:font-bold hover:text-[#00FB94] duration-300 transition-all"
                 >
                   {item.name}
+                  
                 </h1>
               </HashLink>
             ))}
@@ -175,6 +182,33 @@ const navbarLink = [
   {
     id: 4,
     name: "About Us",
-    Link: "/#about us",
+    Link: "/#about",
+  },
+];
+const menuNavbar = [
+  {
+    id: 1,
+    name: "Home",
+    Link: "/#home",
+  },
+  {
+    id: 2,
+    name: "Projects",
+    Link: "/#project",
+  },
+  {
+    id: 3,
+    name: "Services",
+    Link: "/#services",
+  },
+  {
+    id: 4,
+    name: "About Us",
+    Link: "/#about",
+  },
+  {
+    id: 5,
+    name: "Contact Us",
+    Link: "/#contact",
   },
 ];

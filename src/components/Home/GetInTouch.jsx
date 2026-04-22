@@ -33,7 +33,7 @@ const time = [
 
 const GetInTouch = () => {
   return (
-    <div className="max-w-350 mx-auto px-5 py-10">
+    <div id="contact" className="max-w-350 mx-auto px-5 py-10">
       <div className="flex flex-wrap justify-center lg:justify-between gap-4">
         <div>
           <h1 className="text-3xl pb-3 font-semibold text-[#FFFFFF]">
@@ -54,7 +54,7 @@ const GetInTouch = () => {
           </div>
           <div className="my-8">
             {time.map((item) => (
-              <div className="flex items-center gap-3 py-3">
+              <div key={item.id} className="flex items-center gap-3 py-3">
                 <img className="w-5 h-5" src={item.image} alt="" />
                 <div>
                   <p className="text-base text-[#FFFFFF] hover:text-[#06B8FF] transition-all duration-300 cursor-pointer">{item.title}</p>

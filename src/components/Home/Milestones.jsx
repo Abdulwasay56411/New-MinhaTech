@@ -44,7 +44,7 @@ const Counter = ({ endValue, suffix }) => {
 
 const Milestones = () => {
   return (
-    <div className="max-w-350 mx-auto px-5 py-10">
+    <div id="about" className="max-w-350 mx-auto px-5 py-10">
       <Heading title="Milestones Unlocked" />
       <div className="flex items-center">
         <img

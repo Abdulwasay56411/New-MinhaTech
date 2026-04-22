@@ -67,8 +67,8 @@ const Plans = () => {
                 backgroundSize: "20px 2px",
               }}
             />
-            <h1 className="text-3xl font-bold py-8 text-[#FFFFFF]">
-              {item.amount} <span className="text-xl font-normal">/ month</span>
+            <h1 className="text-2xl font-bold py-8 text-[#FFFFFF]">
+              {item.amount} <span className="text-lg font-normal">/ month</span>
             </h1>
             <button className="w-full h-15 rounded-4xl text-lg font-medium mb-8 text-[#FFFFFF] border border-[#06B8FF] bg-[#06B8FF42] cursor-pointer hover:bg-linear-to-r hover:from-[#00FB94] hover:to-[#06B8FF]">
               {item.btn}
