@@ -16,7 +16,7 @@ const footerText = [
 
 const Footer = () => {
   return (
-    <div className="max-w-350 mx-auto bg-linear-to-t from-[#12253E00] to-[#12253E] py-6 px-5">
+    <div className="max-w-350 mx-auto bg-linear-to-t from-[#12253E] to-[#12253E00] py-6 px-5">
       <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_.5fr] gap-x-20 gap-y-5 px-5">
         <div>
           <h1 className="text-[#06B8FF] font-semibold text-5xl">MinhaTech</h1>
