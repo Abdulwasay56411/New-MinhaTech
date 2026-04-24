@@ -28,7 +28,7 @@ const Navbar = () => {
   return (
     <div className="sticky font-montserrat top-0 left-0 z-50 w-full mx-auto">
       {/*  Topbar */}
-      <div className="w-full sm:flex sm:flex-row sm:justify-between items-center flex flex-col justify-center px-4 md:px-8 lg:px-18 py-1.5 border border-[#0776A333] bg-[#0598D333] backdrop-blur-sm text-white">
+      <div className="w-full sm:flex sm:flex-row sm:justify-between items-center flex flex-col justify-center px-4 md:px-8 lg:px-14 py-1.5 border border-[#0776A333] bg-[#0598D333] backdrop-blur-sm text-white">
         <div className="flex flex-col items-center sm:gap-0 sm:w-100 sm:flex sm:flex-row sm:justify-between">
           <p className="flex text-sm sm:text-base items-center gap-3">
             {" "}
@@ -41,14 +41,14 @@ const Navbar = () => {
           </p>
         </div>
         <div className="flex pt-1 items-center gap-3 lg:gap-5">
-          <div className="w-6 flex justify-center items-center h-6 border border-white rounded-full">
-            <FaLinkedinIn size={11} />
+          <div className="w-8 flex justify-center items-center h-8 border border-white rounded-full">
+            <FaLinkedinIn size={13} />
           </div>
-          <div className="w-6 flex justify-center items-center h-6 border border-white rounded-full">
-            <FaInstagram size={11} />
+          <div className="w-8 flex justify-center items-center h-8 border border-white rounded-full">
+            <FaInstagram size={13} />
           </div>
-          <div className="w-6 flex justify-center items-center h-6 border border-white rounded-full">
-            <FaFacebookF size={11} />
+          <div className="w-8 flex justify-center items-center h-8 border border-white rounded-full">
+            <FaFacebookF size={13} />
           </div>
         </div>
       </div>
