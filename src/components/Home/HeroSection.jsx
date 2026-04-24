@@ -7,7 +7,7 @@ const HeroSection = () => {
   return (
     <div
       id="home"
-      className='relative overflow-hidden pt-10 px-4 py-5 bg-[#09182B] w-full h-auto bg-[url("/herobg.png")] bg-cover bg-center bg-no-repeat'
+      className='relative overflow-hidden pt-10 px-4 bg-[#09182B] w-full h-auto bg-[url("/herobg.png")] bg-cover bg-center bg-no-repeat'
     >
       <div className="blob-base blob-left"></div>
       <div className="blob-base blob-right"></div>
@@ -22,8 +22,8 @@ const HeroSection = () => {
           <button className="w-52 h-10 text-sm md:text-base  md:w-62 md:h-12 bg-linear-to-r from-[#0598D3] to-[#07D580] text-[#09182B] rounded-xl font-medium cursor-pointer hover:bg-linear-to-r hover:from-[#07D580] hover:to-[#07D580] hover:scale-105 duration-300">Get Free App Consultation</button>
           <button className="bg-transparent border border-[#E5E5E5] w-25 h-10 text-sm md:text-base md:w-38 md:h-12 rounded-xl text-white cursor-pointer hover:scale-105 duration-300">View Pricing</button>
         </div>
-        <div>
-          
+        <div className="flex justify-center mt-5">
+          <img className="w-auto h-auto object-cover" src="/hero.png" alt="" />
         </div>
       </div>
     </div>

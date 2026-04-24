@@ -45,7 +45,8 @@ const Counter = ({ endValue, suffix }) => {
 const Milestones = () => {
   return (
     <div id="about" className="max-w-350 mx-auto px-5 py-10">
-      <Heading title="Milestones Unlocked" />
+      <Heading title="What We Delivered" />
+      <Heading para="Delivering measurable results through innovation, performance and user-focused mobile solutions"/>
       <div className="flex items-center">
         <img
           className=" object-cover cursor-pointer transform"
