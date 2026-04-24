@@ -48,6 +48,21 @@ body {
   100% { transform: translate(20%, 80%); }
 }
 
+.text-shine {
+  background: linear-gradient(to right, #FFFFFF1A 20%, #0598D3 50%, #FFFFFF1A 80%);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: shine-animation 5s linear infinite;
+}
+
+@keyframes shine-animation {
+  to {
+    background-position: 200% center;
+  }
+}
+
 #home, #services, #project, #contact, #about {
   scroll-margin-top: 140px;
 }

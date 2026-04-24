@@ -7,7 +7,7 @@ const HeroSection = () => {
   return (
     <div
       id="home"
-      className='relative overflow-hidden pt-10 px-4 bg-[#09182B] w-full h-auto bg-[url("/herobg.png")] bg-cover bg-center bg-no-repeat'
+      className='relative overflow-hidden pt-14 px-4 bg-[#09182B] w-full h-auto bg-[url("/herobg.png")] bg-cover bg-center bg-no-repeat'
     >
       <div className="blob-base blob-left"></div>
       <div className="blob-base blob-right"></div>

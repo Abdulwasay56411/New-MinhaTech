@@ -45,17 +45,16 @@ const Counter = ({ endValue, suffix }) => {
 const Milestones = () => {
   return (
     <div id="about" className="max-w-350 mx-auto px-5 py-10">
-      <Heading title="What We Delivered" />
-      <Heading para="Delivering measurable results through innovation, performance and user-focused mobile solutions"/>
+      <Heading title="What We Delivered" para="Delivering measurable results through innovation, performance and user-focused mobile solutions" />
       <div className="flex items-center">
         <img
-          className=" object-cover cursor-pointer transform"
+          className="object-cover"
           src="/milestones.png"
           alt=""
         />
       </div>
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 px-5 py-10 items-start">
-        <div className="w-full h-64 rounded-3xl bg-[#06B8FF6B] text-[#00FB94] flex flex-col justify-between py-10 items-center">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 px-5 py-10 items-start text-[#EFEFEF]">
+        <div className="w-full h-64 rounded-3xl bg-[#0598D333] border border-[#0776A333] flex flex-col justify-between py-10 items-center">
           <h1 className="font-poppins font-bold text-5xl md:text-6xl">
             <Counter endValue={5} suffix="B+" />
           </h1>
@@ -63,15 +62,15 @@ const Milestones = () => {
             Downloads
           </p>
         </div>
-        <div className="w-full h-52 rounded-3xl mt-11 bg-[#06B8FF6B] text-[#00FB94] flex flex-col justify-between py-8 items-center">
+        <div className="w-full h-52 rounded-3xl mt-11 bg-[#0598D333] border border-[#0776A333] flex flex-col justify-between py-8 items-center">
           <h1 className="font-poppins font-bold text-5xl md:text-6xl">
             <Counter endValue={98} suffix="%" />
           </h1>
-          <p className="font-montserrat text-lg md:text-[24px] text-center px-2">
+          <p className="font-montserrat text-lg md:text-[24px]  text-center px-2">
             Client Satisfaction
           </p>
         </div>
-        <div className="w-full h-64 rounded-3xl bg-[#06B8FF6B] text-[#00FB94] flex flex-col justify-between py-10 items-center">
+        <div className="w-full h-64 rounded-3xl bg-[#0598D333] border border-[#0776A333] flex flex-col justify-between py-10 items-center">
           <h1 className="font-poppins font-bold text-5xl md:text-6xl">
             <Counter endValue={900} suffix="+" />
           </h1>
@@ -80,7 +79,7 @@ const Milestones = () => {
           </p>
         </div>
 
-        <div className="w-full h-52 rounded-3xl  md:mt-0 lg:mb-11 bg-[#06B8FF6B] text-[#00FB94] flex flex-col justify-between py-8 items-center">
+        <div className="w-full h-52 rounded-3xl  md:mt-0 lg:mb-11 bg-[#0598D333] border border-[#0776A333] backdrop-blur-sm flex flex-col justify-between py-8 items-center">
           <h1 className="font-poppins font-bold text-5xl md:text-6xl">
             <Counter endValue={300} suffix="+" />
           </h1>
