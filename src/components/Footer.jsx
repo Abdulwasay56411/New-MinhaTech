@@ -54,7 +54,7 @@ const Footer = () => {
       </div>
       {/* Full width shiny text section */}
       <div className="w-full mt-10 mb-5 overflow-hidden">
-        <h1 className="text-shine text-[16vw] font-bold text-[#FFFFFF1A] uppercase text-center tracking-tighter w-full leading-none">
+        <h1 className="text-shine text-[13vw] sm:text-[14vw] font-bold text-[#FFFFFF1A] uppercase text-center tracking-widest w-full">
           MINHATECH
         </h1>
       </div>
