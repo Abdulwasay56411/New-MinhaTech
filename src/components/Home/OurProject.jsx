@@ -10,9 +10,8 @@ const OurProject = () => {
       <Heading title="Our Latest Projects" />
       <div className="flex flex-wrap justify-center gap-5 my-5">
         {project.map((item) => (
-          // Key yahan move kar di hai
           <div key={item.id}>
-            <Link to={item.link}>
+            <Link to={`/project/${item.slug}`}>
               <div
                 onMouseEnter={() => setIsEffect(item.id)}
                 onMouseLeave={() => setIsEffect(null)}
@@ -56,42 +55,43 @@ export default OurProject;
 const project = [
   {
     id: 1,
+    slug: "ai-image-generator",
     image: "/project 1.png",
     title: "UI/ UX Design/ Development",
     name: "Draw House Planner",
     className: "sm:w-[590px] sm:h-[455px]",
-    link: "/aiImagegenaratorapp", 
   },
   {
     id: 2,
+    slug: "house-planner",
     image: "/project 2.png",
     title: "UI/ UX Design/ Development",
     name: "Draw House Planner",
     className: "sm:w-[590px]",
-    link: "/house planner",
   },
   {
     id: 3,
+    slug: "phone-cleaner",
     image: "/project 3.png",
     title: "UI/ UX Design/ Development",
     name: "Phone Cleaner",
     className: "sm:w-[386px]",
-    link: "/phone cleaner", 
+
   },
   {
     id: 4,
+    slug: "video-player",
     image: "/project 4.png",
     title: "UI/ UX Design/ Development",
     name: "Video Player",
     className: "sm:w-[386px]",
-    link: "/video player", 
   },
   {
     id: 5,
+    slug: "vpn",
     image: "/project 5.png",
     title: "UI/ UX Design/ Development",
     name: "VPN",
     className: "sm:w-[386px]",
-    link: "/vpn", 
   },
 ];

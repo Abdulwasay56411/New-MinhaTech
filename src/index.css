@@ -15,7 +15,42 @@ body {
   }
 }
 
+
+.blob-base {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  filter: blur(120px);
+  border-radius: 50%;
+  opacity: 0.3;
+  animation: moveBlob 2s infinite alternate ease-in-out;
+  pointer-events: none;
+  z-index: 0;
+}
+
+
+.blob-left {
+  top: 0;
+  left: 0;
+  background: #00FB94;
+}
+
+.blob-right {
+  bottom: 0;
+  right: 0;
+  background: #00FB94;
+}
+
+/* Animation */
+@keyframes moveBlob {
+  0% { transform: translate(-20%, -20%); }
+  50% { transform: translate(70%, 50%); }
+  100% { transform: translate(20%, 80%); }
+}
+
 #home, #services, #project, #contact, #about {
   scroll-margin-top: 140px;
 }
+
+
 
