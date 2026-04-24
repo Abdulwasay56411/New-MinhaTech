@@ -23,7 +23,7 @@ const HeroSection = () => {
           <button className="bg-transparent border border-[#E5E5E5] w-25 h-10 text-sm md:text-base md:w-38 md:h-12 rounded-xl text-white cursor-pointer hover:scale-105 duration-300">View Pricing</button>
         </div>
         <div className="flex justify-center mt-5">
-          <img className="w-auto h-auto object-cover" src="/hero.png" alt="" />
+          <img className="w-auto h-auto object-cover" src="/heroMobile.png" alt="" />
         </div>
       </div>
     </div>
