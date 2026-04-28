@@ -78,7 +78,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="max-w-350 mx-auto mt-10 mb-5 px-5">
-          <h1 className="text-shine text-[clamp(40px,13vw,180px)] font-bold text-[#FFFFFF1A] uppercase tracking-widest">
+          <h1 className="text-shine text-[clamp(40px,12vw,180px)]  sm:text-[clamp(40px,13vw,180px)] font-bold text-[#FFFFFF1A] uppercase tracking-widest">
             MINHATECH
           </h1>
         </div>
