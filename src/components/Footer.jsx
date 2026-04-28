@@ -5,12 +5,18 @@ const footerText = [
   {
     id: 1,
     title: "Services",
-    links: ["Android Development", "IOS Development", "Cross Platforms Apps Development", "App Monetization", "ASO Services"]
+    links: [
+      "Android Development",
+      "IOS Development",
+      "Cross Platforms Apps Development",
+      "App Monetization",
+      "ASO Services",
+    ],
   },
   {
     id: 2,
     title: "Company",
-    links: ["Home", "About Us", "Projects", "Contact Us"]
+    links: ["Home", "About Us", "Projects", "Contact Us"],
   },
 ];
 
@@ -18,54 +24,81 @@ const Footer = () => {
   return (
     <div className="mt-5 bg-linear-to-t from-[#12253E] to-[#12253E00]">
       <div className="max-w-350 mx-auto py-6 px-5">
+
+        {/* GRID SECTION */}
         <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_.5fr] gap-x-20 gap-y-5 px-5">
+
+          {/* LEFT SECTION */}
           <div>
-            <h1 className="text-[#06B8FF] font-semibold text-5xl">MinhaTech</h1>
+            <h1 className="text-[#06B8FF] font-semibold text-5xl">
+              MinhaTech
+            </h1>
             <p className="text-[#C6C7C8] text-lg mt-2">
-              Buliding revenue generated mobile apps for startups and enterprises. From Idea to App Store, we deliver excellence
+              Buliding revenue generated mobile apps for startups and enterprises.
+              From Idea to App Store, we deliver excellence
             </p>
+
             <div className="flex items-center gap-2 my-8">
-              <div className="bg-[#06B8FF26] border border-[#06B8FF26] text-white w-12 h-12 flex items-center justify-center rounded-2xl cursor-pointer duration-200 hover:scale-105 hover:text-[#06B8FF] hover:border hover:border-[#06B8FF]">
+              <div className="bg-[#06B8FF26] border border-[#06B8FF26] text-white w-12 h-12 flex items-center justify-center rounded-2xl cursor-pointer duration-200 hover:scale-105 hover:text-[#06B8FF] hover:border-[#06B8FF]">
                 <FaInstagram size={22} />
               </div>
-              <div className="bg-[#06B8FF26] border border-[#06B8FF26] text-white w-12 h-12 flex items-center justify-center rounded-2xl cursor-pointer duration-200 hover:scale-105 hover:text-[#06B8FF] hover:border hover:border-[#06B8FF]">
+              <div className="bg-[#06B8FF26] border border-[#06B8FF26] text-white w-12 h-12 flex items-center justify-center rounded-2xl cursor-pointer duration-200 hover:scale-105 hover:text-[#06B8FF] hover:border-[#06B8FF]">
                 <FaLinkedinIn size={22} />
               </div>
-              <div className="bg-[#06B8FF26] border border-[#06B8FF26] text-white w-12 h-12 flex items-center justify-center rounded-2xl cursor-pointer duration-200 hover:scale-105 hover:text-[#06B8FF] hover:border hover:border-[#06B8FF]">
+              <div className="bg-[#06B8FF26] border border-[#06B8FF26] text-white w-12 h-12 flex items-center justify-center rounded-2xl cursor-pointer duration-200 hover:scale-105 hover:text-[#06B8FF] hover:border-[#06B8FF]">
                 <FaFacebookF size={22} />
               </div>
             </div>
           </div>
+
+          {/* SERVICES */}
           <div>
             <h1 className="font-bold text-white mb-3">Services</h1>
             {footerText[0].links.map((link, index) => (
-              <p key={index} className="text-[#C6C7C8] cursor-pointer hover:text-[#06B8FF] mb-2">
+              <p
+                key={index}
+                className="text-[#C6C7C8] cursor-pointer hover:text-[#06B8FF] mb-2"
+              >
                 {link}
               </p>
             ))}
           </div>
+
+          {/* COMPANY */}
           <div>
             <h1 className="font-bold text-white mb-3">Company</h1>
             {footerText[1].links.map((link, index) => (
-              <p key={index} className="text-[#C6C7C8] cursor-pointer hover:text-[#06B8FF] mb-2">
+              <p
+                key={index}
+                className="text-[#C6C7C8] cursor-pointer hover:text-[#06B8FF] mb-2"
+              >
                 {link}
               </p>
             ))}
           </div>
         </div>
-        <div className="w-full mt-10 mb-5">
-          <h1 className="text-shine text-[clamp(40px,13vw,180px)] font-bold text-[#FFFFFF1A] uppercase text-center tracking-widest w-full">
+        <div className="max-w-350 mx-auto mt-10 mb-5 px-5">
+          <h1 className="text-shine text-[clamp(40px,13vw,180px)] font-bold text-[#FFFFFF1A] uppercase tracking-widest">
             MINHATECH
           </h1>
         </div>
-        <hr className="text-[#D9D9D96B] py-3" />
+
+        <hr className="border-[#D9D9D96B] py-3" />
+
         <div className="flex flex-wrap gap-2 justify-center sm:justify-between">
-          <p className="font-medium text-sm text-[#FFFFFFC7]">©2022-2023 Minha Tech. All Rights Reserved</p>
+          <p className="font-medium text-sm text-[#FFFFFFC7]">
+            ©2022-2023 Minha Tech. All Rights Reserved
+          </p>
           <div className="flex gap-5">
-            <p className="font-medium text-sm text-[#FFFFFFC7]">Privacy Policy</p>
-            <p className="font-medium text-sm text-[#FFFFFFC7]">Terms of Use</p>
+            <p className="font-medium text-sm text-[#FFFFFFC7]">
+              Privacy Policy
+            </p>
+            <p className="font-medium text-sm text-[#FFFFFFC7]">
+              Terms of Use
+            </p>
           </div>
         </div>
+
       </div>
     </div>
   );

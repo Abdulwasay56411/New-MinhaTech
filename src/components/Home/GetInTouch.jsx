@@ -92,7 +92,7 @@ const GetInTouch = () => {
             <div className="py-5">
               <button
                 type="submit"
-                className="bg-linear-to-r from-[#0598D3] to-[#07D580] w-full h-13 font-montserrat font-semibold text-lg text-[#FFFFFFED] cursor-pointer rounded-2xl"
+                className="bg-linear-to-r from-[#0598D3] to-[#07D580] w-full h-13 font-montserrat font-semibold text-lg text-[#FFFFFFED] cursor-pointer rounded-2xl hover:scale-102 hover:shadow-2xl hover:shadow-[#0598D3]/30 duration-200"
               >
                 Send Message
               </button>
