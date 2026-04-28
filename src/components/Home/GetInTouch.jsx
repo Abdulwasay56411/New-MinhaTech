@@ -1,4 +1,5 @@
 import React from "react";
+import Heading from "../Heading";
 
 const mail = [
   {
@@ -18,56 +19,18 @@ const mail = [
   },
 ];
 
-const time = [
-  {
-    id: 1,
-    image: "/Time.png",
-    title: "24/7 Full Time Support",
-  },
-  {
-    id: 2,
-    image: "/Time.png",
-    title: "100% On Time Dilevery",
-  },
-];
 
 const GetInTouch = () => {
   return (
     <div id="contact" className="max-w-350 mx-auto px-5 py-10">
+      <Heading title="Let’s Build Something Amazing" para="Ready to turn your app idea into reality? Get in touch today" />
       <div className="flex flex-wrap justify-center lg:justify-between gap-4">
         <div>
-          <h1 className="text-3xl pb-3 font-semibold text-[#FFFFFF]">
-            Get In Touch
-          </h1>
-          <p className="text-lg font-montserrat text-[#FFFFFF]">
-            Let’s talk reach out using the form or contact details below
-          </p>
-          <div className="my-12">
-            {mail.map((item) => (
-              <div key={item.id} className="flex items-center gap-2 py-3">
-                <img className="w-9 h-9" src={item.image} alt="" />
-                <p className="font-montserrat text-xl text-[#FFFFFF] cursor-pointer hover:text-[#06B8FF] transition-all duration-300">
-                  {item.title}
-                </p>
-              </div>
-            ))}
-          </div>
-          <div className="my-8">
-            {time.map((item) => (
-              <div key={item.id} className="flex items-center gap-3 py-3">
-                <img className="w-5 h-5" src={item.image} alt="" />
-                <div>
-                  <p className="text-base text-[#FFFFFF] hover:text-[#06B8FF] transition-all duration-300 cursor-pointer">{item.title}</p>
-                  <hr className="border-dashed text-[#00FB94] " />
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="w-full sm:w-85 h-23  flex justify-center items-center px-8 gap-2 bg-[#06B8FF33] rounded-[50px] my-5 lg:mt-24">
-            <img className="w-32 h-12 object-center" src="/OurTeam.png" alt="" />
-             <p className="font-montserrat text-[#FFFFFF] text-xs font-semibold">Our Team Alway 
-             Ready for New Project</p>
-          </div>
+          {mail.map((item) =>(
+            <div key={item.id}>
+             <img src={item.image} alt="" />
+            </div>
+          ))}
         </div>
         <div className="w-162 h-auto rounded-3xl bg-[#06B8FF33] p-5">
           <form>

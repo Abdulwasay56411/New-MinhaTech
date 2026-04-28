@@ -7,7 +7,7 @@ import OurProject from "./pages/OurProject";
 
 const App = () => {
   return (
-    <div className="bg-[#09182B] h-auto" >
+    <div className="bg-[#030509] h-auto" >
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

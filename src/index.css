@@ -49,7 +49,7 @@ body {
 }
 
 .text-shine {
-  background: linear-gradient(to right, #FFFFFF1A 20%, #0598D3 50%, #FFFFFF1A 80%);
+  background: linear-gradient(to right, #FFFFFF1A 20%, #fff  50%, #FFFFFF1A 80%);
   background-size: 200% auto;
   background-clip: text;
   -webkit-background-clip: text;
