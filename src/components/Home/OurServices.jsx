@@ -3,7 +3,7 @@ import Heading from '../Heading'
 
 const OurServices = () => {
   return (
-    <div>
+    <div id='services'>
       <div>
         <Heading title="Core Services" para="End to end mobile apps solutions tailored for startups and enterprises"/>
       </div>

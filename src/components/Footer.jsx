@@ -16,7 +16,7 @@ const footerText = [
 
 const Footer = () => {
   return (
-    <div className="bg-linear-to-t from-[#12253E] to-[#12253E00]">
+    <div className="mt-5 bg-linear-to-t from-[#12253E] to-[#12253E00]">
       <div className="max-w-350 mx-auto py-6 px-5">
         <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_.5fr] gap-x-20 gap-y-5 px-5">
           <div>

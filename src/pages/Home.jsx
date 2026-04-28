@@ -20,9 +20,9 @@ const Home = () => {
       <ToolMagic/>
       <ClientSays/>
       <OurProject/>
-      <Work/>
       <Faqs/>
       <Plans/>
+      <Work/>
       <GetInTouch/>
     </div>
   )

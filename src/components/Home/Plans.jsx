@@ -43,15 +43,37 @@ const ourPlans = [
   },
 ];
 
+const hire = [
+  {
+    id: 1,
+    image: "/Designer.png",
+    title: "Developer Resources",
+    price: "$&32/ hr",
+    para: "Hire skilled developers with flexible pricing based on your project timeline. Rates update automatically as your scope evolves.",
+    btn: "Hire Developer"
+  },
+  {
+    id: 2,
+    image: "/Developer.png",
+    title: "Designer Resources",
+    price: "$&28/ hr",
+    para: "Work with creative designers and get better rates based on your needs. Pricing adjusts automatically with project duration.",
+    btn: "Hire Designer"
+  },
+]
+
+
+
+
 const Plans = () => {
   return (
     <div className="max-w-350 mx-auto px-5 py-10">
-      <Heading title="Plans That Fit Your Needs" />
+      <Heading title="Transparent Pricing" para="Choose the perfect plan for your project" />
       <div className="flex flex-wrap justify-center gap-x-3 gap-y-5">
         {ourPlans.map((item) => (
           <div
             key={item.id}
-            className="bg-[#06B8FF14] border border-[#06B8FF] w-full sm:w-100 h-160 p-5 mx-2 rounded-4xl"
+            className="bg-[#06B8FF14] border border-[#06B8FF] w-full md:w-100 h-auto p-5 mx-2 rounded-4xl"
           >
             <h1 className="text-[#FFFFFF] font-medium text-2xl">
               {item.title}
@@ -70,7 +92,7 @@ const Plans = () => {
             <h1 className="text-2xl font-bold py-8 text-[#FFFFFF]">
               {item.amount} <span className="text-lg font-normal">/ month</span>
             </h1>
-            <button className="w-full h-15 rounded-4xl text-lg font-medium mb-8 text-[#FFFFFF] border border-[#06B8FF] bg-[#06B8FF42] cursor-pointer hover:bg-linear-to-r hover:from-[#00FB94] hover:to-[#06B8FF]">
+            <button className="w-full h-15 rounded-2xl text-lg font-medium mb-8 text-[#FFFFFF] border border-[#06B8FF] bg-[#06B8FF42] cursor-pointer hover:bg-linear-to-r hover:from-[#00FB94] hover:to-[#06B8FF]">
               {item.btn}
             </button>
             <div>
@@ -90,6 +112,19 @@ const Plans = () => {
                 </div>
               ))}
             </div>
+          </div>
+        ))}
+      </div>
+      <div className="flex flex-col lg:flex-row gap-5 mt-10 mb-5 lg:px-5">
+        {hire.map((item) => (
+          <div key={item.id} className="w-full h-auto  lg:my-5 p-8 rounded-[30px] bg-[#0B1D33] border border-[#FFFFFF33]">
+            <img className="w-17 h-15 object-contain mb-5" src={item.image} alt="" />
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <h1 className="font-bold text-base md:text-2xl text-[#FFFFFF]">{item.title}</h1>
+              <p className="font-bold text-xl md:text-3xl text-[#FFFFFF]">{item.price}</p>
+            </div>
+            <p className="text-[#C6C7C8] text-sm sm:text-base lg:text-xl py-3">{item.para}</p>
+            <button className="w-full h-16 bg-[#06B8FF63] border border-[#06B8FF] text-white rounded-2xl mt-3 cursor-pointer">{item.btn}</button>
           </div>
         ))}
       </div>
