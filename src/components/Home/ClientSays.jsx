@@ -23,7 +23,7 @@ const ClientSays = () => {
   return (
     <div className="max-w-350 mx-auto overflow-hidden px-5 py-10">
       {/* Section Heading */}
-      <Heading title="What Our Clients Saying" />
+      <Heading title="Clients Success Stories" para="Hear from founders and teams we've helped succeed"/>
 
       <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10 md:gap-16">
         <div className="relative w-80 h-80  flex shrink-0 items-center justify-center md:order-1">

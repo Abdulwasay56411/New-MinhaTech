@@ -17,9 +17,9 @@ const Home = () => {
       <HeroSection/>
       <Milestones/>
       <OurServices/>
+      <OurProject/>
       <ToolMagic/>
       <ClientSays/>
-      <OurProject/>
       <AskedQuestion/>
       <Plans/>
       <Work/>
