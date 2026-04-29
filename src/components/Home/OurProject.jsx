@@ -96,16 +96,17 @@ const OurProject = () => {
         {project.map((item) => (
           <div key={item.id} className='bg-[#3E496166] w-full max-w-160 h-auto px-8 py-5 rounded-3xl shadow-[0_0_61px_rgba(6,184,255,0.14)]'>
             <img className='w-full h-auto object-cover' src={item.image} alt="" />
-            <h1 className='font-bold text-3xl text-[#F8F8F8] px-2 py-8'>{item.title}</h1>
+            <h1 className='font-bold text-2xl sm:text-3xl text-[#F8F8F8] px-2 py-8'>{item.title}</h1>
             {item.sections.map((sec, i) => (
               <div key={i} className='py-4 px-2'>
-                <h1 className='font-bold text-xl text-[#06A9EA] py-1'>{sec.label}</h1>
-                <p className='text-xl text-[#C6C7C8]'>{sec.text}</p>
-                <p className='text-[#FFFFFF] text-2xl font-bold'>{sec.download}</p>
+                <h1 className='font-bold text-base sm:text-xl text-[#06A9EA] py-1'>{sec.label}</h1>
+                <p className='text-base sm:text-xl text-[#C6C7C8]'>{sec.text}</p>
+                <p className='text-[#FFFFFF] text-lg sm:text-2xl font-bold'>{sec.download}</p>
               </div>
             ))}
-          <div className='pt-4'>
-          <p className='px-2 text-[#07D580] font-bold text-xl'>{item.link}</p>
+          <div className='flex items-center gap-1 pt-4'>
+          <p className='px-2 text-[#07D580] font-bold cursor-pointer hover:scale-105 duration-300  text-xl'>{item.link}</p>
+          <img className='w-6 h-6 cursor-pointer' src="/Arrow.png" alt="" />
           </div>
           </div>
         ))}
