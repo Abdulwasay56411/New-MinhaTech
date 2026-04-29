@@ -42,9 +42,9 @@ const AskedQuestion = () => {
                         key={item.id}
                         className={`w-full max-w-250 rounded-[30px] border border-[#FFFFFF33] transition-all duration-300 ${isOpen === item.id ? "bg-[#0B1D33]" : "bg-[#192234]  shadow-2xl shadow-[#00000040]"}`}
                     >
-                        <div className='py-5 px-10'>
+                        <div className='py-5 px-5 sm:px-10'>
                             <div className='flex justify-between items-start gap-5'>
-                                <h1 className='font-medium text-xl text-[#E5E5E5]'>{item.title}</h1>
+                                <h1 className='font-medium text-base sm:text-xl text-[#E5E5E5]'>{item.title}</h1>
                                 <div
                                     onClick={() => setIsOpen(isOpen === item.id ? null : item.id)}
                                     className='shrink-0 flex justify-center items-center w-9 h-9 rounded-full cursor-pointer bg-[#0598D3]'
@@ -57,7 +57,7 @@ const AskedQuestion = () => {
                                 </div>
                             </div>
                             <div className={`grid transition-all duration-300 ease-in-out select-none ${isOpen === item.id ? "grid-rows-[1fr] opacity-100 mt-4" : "grid-rows-[0fr] opacity-0"}`}>
-                                <p className='overflow-hidden text-xl text-[#C6C7C8]'>{item.para}</p>
+                                <p className='overflow-hidden text-sm sm:text-xl text-[#C6C7C8]'>{item.para}</p>
                             </div>
                         </div>
                     </div>

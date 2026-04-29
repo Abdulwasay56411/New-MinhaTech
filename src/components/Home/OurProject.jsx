@@ -90,7 +90,7 @@ const project = [
 
 const OurProject = () => {
   return (
-    <div className='max-w-350 mx-auto px-5'>
+    <div className='max-w-350 mx-auto py-10 px-5'>
       <Heading title="Success Stories" para="Premium Projects show casing our Impact" />
       <div className='grid grid-cols-1 lg:grid-cols-2 justify-items-center gap-5'>
         {project.map((item) => (

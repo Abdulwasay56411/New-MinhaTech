@@ -63,12 +63,12 @@ const ClientSays = () => {
             <div className="flex gap-4 justify-end sm:justify-between flex-wrap">
               <div className="flex gap-5">
                 <img
-                  className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover border-2 border-[#00FB94]"
+                  className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover"
                   src={item.image}
                   alt={item.name}
                 />
                 <div className="text-left">
-                  <h1 className="text-xl md:text-2xl text-[#00FB94] font-bold font-montserrat">
+                  <h1 className="text-xl md:text-2xl text-white font-bold font-montserrat">
                     {item.name}
                   </h1>
                   <p className="text-[#FFFFFFD4] text-sm md:text-base font-montserrat opacity-80">
