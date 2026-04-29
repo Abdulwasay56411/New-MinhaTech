@@ -1,14 +1,14 @@
 import React, { useState, useRef, useEffect } from "react";
 
 const image = [
-  { id: 1, image: "/work 1.png", className: "w-[120px] md:w-[230px]" },
-  { id: 2, image: "/work 2.png", className: "w-[90px] md:w-[170px]" },
-  { id: 3, image: "/work 3.png", className: "w-[180px] md:w-[350px]" },
+  { id: 1, image: "/work 1.png", className: "w-[120px] md:w-[150px]" },
+  { id: 2, image: "/work 2.png", className: "w-[90px] md:w-[160px]" },
+  { id: 3, image: "/work 3.png", className: "w-[180px] md:w-[240px]" },
   { id: 4, image: "/work 4.png", className: "w-[40px] md:w-[70px]" },
-  { id: 5, image: "/work 5.png", className: "w-[80px] md:w-[160px]" },
-  { id: 6, image: "/work 6.png", className: "w-[90px] md:w-[175px]" },
-  { id: 7, image: "/work 7.png", className: "w-[80px] md:w-[165px]" },
-  { id: 8, image: "/work 8.png", className: "w-[110px] md:w-[210px]" },
+  { id: 5, image: "/work 5.png", className: "w-[80px] md:w-[140px]" },
+  { id: 6, image: "/work 6.png", className: "w-[90px] md:w-[155px]" },
+  { id: 7, image: "/work 7.png", className: "w-[80px] md:w-[135px]" },
+  { id: 8, image: "/work 8.png", className: "w-[110px] md:w-[140px]" },
 ];
 
 const Work = () => {

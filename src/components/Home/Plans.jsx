@@ -69,11 +69,11 @@ const Plans = () => {
   return (
     <div className="max-w-350 mx-auto px-5 py-10">
       <Heading title="Transparent Pricing" para="Choose the perfect plan for your project" />
-      <div className="flex flex-wrap justify-center gap-x-3 gap-y-5">
+      <div className="grid grid-cols-1 lg:grid-cols-3 justify-items-center gap-5">
         {ourPlans.map((item) => (
           <div
             key={item.id}
-            className="bg-[#0B1D33] border border-[#FFFFFF33] hover:bg-[#00D8FF]/20 hover:shadow-[0_10px_50px_-10px_rgba(0,216,255,0.2)] duration-200 cursor-pointer w-full md:w-100 h-auto p-5 mx-2 rounded-4xl"
+            className="bg-[#0B1D33] border border-[#FFFFFF33] hover:bg-[#00D8FF]/20 hover:shadow-[0_10px_50px_-10px_rgba(0,216,255,0.2)] duration-200 cursor-pointer w-full h-auto p-5 mx-2 rounded-4xl"
           >
             <h1 className="text-[#FFFFFF] font-medium text-2xl">
               {item.title}
@@ -115,9 +115,9 @@ const Plans = () => {
           </div>
         ))}
       </div>
-      <div className="flex flex-col lg:flex-row gap-5 mt-10 mb-5 lg:px-5">
+      <div className="flex flex-col lg:flex-row gap-5 mt-10 mb-5 ">
         {hire.map((item) => (
-          <div key={item.id} className="w-full h-auto  lg:my-5 p-8 rounded-[30px] bg-[#0B1D33] border border-[#FFFFFF33]">
+          <div key={item.id} className="w-full h-auto lg:my-5 p-8 rounded-[30px] bg-[#0B1D33] border border-[#FFFFFF33]">
             <img className="w-17 h-15 object-contain mb-5" src={item.image} alt="" />
             <div className="flex flex-wrap items-center justify-between gap-2">
               <h1 className="font-bold text-base md:text-2xl text-[#FFFFFF]">{item.title}</h1>
