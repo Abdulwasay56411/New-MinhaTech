@@ -92,7 +92,7 @@ const Plans = () => {
             <h1 className="text-2xl font-bold py-8 text-[#FFFFFF]">
               {item.amount} <span className="text-lg font-normal">/ month</span>
             </h1>
-            <button className="w-full h-15 rounded-2xl text-lg font-medium mb-8 text-[#FFFFFF] border border-[#06B8FF] bg-[#06B8FF42] cursor-pointer hover:bg-linear-to-r hover:from-[#00FB94] hover:to-[#06B8FF]">
+            <button className="w-full h-15 rounded-2xl text-lg font-medium mb-8 text-[#FFFFFF] border border-[#06B8FF] bg-[#06B8FF42] cursor-pointer duration-200 hover:bg-linear-to-r hover:from-[#00FB94] hover:to-[#06B8FF] hover:shadow-2xl hover:shadow-[#06B8FF42] hover:scale-102">
               {item.btn}
             </button>
             <div>
@@ -124,7 +124,7 @@ const Plans = () => {
               <p className="font-bold text-xl md:text-3xl text-[#FFFFFF]">{item.price}</p>
             </div>
             <p className="text-[#C6C7C8] text-sm sm:text-base lg:text-xl py-3">{item.para}</p>
-            <button className="w-full h-16 bg-[#06B8FF63] border border-[#06B8FF] text-white rounded-2xl mt-3 cursor-pointer">{item.btn}</button>
+            <button className="w-full h-16 bg-[#06B8FF63] border border-[#06B8FF] text-white rounded-2xl mt-3 cursor-pointer duration-200 hover:scale-102 hover:shadow-2xl hover:shadow-[#06B8FF42]">{item.btn}</button>
           </div>
         ))}
       </div>

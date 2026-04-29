@@ -5,8 +5,8 @@ import OurServices from '../components/Home/OurServices'
 import ToolMagic from '../components/Home/ToolMagic'
 import ClientSays from '../components/Home/ClientSays'
 import OurProject from '../components/Home/OurProject'
+import AskedQuestion from '../components/Home/AskedQuestion'
 import Work from '../components/Home/Work'
-import Faqs from '../components/Home/Faqs'
 import Plans from '../components/Home/Plans'
 import GetInTouch from '../components/Home/GetInTouch'
 
@@ -20,7 +20,7 @@ const Home = () => {
       <ToolMagic/>
       <ClientSays/>
       <OurProject/>
-      <Faqs/>
+      <AskedQuestion/>
       <Plans/>
       <Work/>
       <GetInTouch/>
