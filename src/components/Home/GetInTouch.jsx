@@ -57,7 +57,7 @@ const GetInTouch = () => {
               <p className="text-[#FFFFFF] text-xl font-montserrat">{item.title}</p>
             </div>
           ))}
-          <div className=" w-full md:w-150 mt-5 h-auto border border-[#FFFFFF1A] bg-[#06B8FF26] rounded-[30px] p-8">
+          <div className=" w-full md:w-150 mt-7 h-auto border border-[#FFFFFF1A] bg-[#06B8FF26] rounded-[30px] p-8">
             <h1 className="font-semibold text-2xl pb-3 text-[#FFFFFFD4]">Why Choose MinhaTech?</h1>
             {choose.map((item) => (
               <div key={item.id} className="flex items-center gap-4" >
@@ -67,7 +67,7 @@ const GetInTouch = () => {
             ))}
           </div>
         </div>
-        <div className="w-140 h-auto rounded-3xl bg-[#06B8FF26] border border-[#FFFFFF33] backdrop-blur-2xl shadow-2xl shadow-[#06B8FF33] p-5">
+        <div className="w-140 h-137 rounded-3xl bg-[#06B8FF26] border border-[#FFFFFF33] backdrop-blur-2xl shadow-2xl shadow-[#06B8FF33] p-5">
           <form>
             <label className="block text-white">First Name</label>
             <input
