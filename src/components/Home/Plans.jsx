@@ -73,7 +73,7 @@ const Plans = () => {
         {ourPlans.map((item) => (
           <div
             key={item.id}
-            className="bg-[#06B8FF14] border border-[#06B8FF] w-full md:w-100 h-auto p-5 mx-2 rounded-4xl"
+            className="bg-[#0B1D33] border border-[#FFFFFF33] hover:bg-[#00D8FF]/20 hover:shadow-[0_10px_50px_-10px_rgba(0,216,255,0.2)] duration-200 cursor-pointer w-full md:w-100 h-auto p-5 mx-2 rounded-4xl"
           >
             <h1 className="text-[#FFFFFF] font-medium text-2xl">
               {item.title}

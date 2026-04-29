@@ -1,8 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
 const HeroSection = () => {
-  const [isHover, setIsHover] = useState(null);
-  const [isCursor, setIsCursor] = useState(false);
 
   return (
     <div
