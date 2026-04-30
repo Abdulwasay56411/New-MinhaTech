@@ -48,12 +48,12 @@ const Navbar = () => {
         </div>
       </div>
       {/* Navbar */}
-      <div className={`w-full py-4 px-10 ${isScroll ? "shadow-xl bg-[#0A0D21]/20 backdrop-blur-2xl" : ""
+      <div className={`w-full py-2 sm:py-4 px-4 sm:px-10 ${isScroll ? "shadow-xl bg-[#0A0D21]/20 backdrop-blur-2xl" : ""
         }`}>
         <div className="w-full flex justify-between items-center px-5 py-2 bg-[#8EDFFF33] rounded-[10px]"
 
         >
-          <img className="w-23 h-15 object-contain" src="/MinhaTech.png" alt="" />
+          <img className="w-18 sm:w-23 sm:h-15 object-contain" src="/MinhaTech.png" alt="" />
           <div className="hidden md:flex gap-8 items-center">
             {navbarLink.map((item) => (
               <ul key={item.id} className="group relative py-2">
