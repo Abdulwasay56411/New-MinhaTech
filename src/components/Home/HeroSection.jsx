@@ -19,7 +19,7 @@ const HeroSection = () => {
         
         {/* Left Side - Content */}
         <div className='w-full lg:w-[48%] xl:w-[45%] text-center lg:text-left space-y-3 md:space-y-5'>
-          <h1 className='font-bold text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-[#F2F6F7] leading-tight font-poppins'>
+          <h1 className='font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-8 sm:leading-12 lg:leading-18 text-[#F2F6F7]  font-poppins'>
             Mobile App<span className='text-[#06A9EA]'> Development</span> <br /> That Drive Results
           </h1>
           <p className='text-[#C6C7C8] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-montserrat'>
