@@ -43,50 +43,39 @@ const Counter = ({ endValue, suffix }) => {
 };
 
 const Milestones = () => {
-  return (
-    <div id="about" className="max-w-350 mx-auto px-5 py-10">
-      <Heading title="What We Delivered" para="Delivering measurable results through innovation, performance and user-focused mobile solutions" />
-      <div className="flex items-center">
-        <img
-          className="object-cover"
-          src="/milestones.png"
-          alt=""
-        />
-      </div>
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 px-5 py-10 items-start text-[#EFEFEF]">
-        <div className="w-full h-64 rounded-3xl bg-[#0598D333] border border-[#0776A333] flex flex-col justify-between py-10 items-center">
-          <h1 className="font-poppins font-bold text-5xl md:text-6xl">
-            <Counter endValue={5} suffix="B+" />
-          </h1>
-          <p className="font-montserrat text-lg md:text-[24px] text-center px-2">
-            Downloads
-          </p>
-        </div>
-        <div className="w-full h-52 rounded-3xl mt-11 bg-[#0598D333] border border-[#0776A333] flex flex-col justify-between py-8 items-center">
-          <h1 className="font-poppins font-bold text-5xl md:text-6xl">
-            <Counter endValue={98} suffix="%" />
-          </h1>
-          <p className="font-montserrat text-lg md:text-[24px]  text-center px-2">
-            Client Satisfaction
-          </p>
-        </div>
-        <div className="w-full h-64 rounded-3xl bg-[#0598D333] border border-[#0776A333] flex flex-col justify-between py-10 items-center">
-          <h1 className="font-poppins font-bold text-5xl md:text-6xl">
-            <Counter endValue={900} suffix="+" />
-          </h1>
-          <p className="font-montserrat text-lg md:text-[24px] text-center px-2">
-            Successful Projects
-          </p>
-        </div>
+  // 1. Dummy Data Array
+  const milestonesData = [
+    { id: 1, value: 5, suffix: "B+", label: "Downloads" },
+    { id: 2, value: 98, suffix: "%", label: "Client Satisfaction" },
+    { id: 3, value: 900, suffix: "+", label: "Successful Projects" },
+    { id: 4, value: 300, suffix: "+", label: "Partners" },
+  ];
 
-        <div className="w-full h-52 rounded-3xl  md:mt-0 lg:mb-11 bg-[#0598D333] border border-[#0776A333] backdrop-blur-sm flex flex-col justify-between py-8 items-center">
-          <h1 className="font-poppins font-bold text-5xl md:text-6xl">
-            <Counter endValue={300} suffix="+" />
-          </h1>
-          <p className="font-montserrat text-lg md:text-[24px] text-center px-2">
-            Partners
-          </p>
-        </div>
+  return (
+    <div id="about" className="max-w-350 mx-auto px-5 py-5">
+      <Heading 
+        title="What We Delivered" 
+        para="Delivering measurable results through innovation, performance and user-focused mobile solutions" 
+      />
+      
+      <div className="flex items-center">
+        <img className="object-cover" src="/" alt="Milestones" />
+      </div>
+
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 px-5 py-6 items-start">
+        {milestonesData.map((item) => (
+          <div 
+            key={item.id} 
+            className="w-full h-44 rounded-3xl bg-[#173C4C] border border-[#FFFFFF1A] flex flex-col justify-between py-8 items-center backdrop-blur-sm"
+          >
+            <h1 className="font-poppins text-[#FFFFFF] font-semibold text-5xl md:text-6xl">
+              <Counter endValue={item.value} suffix={item.suffix} />
+            </h1>
+            <p className="font-montserrat text-lg md:text-[24px] pt-2 text-center text-[#C6C7C8] px-2">
+              {item.label}
+            </p>
+          </div>
+        ))}
       </div>
     </div>
   );
