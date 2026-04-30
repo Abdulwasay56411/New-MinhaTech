@@ -50,7 +50,7 @@ const Navbar = () => {
       {/* Navbar */}
       <div className={`w-full py-2 sm:py-4 px-4 sm:px-10 ${isScroll ? "shadow-xl bg-[#0A0D21]/20 backdrop-blur-2xl" : ""
         }`}>
-        <div className="w-full flex justify-between items-center px-5 py-2 bg-[#8EDFFF33] rounded-[10px]"
+        <div className="w-full max-w-350 mx-auto flex justify-between items-center px-5 py-2 bg-[#8EDFFF33] rounded-[10px]"
 
         >
           <img className="w-18 sm:w-23 sm:h-15 object-contain" src="/MinhaTech.png" alt="" />
@@ -79,10 +79,7 @@ const Navbar = () => {
             {/* Button */}
             <HashLink smooth to="/#contact">
               <button
-                className={`text-[#ffffff] cursor-pointer w-39 rounded-xl h-12 border border-[#00FB94] font-medium hover:scale-105 duration-300 z-10 ${isCursor
-                  ? "bg-linear-to-r from-[#00FB94] to-[#00FB94]"
-                  : "bg-linear-to-r from-[#00FB94] to-[#06B8FF]"
-                  }`}
+                className="text-[#ffffff] bg-linear-to-r from-[#00FB94] to-[#06B8FF] cursor-pointer w-39 rounded-xl h-12 border border-[#00FB94] hover:shadow-[0px_5px_10px_rgba(6,184,255,0.45)] font-medium hover:scale-105 duration-300"
               >
                 Contact Us
               </button>
