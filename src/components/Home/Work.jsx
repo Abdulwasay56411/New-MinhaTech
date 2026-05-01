@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const image = [
   { id: 1, image: "/work 1.png", className: "w-[120px] md:w-[150px]" },
@@ -48,7 +49,12 @@ const Work = () => {
   }, []);
 
   return (
-    <div className="max-w-350 mx-auto">
+    <motion.div
+    initial={{opacity: 0, y:50}}
+    whileInView={{opacity: 1, y:0}}
+    transition={{duration: 1.2, ease: "easeOut"}}
+    viewport={{once: true, amount: 0.2}}
+    className="max-w-350 mx-auto">
       <div className="overflow-hidden mt-14 w-full h-20 bg-[#0A1E38] flex items-center">
         <div
           ref={scrollRef}
@@ -68,7 +74,7 @@ const Work = () => {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

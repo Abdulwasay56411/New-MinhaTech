@@ -1,5 +1,6 @@
 import React from "react";
 import Heading from "../Heading";
+import { motion } from "framer-motion";
 
 const mail = [
   {
@@ -45,7 +46,12 @@ const choose = [
 
 const GetInTouch = () => {
   return (
-    <div id="contact" className="max-w-350 mx-auto px-5 py-10">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1.2, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.2 }}
+      id="contact" className="max-w-350 mx-auto px-5 py-10">
       <Heading title="Let’s Build Something Amazing" para="Ready to turn your app idea into reality? Get in touch today" />
       <div className="flex flex-wrap justify-center lg:justify-between gap-4">
         <div>
@@ -71,21 +77,21 @@ const GetInTouch = () => {
           <form>
             <label className="block text-white">First Name</label>
             <input
-              className="w-full h-14 bg-[#AFECFF1A] mt-3 mb-6 rounded-[20px] outline-none px-5 text-[#C6C7C880] font-semibold font-montserrat text-lg"
+              className="w-full h-14 bg-[#AFECFF1A] mt-3 mb-6 rounded-[20px] outline-none px-5 text-[#C6C7C8BD] font-semibold font-montserrat text-lg"
               type="text"
               placeholder="First Name"
               required
             />
             <label className="block text-white">Email</label>
             <input
-              className="w-full h-14 bg-[#AFECFF1A] mt-3 mb-6 rounded-[20px] outline-none px-5 text-[#C6C7C880] font-semibold font-montserrat text-lg"
+              className="w-full h-14 bg-[#AFECFF1A] mt-3 mb-6 rounded-[20px] outline-none px-5 text-[#C6C7C8BD] font-semibold font-montserrat text-lg"
               type="email"
               placeholder="Email"
               required
             />
             <label className="block text-white">Project Details</label>
             <textarea
-              className="resize-none w-full h-38 outline-none mt-3 p-5 rounded-[20px] bg-[#AFECFF1A] text-[#C6C7C880]"
+              className="resize-none w-full h-38 outline-none mt-3 p-5 rounded-[20px] bg-[#AFECFF1A] text-[#C6C7C8BD]"
               placeholder="Tell us about your project idea"
               required
             ></textarea>
@@ -100,7 +106,7 @@ const GetInTouch = () => {
           </form>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

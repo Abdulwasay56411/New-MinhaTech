@@ -10,16 +10,20 @@ const HeroSection = () => {
     { id: 5, image: "/hero 5.png" },
   ];
 
-  // Images ko repeat karo for smooth infinite scroll
   const repeatedImages = [...heroImages, ...heroImages, ...heroImages, ...heroImages];
 
   return (
     <div className='w-full px-4 sm:px-6 md:px-8 lg:px-10 overflow-hidden'>
-      <div className='max-w-350 mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 py-6 md:py-10'>
-        
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.2 }}
+        className='max-w-350 mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12'>
+
         {/* Left Side - Content */}
-        <div className='w-full lg:w-[48%] xl:w-[45%] text-center lg:text-left space-y-3 md:space-y-5'>
-          <h1 className='font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-8 sm:leading-12 lg:leading-18 text-[#F2F6F7]  font-poppins'>
+        <div className='w-full lg:w-[48%] xl:w-[45%] text-center pt-10 lg:pt-20 lg:text-left space-y-3 md:space-y-5'>
+          <h1 className='font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-8 sm:leading-12 lg:leading-18 text-[#F2F6F7] font-poppins'>
             Mobile App<span className='text-[#06A9EA]'> Development</span> <br /> That Drive Results
           </h1>
           <p className='text-[#C6C7C8] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-montserrat'>
@@ -35,12 +39,16 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Right Side - Images */}
-        <div className='w-full lg:w-[48%] xl:w-[45%] flex justify-center lg:justify-end items-center mt-6 lg:mt-0'>
-          
-          {/* Mobile View */}
+        <div className='relative w-full lg:w-[48%] xl:w-[45%] flex justify-center lg:justify-end items-center mt-6 lg:mt-0'>
+
+          <div className="absolute top-0 left-0 w-full h-5 lg:backdrop-blur-sm to-transparent z-10 pointer-events-none"></div>
+
+          <div className="absolute bottom-0 left-0 w-full h-5 lg:backdrop-blur-sm to-transparent z-10 pointer-events-none"></div>
+
+
+
           <div className='lg:hidden flex gap-2 sm:gap-3 justify-center'>
-            {/* Column 1 - Moving Down */}
+
             <div className='relative h-80 sm:h-96 w-32 sm:w-40 overflow-hidden rounded-xl'>
               <motion.div
                 className='flex flex-col gap-3 sm:gap-4'
@@ -62,8 +70,6 @@ const HeroSection = () => {
                 ))}
               </motion.div>
             </div>
-
-            {/* Column 2 - Moving Up */}
             <div className='relative h-80 sm:h-96 w-32 sm:w-40 overflow-hidden rounded-xl'>
               <motion.div
                 className='flex flex-col gap-3 sm:gap-4'
@@ -136,8 +142,7 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-
-      </div>
+      </motion.div>
     </div>
   );
 };

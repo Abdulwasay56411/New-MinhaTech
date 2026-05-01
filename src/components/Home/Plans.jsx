@@ -1,5 +1,6 @@
 import React from "react";
 import Heading from "../Heading";
+import { motion } from "framer-motion";
 
 const ourPlans = [
   {
@@ -67,7 +68,12 @@ const hire = [
 
 const Plans = () => {
   return (
-    <div className="max-w-350 mx-auto px-5 py-10">
+    <motion.div
+    initial={{opacity: 0, y:50}}
+    whileInView={{opacity: 1, y:0}}
+    transition={{duration: 1.2, ease: "easeOut"}}
+    viewport={{once: true, amount: 0.2}}
+    className="max-w-350 mx-auto px-5 py-10">
       <Heading title="Transparent Pricing" para="Choose the perfect plan for your project" />
       <div className="grid grid-cols-1 lg:grid-cols-3 justify-items-center gap-5">
         {ourPlans.map((item) => (
@@ -115,7 +121,7 @@ const Plans = () => {
           </div>
         ))}
       </div>
-      <div className="flex flex-col lg:flex-row gap-5 mt-10 mb-5 ">
+      <div className="flex flex-col lg:flex-row gap-5 my-5 ">
         {hire.map((item) => (
           <div key={item.id} className="w-full h-auto lg:my-5 p-8 rounded-[30px] bg-[#0B1D33] border border-[#FFFFFF33]">
             <img className="w-17 h-15 object-contain mb-5" src={item.image} alt="" />
@@ -128,7 +134,7 @@ const Plans = () => {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

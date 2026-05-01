@@ -28,27 +28,29 @@ const Navbar = () => {
   return (
     <div className="sticky font-montserrat top-0 left-0 z-50 w-full mx-auto">
       {/*  Topbar */}
-      <div className="w-full sm:flex sm:flex-row sm:justify-between items-center flex flex-col justify-center px-4 md:px-8 lg:px-10 py-1.5 bg-[#0598D333] backdrop-blur-sm text-white">
-        <div className="flex flex-col items-center sm:gap-0 sm:w-100 sm:flex sm:flex-row sm:justify-between">
-          <p className="flex text-sm sm:text-base items-center gap-3">
-            {" "}
-            <MdEmail size={20} />
-            contact@minhatech.org
-          </p>
-          <p className="flex  text-sm sm:text-base  items-center gap-3">
-            <IoMdCall size={20} />
-            03440460091
-          </p>
-        </div>
-        <div className="flex pt-1 items-center gap-3 lg:gap-5">
-          <FaLinkedinIn size={14} />
-          <FaInstagram size={14} />
-          <FaFacebookF size={14} />
+      <div className="bg-[#0598D333] backdrop-blur-sm w-full">
+        <div className="max-w-350 mx-auto sm:flex sm:flex-row sm:justify-between items-center flex flex-col justify-center px-6 py-1.5 text-white">
+          <div className="flex flex-col items-center sm:gap-0 sm:w-100 sm:flex sm:flex-row sm:justify-between">
+            <p className="flex text-sm sm:text-base items-center gap-3">
+              {" "}
+              <MdEmail size={20} />
+              contact@minhatech.org
+            </p>
+            <p className="flex  text-sm sm:text-base  items-center gap-3">
+              <IoMdCall size={20} />
+              03440460091
+            </p>
+          </div>
+          <div className="flex pt-1 items-center gap-3 lg:gap-5">
+            <FaLinkedinIn size={14} />
+            <FaInstagram size={14} />
+            <FaFacebookF size={14} />
 
+          </div>
         </div>
       </div>
       {/* Navbar */}
-      <div className={`w-full py-2 sm:py-4 px-4 sm:px-10 ${isScroll ? "shadow-xl bg-[#0A0D21]/20 backdrop-blur-2xl" : ""
+      <div className={`w-full pt-2 sm:pt-4 px-5 ${isScroll ? "shadow-xl bg-[#0A0D21]/20 backdrop-blur-2xl" : ""
         }`}>
         <div className="w-full max-w-350 mx-auto flex justify-between items-center px-5 py-2 bg-[#8EDFFF33] rounded-[10px]"
 

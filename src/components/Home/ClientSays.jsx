@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
+import React, { useState, useEffect } from "react"; 
+import { motion } from "framer-motion"; 
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Heading from "../Heading";
 
@@ -7,26 +7,37 @@ const ClientSays = () => {
   const [currentCard, setCurrentCard] = useState(0);
 
   const handleNext = () => {
-    if (currentCard < ourClient.length - 1) {
-      setCurrentCard((prev) => prev + 1);
-    }
+   
+    setCurrentCard((prev) => (prev < ourClient.length - 1 ? prev + 1 : 0));
   };
 
   const handleprev = () => {
-    if (currentCard > 0) {
-      setCurrentCard((prev) => prev - 1);
-    }
+    setCurrentCard((prev) => (prev > 0 ? prev - 1 : ourClient.length - 1));
   };
+
+  
+  useEffect(() => {
+    const timer = setInterval(() => {
+      handleNext();
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, [currentCard]); 
+  // -----------------------
 
   const item = ourClient[currentCard];
 
   return (
-    <div className="max-w-350 mx-auto overflow-hidden px-5 py-10">
-      {/* Section Heading */}
+    <motion.div
+    initial={{opacity: 0, y:50}}
+    whileInView={{opacity: 1, y:0}}
+    transition={{duration: 1.2, ease: "easeOut"}}
+    viewport={{once: true, amount: 0.2}}
+    className="max-w-350 mx-auto overflow-hidden px-5 py-10">
       <Heading title="Clients Success Stories" para="Hear from founders and teams we've helped succeed"/>
 
       <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10 md:gap-16">
-        <div className="relative w-80 h-80  flex shrink-0 items-center justify-center md:order-1">
+        <div className="relative w-80 h-80 flex shrink-0 items-center justify-center md:order-1">
           <motion.div
             animate={{ rotate: 360 }}
             transition={{
@@ -52,9 +63,18 @@ const ClientSays = () => {
 
           <img src="/Vector.png" alt="quotes" className="w-24 h-auto z-10" />
         </div>
+
         <div className="max-w-190 px-2 md:px-5 lg:px-10 md:order-2">
-          <div key={item.id} className="w-full">
-            <p className="text-[#FFFFFFD4] text-base md:text-2xl font-montserrat font-light leading-relaxed  md:text-left">
+          {/* Content with Framer Motion Animation */}
+          <motion.div 
+            key={item.id} 
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -20 }}
+            transition={{ duration: 0.5 }}
+            className="w-full"
+          >
+            <p className="text-[#FFFFFFD4] text-base md:text-2xl font-montserrat font-light leading-relaxed md:text-left">
               {item.para}
             </p>
 
@@ -76,34 +96,27 @@ const ClientSays = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex flex-col justify-center items-center w-30 sm:w-40 h-11 rounded-4xl bg-[#06B8FF40]  ">
+
+              <div className="flex flex-col justify-center items-center w-30 sm:w-40 h-11 rounded-4xl bg-[#06B8FF40]">
                 <div className="flex items-center gap-5 select-none">
                   <FaChevronLeft
                     onClick={handleprev}
-                    className={`text-xl sm:text-2xl ${
-                      currentCard === 0
-                        ? "text-[#00FB9480]"
-                        : "text-[#00FB94] cursor-pointer"
-                    }`}
+                    className="text-xl sm:text-2xl text-[#00FB94] cursor-pointer"
                   />
                   <h1 className="text-[#06B8FF]">
                     {currentCard + 1} / {ourClient.length}
                   </h1>
                   <FaChevronRight
                     onClick={handleNext}
-                    className={`text-xl sm:text-2xl ${
-                      currentCard === ourClient.length - 1
-                        ? "text-[#00FB9480] "
-                        : "text-[#00FB94] cursor-pointer"
-                    }`}
+                    className="text-xl sm:text-2xl text-[#00FB94] cursor-pointer"
                   />
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -119,16 +132,16 @@ const ourClient = [
   },
   {
     id: 2,
-    para: "“ MinhaTech Pub has been a game changer for us. Their expertise in app design and ideation helped us bring our vision to life, resulting in a product that exceeded our expectations”",
-    image: "/Client.png",
-    name: "Conor Bradley",
-    text: "Senior Marketing Specialist, TechNova",
+    para: "“From concept to launch, MinhaTech Pub demonstrated exceptional professionalism and creativity. Their team turned our idea into a powerful app that align our business goals.”",
+    image: "/client 2.png",
+    name: "Ahmed Rehman",
+    text: "Founder and Ceo, Revo Tech",
   },
   {
     id: 3,
-    para: "“ This is 3rd MinhaTech Pub has been a game changer for us. Their expertise in app design and ideation helped us bring our vision to life, resulting in a product that exceeded our expectations”",
-    image: "/Client.png",
-    name: "Conor Bradley",
-    text: "Senior Marketing Specialist, TechNova",
+    para: "“They didn’t just build an app they built a complete digital experience for our users. Highly recommended for anyone serious about quality.”",
+    image: "/client 3.png",
+    name: "James Carter",
+    text: "Creative Director, NovaSphere",
   },
 ];

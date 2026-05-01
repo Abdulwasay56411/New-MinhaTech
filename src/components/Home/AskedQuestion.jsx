@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Heading from '../Heading'
+import { motion } from 'framer-motion'
 
 const question = [
     {
@@ -10,22 +11,22 @@ const question = [
     {
         id: 2,
         title: "How much does app development cost?",
-        para: "The timeline depends on the app’s complexity and features. A simple app may take 4–6 weeks, while a more advanced app can take 2–4 months. We always provide a clear timeline after understanding your requirements."
+        para: "The cost varies based on design, features and platform (Android/iOS). We offer flexible pricing and custom packages to match your budget and business needs."
     },
     {
         id: 3,
         title: "Do you provide both Android and iOS app development?",
-        para: "The timeline depends on the app’s complexity and features. A simple app may take 4–6 weeks, while a more advanced app can take 2–4 months. We always provide a clear timeline after understanding your requirements."
+        para: "Yes, we develop apps for both Android and iOS platforms. We also offer cross-platform solutions to help you reach a wider audience efficiently."
     },
     {
         id: 4,
         title: "Will you help publish the app on App Store & Play Store?",
-        para: "The timeline depends on the app’s complexity and features. A simple app may take 4–6 weeks, while a more advanced app can take 2–4 months. We always provide a clear timeline after understanding your requirements."
+        para: "Absolutely! We handle the complete deployment process, including submission optimization and ensuring your app meets all store guidelines."
     },
     {
         id: 5,
         title: "Do you provide support after the app is launched?",
-        para: "The timeline depends on the app’s complexity and features. A simple app may take 4–6 weeks, while a more advanced app can take 2–4 months. We always provide a clear timeline after understanding your requirements."
+        para: "Yes, we offer ongoing support and maintenance to ensure your app runs smoothly, stays updated and performs at its best."
     },
 ]
 
@@ -34,7 +35,12 @@ const AskedQuestion = () => {
     const [isOpen, setIsOpen] = useState(null);
 
     return (
-        <div className='max-w-350 mx-auto px-5'>
+        <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.2 }}
+            className='max-w-350 mx-auto px-5'>
             <Heading title="Frequently Asked Questions" para="Everything you need to know about working with us" />
             <div className='flex flex-col items-center justify-center gap-5'>
                 {question.map((item) => (
@@ -57,13 +63,13 @@ const AskedQuestion = () => {
                                 </div>
                             </div>
                             <div className={`grid transition-all duration-300 ease-in-out select-none ${isOpen === item.id ? "grid-rows-[1fr] opacity-100 mt-4" : "grid-rows-[0fr] opacity-0"}`}>
-                                <p className='overflow-hidden text-sm sm:text-xl text-[#C6C7C8]'>{item.para}</p>
+                                <p className='overflow-hidden text-sm sm:text-base text-[#C6C7C8]'>{item.para}</p>
                             </div>
                         </div>
                     </div>
                 ))}
             </div>
-        </div>
+        </motion.div>
     )
 }
 

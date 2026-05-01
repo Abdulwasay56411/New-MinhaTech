@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Heading from "../Heading";
+import { motion } from "framer-motion";
 
 const Counter = ({ endValue, suffix }) => {
   const [count, setCount] = useState(0);
@@ -52,7 +53,12 @@ const Milestones = () => {
   ];
 
   return (
-    <div id="about" className="max-w-350 mx-auto px-5 py-5">
+    <motion.div 
+    initial={{opacity: 0, y:50}}
+    whileInView={{opacity: 1, y:0}}
+    transition={{duration: 1.2, ease: "easeOut"}}
+    viewport={{once: true, amount: 0.2}}
+    id="about" className="max-w-350 mx-auto px-5 py-5">
       <Heading 
         title="What We Delivered" 
         para="Delivering measurable results through innovation, performance and user-focused mobile solutions" 
@@ -77,7 +83,7 @@ const Milestones = () => {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 const footerText = [
@@ -23,7 +24,12 @@ const footerText = [
 const Footer = () => {
   return (
     <footer className="mt-20 bg-linear-to-t from-[#12253E] to-[#12253E00] w-full py-2">
-      <div className="max-w-350 mx-auto px-6 md:px-10 py-10">
+      <motion.div 
+      initial={{opacity: 0, y:50}}
+      whileInView={{opacity: 1, y:0}}
+      transition={{duration: 1.2, ease: "easeOut"}}
+      viewport={{once: true, amount: 0.2}}
+      className="max-w-350 mx-auto px-5 py-10">
         <div className="flex flex-col lg:flex-row lg:justify-between gap-10">
           <div>
             <h1 className="text-[#06B8FF] font-semibold text-5xl">
@@ -57,7 +63,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-16 overflow-hidden">
-          <h1 className="text-shine text-[clamp(40px,13vw,200px)] sm:text-[clamp(40px,14vw,200px)] font-bold text-[#FFFFFF1A] uppercase tracking-[0.07em] leading-none w-full">
+          <h1 className="text-shine text-[clamp(40px,13.5vw,200px)] sm:text-[clamp(40px,14vw,200px)] md:text-[clamp(40px,14.5vw,200px)] font-bold text-[#FFFFFF1A] uppercase tracking-[0.07em] leading-none w-full">
             MINHATECH
           </h1>
         </div>
@@ -68,12 +74,12 @@ const Footer = () => {
             ©2022-2023 Minha Tech. All Rights Reserved
           </p>
           <div className="flex gap-8">
-            <p className="font-medium text-sm text-[#FFFFFFC7] cursor-pointer">Privacy Policy</p>
-            <p className="font-medium text-sm text-[#FFFFFFC7] cursor-pointer">Terms of Use</p>
+            <p className="font-medium text-sm text-[#FFFFFFC7] cursor-pointer hover:scale-105">Privacy Policy</p>
+            <p className="font-medium text-sm text-[#FFFFFFC7] cursor-pointer hover:scale-105">Terms of Use</p>
           </div>
         </div>
 
-      </div>
+      </motion.div>
     </footer>
   );
 };

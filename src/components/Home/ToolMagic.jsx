@@ -1,5 +1,6 @@
 import React from "react";
 import Heading from "../Heading";
+import { motion } from "framer-motion";
 
 
 const toolImages = [
@@ -16,26 +17,32 @@ const processImage = [
   {
     id: 1,
     image: "/idea.png",
+    title: "Idea",
   },
   {
     id: 2,
     image: "/designer 1.png",
+    title: "Design",
   },
   {
     id: 3,
     image: "/developer 1.png",
+    title: "Development",
   },
   {
     id: 4,
     image: "/testing.png",
+    title: "Testing",
   },
   {
     id: 5,
     image: "/launch.png",
+    title: "Lunch",
   },
   {
     id: 6,
     image: "/growth.png",
+    title: "Growth"
   },
 ]
 
@@ -44,20 +51,26 @@ const ToolMagic = () => {
 
   return (
     <div className="bg-linear-to-r from-[#09182B00] to-[#112139] pb-14">
-      <div className="max-w-350 mx-auto">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.2 }}
+        className="max-w-350 mx-auto">
         <div className="pb-14 px-10">
           <Heading title="Our Process" para="A proven methodology from concept to market success" />
-          <div className="relative flex flex-wrap justify-center lg:justify-between gap-5 py-10">
+          <div className="relative flex flex-wrap justify-center lg:justify-between gap-x-5 gap-y-12 py-10">
 
             <div className="hidden lg:block absolute top-1/2 left-0 w-full h-0.5 bg-linear-to-r from-[#06B8FF33] via-[#06B8FF] to-[#06B8FF33] -translate-y-1/2 z-0"></div>
 
             {processImage.map((item) => (
               <div key={item.id} className="relative z-10 flex flex-col items-center group">
 
-                <div className="w-20 h-20 sm:w-34 sm:h-34 rounded-lg sm:rounded-2xl bg-linear-to-t p-0.5 from-[#06B8FF] to-[#00FB94B2] sm:shadow-[0px_4px_34.5px_0px_rgba(6,184,255,0.38)] cursor-pointer hover:scale-105 duration-200">
+                <div className="w-22 h-22 sm:w-34 sm:h-34 rounded-lg sm:rounded-2xl bg-linear-to-t p-0.5 from-[#06B8FF] to-[#00FB94B2] sm:shadow-[0px_4px_34.5px_0px_rgba(6,184,255,0.38)] cursor-pointer hover:scale-105 duration-200">
                   <div className="w-full h-full bg-[#09182B] rounded-[5px] sm:rounded-2xl flex items-center justify-center">
-                    <img className="w-10 h-10 sm:w-15 sm:h-15 object-contain" src={item.image} alt={item.title} />
+                    <img className="w-10 h-10 sm:w-15 sm:h-15 object-contain" src={item.image} />
                   </div>
+                  <h1 className="text-center text-[#FFFFFFD4] text-xs sm:text-xl font-semibold py-2">{item.title}</h1>
                 </div>
               </div>
             ))}
@@ -77,7 +90,7 @@ const ToolMagic = () => {
             ))}
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
