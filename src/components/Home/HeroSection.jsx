@@ -31,7 +31,7 @@ const HeroSection = () => {
             <p className='text-[#C6C7C8] lg:max-w-lg text-sm sm:text-base md:text-lg lg:text-xl font-montserrat'>
               Transforming ideas into seamless digital experiences people love to use
             </p>
-            <div className='flex flex-wrap gap-3 sm:gap-4 pt-3 md:pt-12 pb-10 justify-center lg:justify-start'>
+            <div className='flex flex-wrap gap-3 sm:gap-4 pt-3 md:pt-12 justify-center lg:justify-start'>
               <button className='bg-linear-to-r from-[#06A9EA] to-[#06D27E] px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 rounded-3xl text-white font-semibold shadow-lg shadow-blue-500/20 text-xs sm:text-sm md:text-base cursor-pointer hover:scale-105 transition-transform'>
                 Get Free App Consultation
               </button>
