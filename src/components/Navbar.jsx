@@ -5,6 +5,19 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { HashLink } from "react-router-hash-link";
 import { FaPlus } from "react-icons/fa";
 
+// 1. Variables ko hamesha component se pehle rakhein taake error na aaye
+const navbarLink = [
+  { id: 1, name: "Home", Link: "/#home" },
+  { id: 2, name: "Projects", Link: "/#project" },
+  { id: 3, name: "Services", Link: "/#services" },
+  { id: 4, name: "About Us", Link: "/#about" },
+];
+
+const menuNavbar = [
+  ...navbarLink,
+  { id: 5, name: "Contact Us", Link: "/#contact" },
+];
+
 const Navbar = () => {
   const [isCursor, setIsCursor] = useState(false);
   const [isScroll, setIsScroll] = useState(false);
@@ -47,20 +60,16 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-
-      {/* Navbar Main Wrapper */}
-      <div className={`w-full transition-all duration-300 ${isScroll ? "shadow-xl bg-[#0A0D21]/20 backdrop-blur-2xl" : ""}`}>
-        {/* Is max-w container ki padding Topbar ke barabar honi chiye */}
+      <div className="w-full transition-all duration-300 shadow-xl bg-[#0A0D21]/20 backdrop-blur-2xl">
         <div className="max-w-350 mx-auto px-5 pt-2 sm:pt-4 pb-2">
-          {/* Main Navbar Box */}
           <div className="w-full flex justify-between items-center px-5 py-2 bg-[#8EDFFF33] rounded-[10px]">
-            <img className="w-18 sm:w-23 sm:h-15 object-contain" src="/MinhaTech.png" alt="" />
+            <img className="w-18 sm:w-23 sm:h-15 object-contain" src="/MinhaTech.png" alt="MinhaTech Logo" />
             
-            <div className="hidden md:flex gap-8 items-center">
+            <div className="hidden md:flex gap-10 items-center">
               {navbarLink.map((item) => (
                 <ul key={item.id} className="group relative py-2">
                   <HashLink smooth to={item.Link}>
-                    <li className="md:text-sm lg:text-xl cursor-pointer text-center text-[#FFFFFF] font-montserrat font-medium">
+                    <li className="md:text-sm lg:text-base cursor-pointer text-center text-[#FFFFFF] font-montserrat font-medium">
                       {item.name}
                     </li>
                   </HashLink>
@@ -75,7 +84,7 @@ const Navbar = () => {
               className="hidden md:flex group cursor-pointer items-center"
             >
               <HashLink smooth to="/#contact">
-                <button className="text-[#ffffff] bg-linear-to-r from-[#00FB94] to-[#06B8FF] cursor-pointer w-39 rounded-xl h-12 border border-[#00FB94] hover:shadow-[0px_5px_10px_rgba(6,184,255,0.45)] font-medium hover:scale-105 duration-300">
+                <button className="text-[#ffffff] bg-linear-to-r from-[#00FB94] to-[#06B8FF] cursor-pointer w-39 rounded-xl h-12 border border-[#00FB94] hover:shadow-[0px_5px_10px_rgba(6,184,255,0.45)]  font-medium hover:scale-105 duration-300">
                   Contact Us
                 </button>
               </HashLink>
@@ -90,6 +99,7 @@ const Navbar = () => {
                 </div>
                 <FaPlus className={`text-xs text-white transition-all duration-300 ${isOpen ? "rotate-45" : "rotate-0"}`} />
               </div>
+              
               <div className={`absolute right-0 top-10 w-41 h-auto shadow-2xl rounded-lg px-5 py-4 text-white bg-[#0A1E38] transform transition-all duration-300 z-50 ${isOpen ? "translate-x-0 opacity-100 scale-100" : "translate-x-10 opacity-0 scale-95 pointer-events-none"}`}>
                 {menuNavbar.map((item) => (
                   <HashLink key={item.id} smooth to={item.Link} onClick={() => setIsOpen(false)}>
@@ -106,15 +116,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-const navbarLink = [
-  { id: 1, name: "Home", Link: "/#home" },
-  { id: 2, name: "Projects", Link: "/#project" },
-  { id: 3, name: "Services", Link: "/#services" },
-  { id: 4, name: "About Us", Link: "/#about" },
-];
-
-const menuNavbar = [
-  ...navbarLink,
-  { id: 5, name: "Contact Us", Link: "/#contact" },
-];
