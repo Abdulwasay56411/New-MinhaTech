@@ -50,7 +50,7 @@ const processImage = [
 const ToolMagic = () => {
 
   return (
-    <div className="bg-linear-to-r from-[#09182B00] to-[#112139] pb-14">
+    <div className="pb-14">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -66,9 +66,9 @@ const ToolMagic = () => {
             {processImage.map((item) => (
               <div key={item.id} className="relative z-10 flex flex-col items-center group">
 
-                <div className="w-22 h-22 sm:w-34 sm:h-34 rounded-lg sm:rounded-2xl bg-linear-to-t p-0.5 from-[#06B8FF] to-[#00FB94B2] sm:shadow-[0px_4px_34.5px_0px_rgba(6,184,255,0.38)] cursor-pointer hover:scale-105 duration-200">
+                <div className="w-22 h-22 sm:w-30 sm:h-30 rounded-lg sm:rounded-2xl bg-linear-to-t p-0.5 from-[#06B8FF] to-[#00FB94B2] sm:shadow-[0px_4px_34.5px_0px_rgba(6,184,255,0.38)] cursor-pointer hover:scale-105 duration-200">
                   <div className="w-full h-full bg-[#09182B] rounded-[5px] sm:rounded-2xl flex items-center justify-center">
-                    <img className="w-10 h-10 sm:w-15 sm:h-15 object-contain" src={item.image} />
+                    <img className="w-10 h-10 sm:w-12 sm:h-12 object-contain" src={item.image} />
                   </div>
                   <h1 className="text-center text-[#FFFFFFD4] text-xs sm:text-xl font-semibold py-2">{item.title}</h1>
                 </div>
