@@ -77,21 +77,21 @@ const GetInTouch = () => {
           <form>
             <label className="block text-white">First Name</label>
             <input
-              className="w-full h-14 bg-[#AFECFF1A] mt-3 mb-6 rounded-[20px] outline-none px-5 text-[#C6C7C8BD] font-semibold font-montserrat text-lg"
+              className="w-full h-14 bg-[#AFECFF1A] mt-3 mb-6 rounded-[20px] outline-none px-5 text-[#C6C7C8] font-medium font-montserrat text-lg"
               type="text"
               placeholder="First Name"
               required
             />
             <label className="block text-white">Email</label>
             <input
-              className="w-full h-14 bg-[#AFECFF1A] mt-3 mb-6 rounded-[20px] outline-none px-5 text-[#C6C7C8BD] font-semibold font-montserrat text-lg"
+              className="w-full h-14 bg-[#AFECFF1A] mt-3 mb-6 rounded-[20px] outline-none px-5 text-[#C6C7C8] font-medium font-montserrat text-lg"
               type="email"
               placeholder="Email"
               required
             />
             <label className="block text-white">Project Details</label>
             <textarea
-              className="resize-none w-full h-38 outline-none mt-3 p-5 rounded-[20px] bg-[#AFECFF1A] text-[#C6C7C8BD]"
+              className="resize-none w-full h-38 outline-none mt-3 p-5 rounded-[20px] bg-[#AFECFF1A] text-[#C6C7C8]"
               placeholder="Tell us about your project idea"
               required
             ></textarea>
