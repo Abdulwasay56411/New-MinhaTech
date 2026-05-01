@@ -27,7 +27,7 @@ const HeroSection = () => {
             <h1 className='font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-8 sm:leading-12 lg:leading-18 text-[#F2F6F7] font-poppins'>
               Mobile App<span className='text-[#06A9EA]'> Development</span> <br /> That Drive Results
             </h1>
-            <p className='text-[#C6C7C8] max-w-2xl text-sm sm:text-base md:text-lg lg:text-xl font-montserrat'>
+            <p className='text-[#C6C7C8] lg:max-w-xl text-sm sm:text-base md:text-lg lg:text-xl font-montserrat'>
               Transforming ideas into seamless digital experiences people love to use
             </p>
             <div className='flex flex-wrap gap-3 sm:gap-4 pt-3 md:pt-12 pb-5 justify-center lg:justify-start'>
