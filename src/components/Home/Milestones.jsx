@@ -58,7 +58,7 @@ const Milestones = () => {
     whileInView={{opacity: 1, y:0}}
     transition={{duration: 1.2, ease: "easeOut"}}
     viewport={{once: true, amount: 0.2}}
-    id="about" className="max-w-350 mx-auto px-5 py-10">
+    id="about" className="max-w-350 mx-auto px-5 py-20">
       <Heading 
         title="What We Delivered" 
         para="Delivering measurable results through innovation, performance and user-focused mobile solutions" 
