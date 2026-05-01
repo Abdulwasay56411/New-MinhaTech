@@ -60,8 +60,8 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className="w-full transition-all duration-300 shadow-xl bg-[#0A0D21]/20 backdrop-blur-2xl">
-        <div className="max-w-350 mx-auto px-5 pt-2 sm:pt-4 pb-2">
+      <div className="w-full transition-all duration-300 shadow-xl p bg-[#0A0D21]/20 backdrop-blur-2xl">
+        <div className="max-w-350 mx-auto px-5 py-2">
           <div className="w-full flex justify-between items-center px-5 py-2 bg-[#8EDFFF33] rounded-[10px]">
             <img className="w-18 sm:w-23 sm:h-15 object-contain" src="/MinhaTech.png" alt="MinhaTech Logo" />
             
