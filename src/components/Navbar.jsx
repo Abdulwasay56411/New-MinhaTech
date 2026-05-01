@@ -12,7 +12,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 10) {
         setIsScroll(true);
       } else {
         setIsScroll(false);
@@ -26,112 +26,77 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="sticky font-montserrat top-0 left-0 z-50 w-full mx-auto">
-      {/*  Topbar */}
+    <div className="sticky font-montserrat top-0 left-0 z-50 w-full">
+      {/* Topbar */}
       <div className="bg-[#0598D333] backdrop-blur-sm w-full">
-        <div className="max-w-350 mx-auto sm:flex sm:flex-row sm:justify-between items-center flex flex-col justify-center px-5 py-1.5 text-white">
-          <div className="flex flex-col items-center sm:gap-0 sm:w-100 sm:flex sm:flex-row sm:justify-between">
+        <div className="max-w-350 mx-auto flex flex-row justify-between items-center px-5 py-1.5 text-white">
+          <div className="flex flex-row items-center gap-6 sm:gap-10">
             <p className="flex text-sm sm:text-base items-center gap-3">
-              {" "}
               <MdEmail size={20} />
               contact@minhatech.org
             </p>
-            <p className="flex  text-sm sm:text-base  items-center gap-3">
+            <p className="flex text-sm sm:text-base items-center gap-3">
               <IoMdCall size={20} />
-              03440460091
+              0315 4666899
             </p>
           </div>
-          <div className="flex pt-1 items-center gap-3 lg:gap-5">
-            <FaLinkedinIn size={14} />
-            <FaInstagram size={14} />
-            <FaFacebookF size={14} />
-
+          <div className="flex items-center gap-3 lg:gap-5">
+            <FaLinkedinIn size={14} className="hover:text-[#06B8FF] cursor-pointer" />
+            <FaInstagram size={14} className="hover:text-[#06B8FF] cursor-pointer"/>
+            <FaFacebookF size={14} className="hover:text-[#06B8FF] cursor-pointer "/>
           </div>
         </div>
       </div>
-      {/* Navbar */}
-      <div className={`w-full pt-2 sm:pt-4 px-5 ${isScroll ? "shadow-xl bg-[#0A0D21]/20 backdrop-blur-2xl" : ""
-        }`}>
-        <div className="w-full max-w-350 mx-auto flex justify-between items-center px-5 py-2 bg-[#8EDFFF33] rounded-[10px]"
 
-        >
-          <img className="w-18 sm:w-23 sm:h-15 object-contain" src="/MinhaTech.png" alt="" />
-          <div className="hidden md:flex gap-8 items-center">
-            {navbarLink.map((item) => (
-              <ul key={item.id} className="group relative py-2">
-                <HashLink smooth to={item.Link}>
-                  <li className="md:text-sm lg:text-xl cursor-pointer text-center text-[#FFFFFF] font-montserrat font-medium">
-                    {item.name}
-                  </li>
-                </HashLink>
-                <span
-                  className="absolute w-0 h-0.5 left-0 bottom-0 
-                 group-hover:w-full transition-all duration-300 
-                 bg-linear-to-r from-[#00FB94] to-[#06B8FF]"
-                ></span>
-              </ul>
-            ))}
-          </div>
-
-          <div
-            onMouseEnter={() => setIsCursor(true)}
-            onMouseLeave={() => setIsCursor(false)}
-            className="hidden md:flex group cursor-pointer items-center"
-          >
-            {/* Button */}
-            <HashLink smooth to="/#contact">
-              <button
-                className="text-[#ffffff] bg-linear-to-r from-[#00FB94] to-[#06B8FF] cursor-pointer w-39 rounded-xl h-12 border border-[#00FB94] hover:shadow-[0px_5px_10px_rgba(6,184,255,0.45)] font-medium hover:scale-105 duration-300"
-              >
-                Contact Us
-              </button>
-            </HashLink>
-          </div>
-          {/* Mobile Menu */}
-          <div
-            onClick={() => setIsOpen(!isOpen)}
-            className="block relative md:hidden"
-          >
-            <div className="group relative flex items-center gap-2 rounded-4xl px-3 py-2 cursor-pointer select-none bg-[#06B8FF] overflow-hidden h-8">
-              <div className="relative h-5 overflow-hidden">
-                <span
-                  className="block text-white font-bold text-sm
-                     transition-all duration-300
-                     group-hover:-translate-y-full"
-                >
-                  Menu
-                </span>
-                <span
-                  className="absolute left-0 top-0 text-white font-bold text-sm
-                     translate-y-full
-                     group-hover:translate-y-0
-                     transition-all duration-300"
-                >
-                  Menu
-                </span>
-              </div>
-
-              <FaPlus
-                className={`text-xs text-white transition-all duration-300 ${isOpen ? "rotate-45" : "rotate-0"
-                  }`}
-              />
-            </div>
-            <div
-              className={`absolute right-8 top-10 w-41 h-auto shadow-2xl rounded-lg px-5 py-4 text-white bg-[#0A1E38] transform transition-all duration-300 z-50 ${isOpen
-                ? "translate-x-0 opacity-100 scale-100"
-                : "translate-x-10 opacity-0 scale-95 pointer-events-none"
-                }`}
-            >
-              {menuNavbar.map((item) => (
-                <HashLink key={item.id} smooth to={item.Link}>
-                  <h1
-                    onClick={() => setIsOpen(false)}
-                    className="leading-10 hover:font-bold hover:text-[#00FB94] duration-300 transition-all"
-                  >
-                    {item.name}
-                  </h1>
-                </HashLink>
+      {/* Navbar Main Wrapper */}
+      <div className={`w-full transition-all duration-300 ${isScroll ? "shadow-xl bg-[#0A0D21]/20 backdrop-blur-2xl" : ""}`}>
+        {/* Is max-w container ki padding Topbar ke barabar honi chiye */}
+        <div className="max-w-350 mx-auto px-5 pt-2 sm:pt-4 pb-2">
+          {/* Main Navbar Box */}
+          <div className="w-full flex justify-between items-center px-5 py-2 bg-[#8EDFFF33] rounded-[10px]">
+            <img className="w-18 sm:w-23 sm:h-15 object-contain" src="/MinhaTech.png" alt="" />
+            
+            <div className="hidden md:flex gap-8 items-center">
+              {navbarLink.map((item) => (
+                <ul key={item.id} className="group relative py-2">
+                  <HashLink smooth to={item.Link}>
+                    <li className="md:text-sm lg:text-xl cursor-pointer text-center text-[#FFFFFF] font-montserrat font-medium">
+                      {item.name}
+                    </li>
+                  </HashLink>
+                  <span className="absolute w-0 h-0.5 left-0 bottom-0 group-hover:w-full transition-all duration-300 bg-linear-to-r from-[#00FB94] to-[#06B8FF]"></span>
+                </ul>
               ))}
+            </div>
+
+            <div
+              onMouseEnter={() => setIsCursor(true)}
+              onMouseLeave={() => setIsCursor(false)}
+              className="hidden md:flex group cursor-pointer items-center"
+            >
+              <HashLink smooth to="/#contact">
+                <button className="text-[#ffffff] bg-linear-to-r from-[#00FB94] to-[#06B8FF] cursor-pointer w-39 rounded-xl h-12 border border-[#00FB94] hover:shadow-[0px_5px_10px_rgba(6,184,255,0.45)] font-medium hover:scale-105 duration-300">
+                  Contact Us
+                </button>
+              </HashLink>
+            </div>
+
+            {/* Mobile Menu */}
+            <div onClick={() => setIsOpen(!isOpen)} className="block relative md:hidden">
+              <div className="group relative flex items-center gap-2 rounded-4xl px-3 py-2 cursor-pointer select-none bg-[#06B8FF] overflow-hidden h-8">
+                <div className="relative h-5 overflow-hidden">
+                  <span className="block text-white font-bold text-sm transition-all duration-300 group-hover:-translate-y-full">Menu</span>
+                  <span className="absolute left-0 top-0 text-white font-bold text-sm translate-y-full group-hover:translate-y-0 transition-all duration-300">Menu</span>
+                </div>
+                <FaPlus className={`text-xs text-white transition-all duration-300 ${isOpen ? "rotate-45" : "rotate-0"}`} />
+              </div>
+              <div className={`absolute right-0 top-10 w-41 h-auto shadow-2xl rounded-lg px-5 py-4 text-white bg-[#0A1E38] transform transition-all duration-300 z-50 ${isOpen ? "translate-x-0 opacity-100 scale-100" : "translate-x-10 opacity-0 scale-95 pointer-events-none"}`}>
+                {menuNavbar.map((item) => (
+                  <HashLink key={item.id} smooth to={item.Link} onClick={() => setIsOpen(false)}>
+                    <h1 className="leading-10 hover:font-bold hover:text-[#00FB94] duration-300 transition-all">{item.name}</h1>
+                  </HashLink>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -143,52 +108,13 @@ const Navbar = () => {
 export default Navbar;
 
 const navbarLink = [
-  {
-    id: 1,
-    name: "Home",
-    Link: "/#home",
-  },
-  {
-    id: 2,
-    name: "Projects",
-    Link: "/#project",
-  },
-  {
-    id: 3,
-    name: "Services",
-    Link: "/#services",
-  },
-  {
-    id: 4,
-    name: "About Us",
-    Link: "/#about",
-  },
+  { id: 1, name: "Home", Link: "/#home" },
+  { id: 2, name: "Projects", Link: "/#project" },
+  { id: 3, name: "Services", Link: "/#services" },
+  { id: 4, name: "About Us", Link: "/#about" },
 ];
 
 const menuNavbar = [
-  {
-    id: 1,
-    name: "Home",
-    Link: "/#home",
-  },
-  {
-    id: 2,
-    name: "Projects",
-    Link: "/#project",
-  },
-  {
-    id: 3,
-    name: "Services",
-    Link: "/#services",
-  },
-  {
-    id: 4,
-    name: "About Us",
-    Link: "/#about",
-  },
-  {
-    id: 5,
-    name: "Contact Us",
-    Link: "/#contact",
-  },
+  ...navbarLink,
+  { id: 5, name: "Contact Us", Link: "/#contact" },
 ];

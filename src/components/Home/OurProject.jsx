@@ -1,6 +1,8 @@
 import React from 'react'
 import Heading from '../Heading'
+
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 
 const project = [
@@ -91,7 +93,7 @@ const project = [
 
 const OurProject = () => {
   return (
-    <motion.div 
+    <motion.div id='project'
     initial={{opacity: 0, y:50}}
     whileInView={{opacity: 1, y:0}}
     transition={{duration: 1.2, ease: "easeOut"}}
@@ -110,10 +112,12 @@ const OurProject = () => {
                 <p className='text-[#FFFFFF] text-lg sm:text-2xl font-bold'>{sec.download}</p>
               </div>
             ))}
+            <Link to={`/project/${item.slug}`}>
             <div className='flex items-center gap-1 pt-4'>
               <p className='px-2 text-[#07D580] font-bold cursor-pointer hover:scale-105 duration-300  text-xl'>{item.link}</p>
               <img className='w-6 h-6 cursor-pointer' src="/Arrow.png" alt="" />
             </div>
+            </Link>
           </div>
         ))}
       </div>
