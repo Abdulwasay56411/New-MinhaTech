@@ -41,7 +41,7 @@ const Navbar = () => {
   return (
     <div className="sticky font-montserrat top-0 left-0 z-50 w-full">
       {/* Topbar */}
-      <div className="bg-[#0598D333] backdrop-blur-sm w-full">
+      <div className="bg-[#033C53] w-full">
         <div className="max-w-350 mx-auto flex flex-row justify-between items-center px-5 py-1.5 text-white">
           <div className="flex flex-row items-center gap-6 sm:gap-10">
             <p className="flex text-sm sm:text-base items-center gap-3">

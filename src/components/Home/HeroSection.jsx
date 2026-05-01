@@ -25,7 +25,7 @@ const HeroSection = () => {
           className='flex flex-col lg:flex-row items-stretch justify-between gap-8 lg:gap-12'
         >
           <div className='w-full lg:w-[48%] xl:w-[45%] pt-10 lg:pt-20 text-center lg:text-left space-y-3 md:space-y-5'>
-            <h1 className='font-bold text-3xl sm:text-4xl md:text-5xl xl:text-6xl leading-8 sm:leading-12 lg:leading-14 xl:leading-17 text-[#F2F6F7] font-poppins'>
+            <h1 className='font-bold text-3xl sm:text-4xl md:text-5xl leading-8 sm:leading-12 lg:leading-14  text-[#F2F6F7] font-poppins'>
               Mobile App<span className='text-[#06A9EA]'> Development</span> <br /> That Drive Results
             </h1>
             <p className='text-[#C6C7C8] lg:max-w-lg xl:max-w-xl text-sm sm:text-base md:text-lg lg:text-xl font-montserrat'>
