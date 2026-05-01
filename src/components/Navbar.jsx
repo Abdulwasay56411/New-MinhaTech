@@ -29,7 +29,7 @@ const Navbar = () => {
     <div className="sticky font-montserrat top-0 left-0 z-50 w-full mx-auto">
       {/*  Topbar */}
       <div className="bg-[#0598D333] backdrop-blur-sm w-full">
-        <div className="max-w-350 mx-auto sm:flex sm:flex-row sm:justify-between items-center flex flex-col justify-center px-6 py-1.5 text-white">
+        <div className="max-w-350 mx-auto sm:flex sm:flex-row sm:justify-between items-center flex flex-col justify-center px-5 py-1.5 text-white">
           <div className="flex flex-col items-center sm:gap-0 sm:w-100 sm:flex sm:flex-row sm:justify-between">
             <p className="flex text-sm sm:text-base items-center gap-3">
               {" "}
@@ -66,8 +66,8 @@ const Navbar = () => {
                 </HashLink>
                 <span
                   className="absolute w-0 h-0.5 left-0 bottom-0 
-        group-hover:w-full transition-all duration-300 
-        bg-linear-to-r from-[#00FB94] to-[#06B8FF]"
+                 group-hover:w-full transition-all duration-300 
+                 bg-linear-to-r from-[#00FB94] to-[#06B8FF]"
                 ></span>
               </ul>
             ))}
