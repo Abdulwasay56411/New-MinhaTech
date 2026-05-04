@@ -43,12 +43,12 @@ const Navbar = () => {
       {/* Topbar */}
       <div className="bg-[#033C53] w-full">
         <div className="max-w-350 mx-auto flex flex-row justify-between items-center px-5 py-1.5 text-white">
-          <div className="flex flex-row items-center gap-6 sm:gap-10">
-            <p className="flex text-sm sm:text-base items-center gap-3">
+          <div className="flex flex-row items-center gap-3 sm:gap-10">
+            <p className="flex text-xs sm:text-base items-center gap-3">
               <MdEmail size={20} />
               contact@minhatech.org
             </p>
-            <p className="flex text-sm sm:text-base items-center gap-3">
+            <p className="flex text-xs sm:text-base items-center gap-3">
               <IoMdCall size={20} />
               0315 4666899
             </p>

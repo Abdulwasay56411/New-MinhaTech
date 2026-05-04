@@ -25,14 +25,14 @@ const ProjectDetails = () => {
       </Link>
 
       <div className="pt-10">
-        <h1 className="text-5xl font-semibold text-[#FFFFFF] py-2">{item.heroTitle}</h1>
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-[#FFFFFF] py-2">{item.heroTitle}</h1>
         <p className="text-[#C6C7C8] text-xl">{item.heroDesc}</p>
       </div>
 
-      <div className="flex items-center justify-between py-5 max-w-200 gap-5">
-        <p className="text-[#C6C7C8] text-xl">Client: <span className="text-[#FFFFFFED] font-semibold text-2xl pl-2"> {item.client}</span></p>
-        <p className="text-[#C6C7C8] text-xl">Duration: <span className="text-[#FFFFFFED] font-semibold text-2xl pl-2"> {item.duration}</span></p>
-        <p className="text-[#C6C7C8] text-xl">Year: <span className="text-[#FFFFFFED] font-semibold text-2xl pl-2"> {item.year}</span></p>
+      <div className="flex items-center justify-between py-5 sm:max-w-150 lg:max-w-200 gap-2 lg:gap-5">
+        <p className="text-[#C6C7C8] text-xs sm:text-sm  md:text-base lg:text-xl">Client: <span className="text-[#FFFFFFED] font-semibold text-sm sm:text-base md:text-xl lg:text-2xl pl-2"> {item.client}</span></p>
+        <p className="text-[#C6C7C8] text-xs sm:text-sm  md:text-base lg:text-xl">Duration: <span className="text-[#FFFFFFED] font-semibold text-sm sm:text-base md:text-xl lg:text-2xl pl-2"> {item.duration}</span></p>
+        <p className="text-[#C6C7C8] text-xs sm:text-sm md:text-base lg:text-xl">Year: <span className="text-[#FFFFFFED] font-semibold text-sm sm:text-base md:text-xl lg:text-2xl pl-2"> {item.year}</span></p>
       </div>
 
       <div className="w-full bg-[#06B8FF33] rounded-4xl my-10 p-5">
@@ -61,28 +61,44 @@ const ProjectDetails = () => {
           <p className="text-[#C6C7C8] text-sm md:text-base lg:text-lg">Retention</p>
         </div>
       </div>
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 items-stretch">
 
-      <div>
-        <div className="flex flex-col gap-5">
-          <div>
-            <h1 className="text-[#F2F6F7] font-bold text-3xl">Overview</h1>
-            <p className="text-[#C6C7C8] text-xl py-2">{item.overView}</p>
+        <div className="lg:col-span-7 flex flex-col gap-6">
+          <div className="flex flex-col gap-10">
+            <div>
+              <h1 className="text-[#F2F6F7] font-bold text-3xl">Overview</h1>
+              <p className="text-[#C6C7C8] text-xl py-2">{item.overView}</p>
+            </div>
+
+            <div>
+              <h1 className="text-[#F2F6F7] font-bold text-3xl">The Challenge</h1>
+              <p className="text-[#C6C7C8] text-xl py-2">{item.challenge}</p>
+            </div>
+
+            <div>
+              <h1 className="text-[#F2F6F7] font-bold text-3xl">Our Solutions</h1>
+              <p className="text-[#C6C7C8] text-xl py-2">{item.solution}</p>
+            </div>
+
+            <div>
+              <h1 className="text-[#F2F6F7] font-bold text-3xl mb-4">Key Results</h1>
+              <div className="flex flex-col gap-3">
+                {item.results && item.results.map((res, index) => (
+                  <div key={index} className="flex items-center gap-2">
+                    <img className="w-4 h-4 object-cover" src="/result.png" alt="bullet" />
+                    <p className="text-[#C6C7C8] text-xl">{res}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
+        </div>
+        <div className="lg:col-span-5 flex flex-col gap-5">
 
-          <div>
-            <h1 className="text-[#F2F6F7] font-bold text-3xl">The Challenge</h1>
-            <p className="text-[#C6C7C8] text-xl py-2">{item.challenge}</p>
-          </div>
-
-          <div>
-            <h1 className="text-[#F2F6F7] font-bold text-3xl">Our Solutions</h1>
-            <p className="text-[#C6C7C8] text-xl py-2">{item.solution}</p>
-          </div>
-
-          <div className="py-5">
-            <h1 className="text-[#F2F6F7] font-bold text-3xl mb-5">Key Results</h1>
+          <div className="bg-[#06B8FF29] rounded-4xl p-8 border border-[#06B8FF21] flex-1">
+            <h1 className="text-[#F2F6F7] font-bold text-3xl mb-5">Features</h1>
             <div className="flex flex-col gap-4">
-              {item.results && item.results.map((res, index) => (
+              {item.features && item.features.map((res, index) => (
                 <div key={index} className="flex items-center gap-2">
                   <img className="w-4 h-4 object-cover" src="/result.png" alt="bullet" />
                   <p className="text-[#C6C7C8] text-xl">{res}</p>
@@ -90,6 +106,25 @@ const ProjectDetails = () => {
               ))}
             </div>
           </div>
+          <div className="bg-[#06D27E29] rounded-4xl p-8 border border-[#06D27E21] flex-1">
+            <h1 className="text-[#F2F6F7] font-bold text-3xl my-5">Technologies</h1>
+            <div className="py-5">
+              <div>
+                <button className="w-45 py-2 text-xl text-[#F8F8F8] border border-[#00FB94] bg-[#00FB9433] rounded-2xl">
+                  {item.figma}
+                </button>
+                <button className="w-45 py-2 text-xl text-[#F8F8F8] border border-[#00FB94] bg-[#00FB9433] rounded-2xl ml-3">
+                  {item.react}
+                </button>
+              </div>
+              <div>
+                <button className="w-60 py-2 text-xl text-[#F8F8F8] border border-[#00FB94] mt-5 bg-[#00FB9433] rounded-2xl">
+                  {item.Cloud}
+                </button>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
