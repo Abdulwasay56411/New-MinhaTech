@@ -12,7 +12,7 @@ const ClientSays = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentCard((prev) => (prev < ourClient.length - 1 ? prev + 1 : 0));
-    }, 5000);
+    }, 2000);
     return () => clearInterval(timer);
   }, []);
 
@@ -53,7 +53,7 @@ const ClientSays = () => {
           >
             <svg viewBox="0 0 400 400" className="w-full h-full">
               <path id="circlePath" d="M200,200 m-150,0 a150,150 0 1,1 300,0 a150,150 0 1,1 -300,0" fill="none" />
-              <text className="text-[26px] fill-[#00FB94] font-medium tracking-[0.25em] uppercase">
+              <text className="text-[26px] fill-[#01ff95] font-medium tracking-[0.25em] uppercase">
                 <textPath href="#circlePath">MinhaTech App Development IT Company Minhatech</textPath>
               </text>
             </svg>

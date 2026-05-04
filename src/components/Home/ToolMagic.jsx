@@ -50,18 +50,18 @@ const processImage = [
 const ToolMagic = () => {
 
   return (
-    <div className="pb-14 bg-linear-to-t  from-[#112139] to-[#09182B00]">
+    <div className="pb-14">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.2 }}
-        className="max-w-350 mx-auto pb-12">
-        <div className="pb-14 px-10">
+        className="pb-12">
+        <div className="pb-14 max-w-350 mx-auto  px-10">
           <Heading title="Our Process" para="A proven methodology from concept to market success" />
           <div className="relative flex flex-wrap justify-center lg:justify-between gap-x-5 gap-y-12 py-5 ">
 
-            <div className="hidden lg:block absolute top-12 left-0 w-full h-0.5 bg-linear-to-r from-[#06B8FF33] via-[#06B8FF] to-[#06B8FF33] -translate-y-1/2 z-0"></div>
+            <div className="hidden lg:block absolute top-18 left-0 w-full h-0.5 bg-linear-to-r from-[#06B8FF33] via-[#06B8FF] to-[#06B8FF33] -translate-y-1/2 z-0"></div>
 
             {processImage.map((item) => (
               <div key={item.id} className="relative z-10 flex flex-col items-center group">
@@ -76,7 +76,7 @@ const ToolMagic = () => {
             ))}
           </div>
         </div>
-        <div>
+        <div className="bg-linear-to-t  from-[#112139] to-[#09182B00] pb-10">
           <Heading title="Tools Behind Our Magic" para="Everything we use to make things happen" />
           <div className="flex flex-wrap justify-center  gap-5 max-w-250 mx-auto">
             {toolImages.map((item) => (

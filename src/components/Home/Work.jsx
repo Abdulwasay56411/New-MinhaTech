@@ -22,7 +22,7 @@ const Work = () => {
     if (!scrollElement) return;
 
     let position = 0;
-    const speed = 0.8;
+    const speed = 2;
 
     const animate = () => {
       if (scrollElement) {
@@ -50,11 +50,11 @@ const Work = () => {
 
   return (
     <motion.div
-    initial={{opacity: 0, y:50}}
-    whileInView={{opacity: 1, y:0}}
-    transition={{duration: 1.2, ease: "easeOut"}}
-    viewport={{once: true, amount: 0.2}}
-    className="max-w-350 mx-auto">
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1.2, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.2 }}
+    >
       <div className="overflow-hidden mt-14 w-full h-24 bg-[#0A1E38] flex items-center">
         <div
           ref={scrollRef}
