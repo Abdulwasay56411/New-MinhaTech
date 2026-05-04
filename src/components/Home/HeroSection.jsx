@@ -15,9 +15,9 @@ const HeroSection = () => {
 
   return (
 
-    <div id='home' className='w-full overflow-hidden lg:-mt-33.75 -mt-27.5'>
+    <div id='home' className='w-full bg-[url("/herobg.png")] bg-cover bg-center overflow-hidden lg:-mt-33.75 -mt-27.5'>
 
-      <div className='max-w-350 mx-auto  bg-[url("/herobg.png")] bg-cover bg-center px-5 pt-32 lg:pt-52'>
+      <div className='max-w-350 mx-auto  px-5 pt-32 lg:pt-52'>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
