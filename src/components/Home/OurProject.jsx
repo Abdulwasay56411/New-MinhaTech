@@ -101,7 +101,7 @@ const OurProject = () => {
     viewport={{once: true, amount: 0.2}}
     className='max-w-350 mx-auto py-10 px-5'>
       <Heading title="Success Stories" para="Premium Projects show casing our Impact" />
-      <div className='grid grid-cols-1 lg:grid-cols-2 justify-items-center gap-5'>
+      <div className='grid grid-cols-1 lg:grid-cols-2 justify-items-center gap-x-5 gap-y-6'>
         {project.map((item) => (
           <div key={item.id} className='bg-[#3E496166] w-full max-w-160 h-auto px-8 py-5 rounded-3xl shadow-[0_0_61px_rgba(6,184,255,0.14)]'>
             <img className='w-full h-auto object-cover' src={item.image} alt="" />
@@ -116,7 +116,7 @@ const OurProject = () => {
             <Link to={`/project/${item.slug}`}>
             <div className='flex items-center gap-1 pt-4'>
               <p className='px-2 text-[#07D580] font-bold cursor-pointer hover:scale-105 duration-300  text-xl'>{item.link}</p>
-              <img className='w-6 h-6 cursor-pointer' src="/Arrow.png" alt="" />
+              <img className='w-8 h-8 cursor-pointer' src="/Arrow.png" alt="" />
             </div>
             </Link>
           </div>

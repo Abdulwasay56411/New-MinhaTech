@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { HashLink } from 'react-router-hash-link';
 
 const HeroSection = () => {
   const heroImages = [
@@ -13,10 +14,10 @@ const HeroSection = () => {
   const repeatedImages = [...heroImages, ...heroImages, ...heroImages, ...heroImages];
 
   return (
-   
-    <div id='home' className='w-full overflow-hidden lg:-mt-33.75 -mt-27.5'>
- 
-      <div className='max-w-350 mx-auto bg-[url("/bghero.png")] bg-cover bg-center px-5 pt-32 lg:pt-52'>
+
+    <div id='home' className='w-full bg-[#09182B] overflow-hidden lg:-mt-33.75 -mt-27.5'>
+
+      <div className='max-w-350 mx-auto  bg-[url("/bghero.png")] bg-cover bg-center px-5 pt-32 lg:pt-52'>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -25,19 +26,24 @@ const HeroSection = () => {
           className='flex flex-col lg:flex-row items-stretch justify-between gap-8 lg:gap-12'
         >
           <div className='w-full lg:w-[48%] xl:w-[45%] pt-10 lg:pt-20 text-center lg:text-left space-y-3 md:space-y-5'>
-            <h1 className='font-bold text-3xl sm:text-4xl md:text-5xl leading-8 sm:leading-12 lg:leading-14  text-[#F2F6F7] font-poppins'>
+            <h1 className='font-bold text-3xl sm:text-4xl md:text-5xl lg:text-[52px] leading-8 sm:leading-12 lg:leading-16 tracking-wide text-[#F2F6F7] font-poppins'>
               Mobile App<span className='text-[#06A9EA]'> Development</span> <br /> That Drive Results
             </h1>
-            <p className='text-[#C6C7C8] lg:max-w-lg text-sm sm:text-base md:text-lg lg:text-xl font-montserrat'>
+            <p className='text-[#C6C7C8] lg:max-w-md tracking-wide text-sm sm:text-base  font-montserrat'>
               Transforming ideas into seamless digital experiences people love to use
             </p>
             <div className='flex flex-wrap gap-3 sm:gap-4 pt-3 md:pt-12 justify-center lg:justify-start'>
-              <button className='bg-linear-to-r from-[#06A9EA] to-[#06D27E] px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 rounded-3xl text-white font-semibold shadow-lg shadow-blue-500/20 text-xs sm:text-sm md:text-base cursor-pointer hover:scale-105 transition-transform'>
-                Get Free App Consultation
-              </button>
-              <button className='border border-white/30 px-5 sm:px-7 md:px-10 py-2 sm:py-3 md:py-4 rounded-3xl text-white text-xs sm:text-sm md:text-base cursor-pointer hover:bg-white/10 transition-all'>
-                View Pricing
-              </button>
+
+              <HashLink smooth to="/#contact">
+                <button className='bg-linear-to-r from-[#06A9EA] to-[#06D27E] px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 rounded-3xl text-white font-semibold shadow-lg shadow-blue-500/20 text-xs sm:text-sm md:text-base cursor-pointer hover:scale-105 transition-transform'>
+                  Get Free App Consultation
+                </button>
+              </HashLink>
+              <HashLink smooth to="/#pricing">
+                <button className='border border-white/30 px-5 sm:px-7 md:px-10 py-2 sm:py-3 md:py-4 rounded-3xl text-white text-xs sm:text-sm md:text-base cursor-pointer hover:bg-white/10 transition-all'>
+                  View Pricing
+                </button>
+              </HashLink>
             </div>
           </div>
           <div className='relative w-full lg:w-[50%] flex justify-center lg:justify-end items-start lg:-mt-20 overflow-hidden'>

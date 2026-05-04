@@ -59,32 +59,32 @@ const ToolMagic = () => {
         className="max-w-350 mx-auto bg-linear-to-t  from-[#112139] to-[#09182B00] pb-12">
         <div className="pb-14 px-10">
           <Heading title="Our Process" para="A proven methodology from concept to market success" />
-          <div className="relative flex flex-wrap justify-center lg:justify-between gap-x-5 gap-y-12 py-10">
+          <div className="relative flex flex-wrap justify-center lg:justify-between gap-x-5 gap-y-12 py-5 ">
 
-            <div className="hidden lg:block absolute top-1/2 left-0 w-full h-0.5 bg-linear-to-r from-[#06B8FF33] via-[#06B8FF] to-[#06B8FF33] -translate-y-1/2 z-0"></div>
+            <div className="hidden lg:block absolute top-12 left-0 w-full h-0.5 bg-linear-to-r from-[#06B8FF33] via-[#06B8FF] to-[#06B8FF33] -translate-y-1/2 z-0"></div>
 
             {processImage.map((item) => (
               <div key={item.id} className="relative z-10 flex flex-col items-center group">
 
-                <div className="w-22 h-22 sm:w-30 sm:h-30 rounded-lg sm:rounded-2xl bg-linear-to-t p-0.5 from-[#06B8FF] to-[#00FB94B2] sm:shadow-[0px_4px_34.5px_0px_rgba(6,184,255,0.38)] cursor-pointer hover:scale-105 duration-200">
+                <div className="w-20 h-20 sm:w-24  sm:h-24 rounded-lg sm:rounded-2xl bg-linear-to-t p-0.5 from-[#06B8FF] to-[#00FB94B2] sm:shadow-[0px_4px_34.5px_0px_rgba(6,184,255,0.38)] cursor-pointer hover:scale-105 duration-200">
                   <div className="w-full h-full bg-[#09182B] rounded-[5px] sm:rounded-2xl flex items-center justify-center">
-                    <img className="w-10 h-10 sm:w-12 sm:h-12 object-contain" src={item.image} />
+                    <img className="w-8 h-8 sm:w-10 sm:h-10 object-contain" src={item.image} />
                   </div>
-                  <h1 className="text-center text-[#FFFFFFD4] text-xs sm:text-xl font-semibold py-2">{item.title}</h1>
                 </div>
+                  <h1 className="text-center text-[#FFFFFFD4] text-base font-semibold py-3">{item.title}</h1>
               </div>
             ))}
           </div>
         </div>
         <div>
           <Heading title="Tools Behind Our Magic" para="Everything we use to make things happen" />
-          <div className="flex flex-wrap justify-center pt-5 gap-5">
+          <div className="flex flex-wrap justify-center  gap-5 max-w-250 mx-auto">
             {toolImages.map((item) => (
               <div key={item.id}
-                className="w-32 h-13 sm:w-67 sm:h-28 flex items-center justify-center rounded-xl p-0.5 bg-linear-to-r from-[#00FB9414] to-[#06B8FF80] sm:bg-linear-to-r sm:from-[#06B8FF] sm:to-[#07D580] cursor-pointer hover:scale-105 duration-300"
+                className="w-32 h-13 sm:w-56 sm:h-20 flex items-center justify-center rounded-xl p-0.5 bg-linear-to-r from-[#00FB9414] to-[#06B8FF80] sm:bg-linear-to-r sm:from-[#06B8FF] sm:to-[#07D580] cursor-pointer hover:scale-105 duration-300"
               >
                 <div className="sm:bg-[#0F1D34] w-full h-full rounded-[10px] flex items-center justify-center">
-                  <img className="w-8 h-8 sm:w-14 sm:h-14 object-cover" src={item.image} alt="" />
+                  <img className="w-8 h-8 sm:w-10 sm:h-10 object-cover" src={item.image} alt="" />
                 </div>
               </div>
             ))}

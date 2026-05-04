@@ -12,7 +12,7 @@ const ClientSays = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentCard((prev) => (prev < ourClient.length - 1 ? prev + 1 : 0));
-    }, 10000);
+    }, 5000);
     return () => clearInterval(timer);
   }, []);
 

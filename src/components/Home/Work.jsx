@@ -55,7 +55,7 @@ const Work = () => {
     transition={{duration: 1.2, ease: "easeOut"}}
     viewport={{once: true, amount: 0.2}}
     className="max-w-350 mx-auto">
-      <div className="overflow-hidden mt-14 w-full h-20 bg-[#0A1E38] flex items-center">
+      <div className="overflow-hidden mt-14 w-full h-24 bg-[#0A1E38] flex items-center">
         <div
           ref={scrollRef}
           className="flex w-fit items-center gap-10 md:gap-16"
@@ -66,7 +66,7 @@ const Work = () => {
               className="shrink-0 flex items-center"
             >
               <img
-                className={`object-contain h-12 ${item.className}`}
+                className={`object-contain h-10 ${item.className}`}
                 src={item.image}
                 alt="tool"
               />

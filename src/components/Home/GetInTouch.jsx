@@ -5,12 +5,12 @@ import { motion } from "framer-motion";
 const mail = [
   {
     id: 1,
-    title: "contact@minhatech.org",
+    title: "info@minhatech.org",
     image: "/mail.png",
   },
   {
     id: 2,
-    title: "03440460091",
+    title: "+92 315 4666899",
     image: "phone.png",
   },
   {
@@ -91,7 +91,7 @@ const GetInTouch = () => {
             />
             <label className="block text-white">Project Details</label>
             <textarea
-              className="resize-none w-full h-38 outline-none mt-3 p-5 rounded-[20px] bg-[#AFECFF1A] text-[#C6C7C8]"
+              className="resize-none w-full h-38 outline-none mt-3 p-5 rounded-[20px] text-lg font-medium bg-[#AFECFF1A] text-[#C6C7C8]"
               placeholder="Tell us about your project idea"
               required
             ></textarea>
