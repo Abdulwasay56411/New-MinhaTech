@@ -14,7 +14,7 @@ const HeroSection = () => {
 
   return (
    
-    <div id='home' className='w-full overflow-hidden lg:-mt-33.75 -mt-27.5'>
+    <div id='home' className='w-full overflow-hidden bg-[url("/bghero.png")] bg-cover bg-center lg:-mt-33.75 -mt-27.5'>
  
       <div className='max-w-350 mx-auto px-5 pt-32 lg:pt-52'>
         <motion.div
