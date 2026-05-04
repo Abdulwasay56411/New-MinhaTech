@@ -77,7 +77,6 @@ const Navbar = () => {
                 </ul>
               ))}
             </div>
-
             <div
               onMouseEnter={() => setIsCursor(true)}
               onMouseLeave={() => setIsCursor(false)}

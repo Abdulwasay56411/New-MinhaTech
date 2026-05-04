@@ -1,7 +1,7 @@
 import React from 'react'
 import ProjectDetails from '../components/Project/ProjectDetails'
 
-const OurProject = () => {
+const Project = () => {
   return (
     <div>
       <ProjectDetails/>
@@ -9,4 +9,4 @@ const OurProject = () => {
   )
 }
 
-export default OurProject
+export default Project

@@ -56,7 +56,7 @@ const ToolMagic = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.2 }}
-        className="max-w-350 mx-auto">
+        className="max-w-350 mx-auto bg-linear-to-t  from-[#112139] to-[#09182B00] pb-12">
         <div className="pb-14 px-10">
           <Heading title="Our Process" para="A proven methodology from concept to market success" />
           <div className="relative flex flex-wrap justify-center lg:justify-between gap-x-5 gap-y-12 py-10">

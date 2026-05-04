@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom'
 
 
 const project = [
-
   {
     id: 1,
+    slug: "ai-image-generator",
     image: "/project 1.png",
     title: "AI Image Generator App",
     sections: [
@@ -29,6 +29,7 @@ const project = [
   },
   {
     id: 2,
+    slug: "phone-cleaner",
     image: "/project 2.png",
     title: "Phone Cleaner App",
     sections: [
@@ -49,6 +50,7 @@ const project = [
   },
   {
     id: 3,
+    slug: "house-planner",
     image: "/project 3.png",
     title: "Draw House App",
     sections: [
@@ -69,8 +71,9 @@ const project = [
   },
   {
     id: 4,
+    slug: "video-player",
     image: "/project 4.png",
-    title: "Draw House App",
+    title: "Video Player App",
     sections: [
       {
         label: "Problem",
@@ -87,9 +90,7 @@ const project = [
     ],
     link: "View Case Study",
   },
-
-
-]
+];
 
 const OurProject = () => {
   return (

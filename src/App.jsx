@@ -4,10 +4,10 @@ import Navbar from "./components/Navbar";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
-import OurProject from "./pages/OurProject";
+import Project from "./pages/Project";
+
 
 const App = () => {
-
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
@@ -20,13 +20,13 @@ const App = () => {
       mouseX.set(e.clientX);
       mouseY.set(e.clientY);
     };
-
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, [mouseX, mouseY]);
 
   return (
     <div className="bg-[#0A0D21] h-auto min-h-screen relative ">
+
       <motion.div
         className="fixed top-0 left-0 w-4 h-4 bg-white rounded-full pointer-events-none z-9999"
         style={{
@@ -38,12 +38,17 @@ const App = () => {
       />
 
       <Navbar />
+      
       <div className="relative z-10">
         <Routes>
+    
           <Route path="/" element={<Home />} />
-          <Route path="/project/:slug" element={<OurProject />} />
+          
+
+          <Route path="/project/:slug" element={<Project/>} />
         </Routes>
       </div>
+
       <Footer />
     </div>
   );
