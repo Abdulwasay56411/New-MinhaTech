@@ -84,7 +84,7 @@ const Footer = () => {
         <hr className="border-[#D9D9D96B] my-6" />
         <div className="flex flex-col md:flex-row gap-4 justify-between items-center">
           <p className="font-medium text-sm text-[#FFFFFFC7]">
-            ©2022-2023 Minha Tech. All Rights Reserved
+            ©2022-2023 MinhaTech. All Rights Reserved
           </p>
           <div className="flex gap-8">
             <p className="font-medium text-sm text-[#FFFFFFC7] cursor-pointer hover:scale-105">Privacy Policy</p>

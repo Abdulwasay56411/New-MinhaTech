@@ -46,6 +46,36 @@ const processImage = [
   },
 ]
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.3, // Har box ke darmiyan 0.3s ka delay
+      delayChildren: 0.2,   // Shuru hone se pehle halka sa wait
+    },
+  },
+};
+
+// Items Variants: Boxes niche se upar ayenge
+const itemVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" }
+  },
+};
+
+// Line Variant: Line left se right grow karegi
+const lineVariants = {
+  hidden: { width: 0, opacity: 0 },
+  visible: {
+    width: "100%",
+    opacity: 1,
+    transition: { duration: 1.2, ease: "easeInOut" }
+  },
+};
 
 const ToolMagic = () => {
 
@@ -56,7 +86,7 @@ const ToolMagic = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.2 }}
-        >
+      >
         <div className="max-w-350 mx-auto px-10">
           <Heading title="Our Process" para="A proven methodology from concept to market success" />
           <div className="relative flex flex-wrap justify-center lg:justify-between gap-x-5 gap-y-12 py-5 ">
@@ -66,12 +96,12 @@ const ToolMagic = () => {
             {processImage.map((item) => (
               <div key={item.id} className="relative z-10 flex flex-col items-center group">
 
-                <div className="w-20 h-20 sm:w-24  sm:h-24 rounded-lg sm:rounded-2xl bg-linear-to-t p-0.5 from-[#06B8FF] to-[#00FB94B2] sm:shadow-[0px_4px_34.5px_0px_rgba(6,184,255,0.38)] cursor-pointer hover:scale-105 duration-200">
+                <div className="w-20 h-20 sm:w-24  sm:h-24 rounded-lg sm:rounded-2xl bg-linear-to-t p-0.5 from-[#06B8FF] to-[#00FB94B2] sm:shadow-[0px_4px_20px_0px_rgba(6,184,255,0.38)] cursor-pointer hover:scale-105 duration-200">
                   <div className="w-full h-full bg-[#09182B] rounded-[5px] sm:rounded-2xl flex items-center justify-center">
                     <img className="w-8 h-8 sm:w-10 sm:h-10 object-contain" src={item.image} />
                   </div>
                 </div>
-                  <h1 className="text-center text-[#FFFFFFD4] text-base font-semibold py-3">{item.title}</h1>
+                <h1 className="text-center text-[#FFFFFFD4] text-base font-semibold py-3">{item.title}</h1>
               </div>
             ))}
           </div>
