@@ -84,7 +84,7 @@ const Plans = () => {
             <h1 className="text-[#FFFFFF] font-medium text-2xl">
               {item.title}
             </h1>
-            <p className="text-base font-montserrat text-[#FFFFFF]">
+            <p className="text-base text-[#FFFFFF]">
               {item.para}
             </p>
             <div

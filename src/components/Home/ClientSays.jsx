@@ -71,17 +71,17 @@ const ClientSays = () => {
                 transition={{ duration: 0.5 }}
                 className="w-full"
               >
-                <p className="text-[#FFFFFFD4] text-base md:text-2xl font-montserrat font-light leading-relaxed md:text-left h-25 md:h-32.5">
+                <p className="text-[#FFFFFFD4] text-base md:text-2xl font-light leading-relaxed md:text-left h-25 md:h-32.5">
                   {item.para}
                 </p>
 
-                <hr className="border-[#D9D9D987] mt-10 mb-8" />
+                <hr className="border-[#D9D9D987]  lg:mt-10 mb-8" />
 
                 <div className="flex gap-5">
                   <img className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover" src={item.image} alt={item.name} />
                   <div className="text-left">
-                    <h1 className="text-xl md:text-2xl text-white font-bold font-montserrat">{item.name}</h1>
-                    <p className="text-[#FFFFFFD4] text-sm md:text-base font-montserrat opacity-80">{item.text}</p>
+                    <h1 className="text-xl md:text-2xl text-white font-bold">{item.name}</h1>
+                    <p className="text-[#FFFFFFD4] text-sm md:text-base opacity-80">{item.text}</p>
                   </div>
                 </div>
               </motion.div>
@@ -90,10 +90,10 @@ const ClientSays = () => {
                <div className="hidden sm:block"></div>
 
                <div className="flex flex-col justify-center items-center w-30 sm:w-40 h-11 rounded-4xl bg-[#06B8FF40]">
-                <div className="flex items-center gap-5 select-none">
+                <div className="flex items-center gap-3 select-none">
                   <FaChevronLeft
                     onClick={handleprev}
-                    className={`text-xl sm:text-2xl transition-opacity duration-300 ${
+                    className={`text-lg sm:text-xl transition-opacity duration-300 ${
                       manualIndex === 0 ? "text-[#00FB9480]" : "text-[#00FB94] cursor-pointer"
                     }`}
                   />
@@ -104,7 +104,7 @@ const ClientSays = () => {
 
                   <FaChevronRight
                     onClick={handleNext}
-                    className={`text-xl sm:text-2xl transition-opacity duration-300 ${
+                    className={`text-lg sm:text-xl transition-opacity duration-300 ${
                       manualIndex === ourClient.length - 1 ? "text-[#00FB9480]" : "text-[#00FB94] cursor-pointer"
                     }`}
                   />

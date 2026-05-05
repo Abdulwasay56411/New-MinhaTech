@@ -60,10 +60,10 @@ const HeroSection = () => {
 
           {/* TEXT SECTION */}
           <div className='relative w-full lg:w-[48%] xl:w-[45%] pt-10 lg:pt-20 text-center lg:text-left space-y-3 md:space-y-5'>
-            <h1 className='font-bold text-3xl sm:text-4xl md:text-5xl lg:text-[52px] leading-8 sm:leading-12 lg:leading-16 tracking-wide text-[#F2F6F7] font-poppins'>
+            <h1 className='font-bold text-3xl sm:text-4xl md:text-5xl lg:text-[52px] leading-8 sm:leading-12 lg:leading-16 tracking-wide text-[#F2F6F7]'>
               Mobile App<span className='text-[#06A9EA]'> Development</span> <br /> That Drive Results
             </h1>
-            <p className='text-[#C6C7C8] lg:max-w-md tracking-wide text-sm sm:text-base font-montserrat'>
+            <p className='text-[#C6C7C8] lg:max-w-md tracking-wide text-sm sm:text-base'>
               Transforming ideas into seamless digital experiences people love to use
             </p>
 

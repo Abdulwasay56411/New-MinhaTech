@@ -11,7 +11,7 @@ const OurServices = () => {
       viewport={{ once: true, amount: 0.2 }}
       id='services' className='max-w-350 mx-auto px-5'>
       <Heading title="Core Services" para="End to end mobile apps solutions tailored for startups and enterprises" />
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-items-center my-5 gap-5'>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-items-center lg:my-5 gap-5'>
         {serviceBox.map((item) => (
           <div key={item.id} className='w-full px-5 py-10 max-w-95 h-auto bg-linear-to-t from-[#12253E] to-[#12253E80] shadow-[0_0_12px_12px_rgba(18,37,62,0.2)] rounded-3xl'>
             <div className='flex flex-col text-center items-center hover:scale-105 duration-300 cursor-pointer'>

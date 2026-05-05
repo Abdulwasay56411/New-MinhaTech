@@ -1,20 +1,9 @@
 @import "tailwindcss";
 
+
 body {
-  font-family: 'Poppins';
+  font-family: 'Inter', sans-serif;  
 }
-
-/* For Custom classis */
-@layer utilities {
-  .font-poppins {
-    font-family: 'Poppins' ;
-  }
-  
-  .font-montserrat {
-    font-family: 'Montserrat';
-  }
-}
-
 
 
 /* Animation */

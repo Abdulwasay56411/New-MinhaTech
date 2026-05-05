@@ -40,7 +40,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="sticky font-montserrat top-0 left-0 z-50 w-full">
+    <div className="sticky top-0 left-0 z-50 w-full">
       {/* Topbar */}
       <div className="bg-[#033C53] w-full">
         <div className="max-w-350 mx-auto flex flex-row justify-between items-center px-5 py-1.5 text-white">
@@ -82,7 +82,7 @@ const Navbar = () => {
               {navbarLink.map((item) => (
                 <ul key={item.id} className="group relative py-2">
                   <HashLink smooth to={item.Link}>
-                    <li className="md:text-sm lg:text-base cursor-pointer text-center text-[#FFFFFF] font-montserrat font-medium">
+                    <li className="md:text-sm lg:text-base cursor-pointer text-center text-[#FFFFFF] font-medium">
                       {item.name}
                     </li>
                   </HashLink>

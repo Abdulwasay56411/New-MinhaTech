@@ -60,7 +60,7 @@ const GetInTouch = () => {
               <div className="flex justify-center items-center w-14 h-14 border my-4 rounded-2xl border-[#06B8FF33] bg-[#06B8FF1A] backdrop-blur-xl shadow-2xl shadow-[#06B8FF33]">
                 <img className="w-7 h-7 object-contain" src={item.image} alt="" />
               </div>
-              <p className="text-[#FFFFFF] text-xl font-montserrat">{item.title}</p>
+              <p className="text-[#FFFFFF] text-xl">{item.title}</p>
             </div>
           ))}
           <div className=" w-full md:w-150 mt-7 h-auto border border-[#FFFFFF1A] bg-[#06B8FF26] rounded-[30px] p-8">
@@ -77,14 +77,14 @@ const GetInTouch = () => {
           <form>
             <label className="block text-white">First Name</label>
             <input
-              className="w-full h-14 bg-[#AFECFF1A] mt-3 mb-6 rounded-[20px] outline-none px-5 text-[#C6C7C8] font-medium font-montserrat text-lg"
+              className="w-full h-14 bg-[#AFECFF1A] mt-3 mb-6 rounded-[20px] outline-none px-5 text-[#C6C7C8] font-medium text-lg"
               type="text"
               placeholder="First Name"
               required
             />
             <label className="block text-white">Email</label>
             <input
-              className="w-full h-14 bg-[#AFECFF1A] mt-3 mb-6 rounded-[20px] outline-none px-5 text-[#C6C7C8] font-medium font-montserrat text-lg"
+              className="w-full h-14 bg-[#AFECFF1A] mt-3 mb-6 rounded-[20px] outline-none px-5 text-[#C6C7C8] font-medium text-lg"
               type="email"
               placeholder="Email"
               required
@@ -98,7 +98,7 @@ const GetInTouch = () => {
             <div className="py-5">
               <button
                 type="submit"
-                className="bg-linear-to-r from-[#0598D3] to-[#07D580] w-full h-13 font-montserrat font-semibold text-lg text-[#FFFFFFED] cursor-pointer rounded-2xl hover:scale-102 hover:shadow-2xl hover:shadow-[#0598D3]/30 duration-200"
+                className="bg-linear-to-r from-[#0598D3] to-[#07D580] w-full h-13 font-semibold text-lg text-[#FFFFFFED] cursor-pointer rounded-2xl hover:scale-102 hover:shadow-2xl hover:shadow-[#0598D3]/30 duration-200"
               >
                 Send Message
               </button>

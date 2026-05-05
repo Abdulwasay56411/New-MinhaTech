@@ -63,21 +63,17 @@ const Milestones = () => {
         title="What We Delivered" 
         para="Delivering measurable results through innovation, performance and user-focused mobile solutions" 
       />
-      
-      {/* <div className="flex items-center my-8">
-        <img className="object-cover" src="/milestones.png" alt="Milestones" />
-      </div> */}
 
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 py-6 items-start">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:py-6 items-start">
         {milestonesData.map((item) => (
           <div 
             key={item.id} 
             className="w-full h-35 sm:h-44 rounded-3xl bg-[#173C4C] border border-[#FFFFFF1A] flex flex-col justify-between py-8 items-center backdrop-blur-sm"
           >
-            <h1 className="font-poppins text-[#FFFFFF] font-semibold text-3xl sm:text-5xl md:text-6xl">
+            <h1 className="text-[#FFFFFF] font-semibold text-3xl sm:text-5xl md:text-6xl">
               <Counter endValue={item.value} suffix={item.suffix} />
             </h1>
-            <p className="font-montserrat text-sm sm:text-lg md:text-[24px] pt-2 text-center text-[#C6C7C8] px-2">
+            <p className="text-sm sm:text-lg md:text-[24px] pt-2 text-center text-[#C6C7C8] px-2">
               {item.label}
             </p>
           </div>
