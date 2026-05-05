@@ -95,11 +95,11 @@ const project = [
 const OurProject = () => {
   return (
     <motion.div id='project'
-    initial={{opacity: 0, y:50}}
-    whileInView={{opacity: 1, y:0}}
-    transition={{duration: 1.2, ease: "easeOut"}}
-    viewport={{once: true, amount: 0.2}}
-    className='max-w-350 mx-auto py-10 px-5'>
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1.2, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.2 }}
+      className='max-w-350 mx-auto py-10 px-5'>
       <Heading title="Success Stories" para="Premium Projects show casing our Impact" />
       <div className='grid md:grid-cols-1 lg:grid-cols-2 justify-items-center gap-x-5 gap-y-6'>
         {project.map((item) => (
@@ -114,10 +114,16 @@ const OurProject = () => {
               </div>
             ))}
             <Link to={`/project/${item.slug}`}>
-            <div className='flex items-center gap-1 pt-4'>
-              <p className='px-2 text-[#07D580] font-bold cursor-pointer hover:scale-105 duration-300  text-xl'>{item.link}</p>
-              <img className='w-8 h-8 cursor-pointer' src="/Arrow.png" alt="" />
-            </div>
+              <div className='group flex items-center gap-1 pt-4'>
+                <p className='px-2 text-[#07D580] font-bold cursor-pointer hover:scale-105 duration-300 text-xl'>
+                  {item.link}
+                </p>
+                <img
+                  className='w-8 h-8 cursor-pointer transition-transform duration-300 group-hover:translate-x-2'
+                  src="/Arrow.png"
+                  alt=""
+                />
+              </div>
             </Link>
           </div>
         ))}

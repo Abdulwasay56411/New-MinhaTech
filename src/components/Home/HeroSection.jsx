@@ -28,11 +28,9 @@ const HeroSection = () => {
           repeat: Infinity, 
           ease: "easeInOut" 
         }}
-        className='absolute bottom-[10%] left-[-5%] w-[300px] md:w-[500px] h-[300px] md:h-[500px] rounded-full blur-[100px] md:blur-[140px] pointer-events-none z-0'
+        className='absolute bottom-[10%] left-[-5%] w-75 md:w-125 h-75 md:h-125 rounded-full blur-[100px] md:blur-[140px] pointer-events-none z-0'
         style={{ backgroundColor: '#00FB94' }}
       />
-
-      {/* --- RIGHT SIDE GLOW (Images Side) --- */}
       <motion.div 
         animate={{ 
           scale: [1.1, 1, 1.1],
@@ -45,7 +43,7 @@ const HeroSection = () => {
           repeat: Infinity, 
           ease: "easeInOut" 
         }}
-        className='absolute top-[5%] right-[-5%] w-[350px] md:w-[550px] h-[350px] md:h-[550px] rounded-full blur-[100px] md:blur-[150px] pointer-events-none z-0'
+        className='absolute top-[5%] right-[-5%] w-87.5 md:w-137.5 h-87.5 md:h-137.5 rounded-full blur-[100px] md:blur-[150px] pointer-events-none z-0'
         style={{ backgroundColor: '#00FB94' }}
       />
 
