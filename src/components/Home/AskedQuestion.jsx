@@ -49,7 +49,7 @@ const AskedQuestion = () => {
                         className={`w-full max-w-250 rounded-[30px] border border-[#FFFFFF33] transition-all duration-300 ${isOpen === item.id ? "bg-[#0B1D33]" : "bg-[#192234]  shadow-2xl shadow-[#00000040]"}`}
                     >
                         <div className='py-5 px-5 sm:px-10'>
-                            <div className='flex justify-between items-start gap-5'>
+                            <div className='flex justify-between items-center gap-5'>
                                 <h1 className='font-medium text-base sm:text-xl text-[#E5E5E5]'>{item.title}</h1>
                                 <div
                                     onClick={() => setIsOpen(isOpen === item.id ? null : item.id)}

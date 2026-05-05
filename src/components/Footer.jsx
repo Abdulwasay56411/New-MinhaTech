@@ -41,7 +41,7 @@ const Footer = () => {
             <h1 className="text-[#06B8FF] font-semibold text-5xl">
               MinhaTech
             </h1>
-            <p className="text-[#C6C7C8] text-lg mt-4 lg:max-w-xl">
+            <p className="text-[#C6C7C8] text-sm md:text-lg mt-4 lg:max-w-xl">
               Building revenue generated mobile apps for startups and enterprises.
               From Idea to App Store, we deliver excellence.
             </p>
@@ -54,7 +54,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <div className="bg-[#06B8FF26] border border-[#06B8FF26] text-white w-12 h-12 flex items-center justify-center rounded-2xl cursor-pointer duration-200 hover:scale-105 hover:text-[#06B8FF] hover:border-[#06B8FF]">
+                  <div className="bg-[#06B8FF26] border border-[#06B8FF26] text-white w-8 h-8 sm:w-12 sm:h-12 flex items-center justify-center rounded-2xl cursor-pointer duration-200 hover:scale-105 hover:text-[#06B8FF] hover:border-[#06B8FF]">
                     <item.Icon size={22} />
                   </div>
                 </a>
@@ -84,7 +84,7 @@ const Footer = () => {
         <hr className="border-[#D9D9D96B] my-6" />
         <div className="flex flex-col md:flex-row gap-4 justify-between items-center">
           <p className="font-medium text-sm text-[#FFFFFFC7]">
-            ©2022-2023 MinhaTech. All Rights Reserved
+            ©2025-2026 MinhaTech. All Rights Reserved
           </p>
           <div className="flex gap-8">
             <p className="font-medium text-sm text-[#FFFFFFC7] cursor-pointer hover:scale-105">Privacy Policy</p>

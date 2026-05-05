@@ -42,7 +42,7 @@ const ClientSays = () => {
     >
       <Heading title="Clients Success Stories" para="Hear from founders and teams we've helped succeed" />
 
-      <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10 md:gap-16">
+      <div className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-16">
         <div className="relative w-80 h-80 flex shrink-0 items-center justify-center md:order-1">
           <motion.div
             animate={{ rotate: 360 }}
@@ -80,7 +80,7 @@ const ClientSays = () => {
                 <div className="flex gap-5">
                   <img className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover" src={item.image} alt={item.name} />
                   <div className="text-left">
-                    <h1 className="text-xl md:text-2xl text-white font-bold">{item.name}</h1>
+                    <h1 className="text-lg md:text-2xl text-white font-bold">{item.name}</h1>
                     <p className="text-[#FFFFFFD4] text-sm md:text-base opacity-80">{item.text}</p>
                   </div>
                 </div>
@@ -89,7 +89,7 @@ const ClientSays = () => {
             <div className="flex gap-4 justify-center mt-5 sm:justify-between flex-wrap  sm:-mt-18 relative z-20">
                <div className="hidden sm:block"></div>
 
-               <div className="flex flex-col justify-center items-center w-30 sm:w-40 h-11 rounded-4xl bg-[#06B8FF40]">
+               <div className="flex flex-col justify-center items-center w-26 sm:w-40 h-11 rounded-4xl bg-[#06B8FF40]">
                 <div className="flex items-center gap-3 select-none">
                   <FaChevronLeft
                     onClick={handleprev}

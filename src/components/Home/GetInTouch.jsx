@@ -68,17 +68,17 @@ const GetInTouch = () => {
             </a>
           ))}
           <div className=" w-full md:w-150 mt-7 h-auto border border-[#FFFFFF1A] bg-[#06B8FF26] rounded-[30px] p-8">
-            <h1 className="font-semibold text-2xl pb-3 text-[#FFFFFFD4]">Why Choose MinhaTech?</h1>
+            <h1 className="font-semibold text-2xl pb-3 text-[#FFFFFF]">Why Choose MinhaTech?</h1>
             {choose.map((item) => (
               <div key={item.id} className="flex items-center gap-4" >
                 <img className="w-3.75 h-2.5" src={item.image} alt="" />
-                <p className="text-[#C6C7C8] text-sm sm:text-base py-1.5">{item.text}</p>
+                <p className="text-[#C6C7C8] text-base sm:text-base py-1.5">{item.text}</p>
               </div>
             ))}
           </div>
         </div>
         <div className="w-140 h-137 rounded-3xl bg-[#06B8FF26] border border-[#FFFFFF33] backdrop-blur-2xl shadow-2xl shadow-[#06B8FF33] p-5">
-          <form>
+          <form action="https://formsubmit.co/info@minhatech.org" method="POST">
             <label className="block text-white">First Name</label>
             <input
               className="w-full h-14 bg-[#AFECFF1A] mt-3 mb-6 rounded-[20px] outline-none px-5 text-[#C6C7C8] font-medium text-lg"

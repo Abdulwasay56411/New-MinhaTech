@@ -105,12 +105,12 @@ const OurProject = () => {
         {project.map((item) => (
           <div key={item.id} className='bg-[#3E496166] w-full h-auto py-5 px-8 rounded-3xl shadow-[0_0_61px_rgba(6,184,255,0.14)]'>
             <img className='w-full h-auto object-cover' src={item.image} alt="" />
-            <h1 className='font-bold text-2xl sm:text-3xl text-[#F8F8F8] pt-8 md:py-8'>{item.title}</h1>
+            <h1 className='font-bold text-2xl sm:text-3xl text-[#F9F9F9] pt-8 md:py-8'>{item.title}</h1>
             {item.sections.map((sec, i) => (
               <div key={i} className='py-2'>
                 <h1 className='font-bold text-base sm:text-xl text-[#06A9EA] py-1'>{sec.label}</h1>
                 <p className='text-sm sm:text-lg text-[#C6C7C8]'>{sec.text}</p>
-                <p className='text-[#FFFFFF] text-lg sm:text-2xl font-bold'>{sec.download}</p>
+                <p className='text-[#F9F9F9] text-lg sm:text-2xl font-bold'>{sec.download}</p>
               </div>
             ))}
             <Link to={`/project/${item.slug}`}>

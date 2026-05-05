@@ -81,24 +81,24 @@ const Plans = () => {
             key={item.id}
             className="bg-[#0B1D33] border border-[#FFFFFF33] hover:bg-[#00D8FF]/20 hover:shadow-[0_10px_50px_-10px_rgba(0,216,255,0.2)] duration-200 cursor-pointer w-full h-auto p-5 mx-2 rounded-4xl"
           >
-            <h1 className="text-[#FFFFFF] font-medium text-2xl">
+            <h1 className="text-[#F9F9F9] font-medium text-2xl">
               {item.title}
             </h1>
-            <p className="text-base text-[#FFFFFF]">
+            <p className="text-base text-[#C6C7C8]">
               {item.para}
             </p>
             <div
-              className="my-4 w-full h-0.5"
+              className="my-6 w-full h-0.5"
               style={{
                 backgroundImage:
                   "linear-gradient(90deg, #06B8FF80 50%, transparent 50%)",
                 backgroundSize: "20px 2px",
               }}
             />
-            <h1 className="text-2xl font-bold py-8 text-[#FFFFFF]">
+            <h1 className="text-2xl font-bold pb-4 text-[#F9F9F9]">
               {item.amount} <span className="text-lg font-normal">/ month</span>
             </h1>
-            <button className="w-full h-15 rounded-2xl text-lg font-medium mb-8 text-[#FFFFFF] border border-[#06B8FF] bg-[#06B8FF42] cursor-pointer duration-200 hover:bg-linear-to-r hover:from-[#00FB94] hover:to-[#06B8FF] hover:shadow-2xl hover:shadow-[#06B8FF42] hover:scale-102">
+            <button className="w-full h-15 rounded-2xl text-lg font-medium mb-8 text-[#F9F9F9] border border-[#06B8FF] bg-[#06B8FF42] cursor-pointer duration-200 hover:bg-linear-to-r hover:from-[#00FB94] hover:to-[#06B8FF] hover:shadow-2xl hover:shadow-[#06B8FF42] hover:scale-102">
               {item.btn}
             </button>
             <div>
@@ -112,7 +112,7 @@ const Plans = () => {
               ].map((text, idx) => (
                 <div key={idx} className="flex items-center gap-4 pt-4">
                   <img className="w-4 h-4" src="/Tick.png" alt="" />
-                  <p className="text-lg font-medium text-[#FFFFFF]  font-montserrat">
+                  <p className="text-lg text-[#C6C7C8] ">
                     {text}
                   </p>
                 </div>
@@ -126,8 +126,8 @@ const Plans = () => {
           <div key={item.id} className="w-full h-auto lg:my-5 p-8 rounded-[30px] bg-[#0B1D33] border border-[#FFFFFF33]">
             <img className="w-17 h-15 object-contain mb-5" src={item.image} alt="" />
             <div className="flex flex-wrap items-center justify-between gap-2">
-              <h1 className="font-bold text-base md:text-2xl text-[#FFFFFF]">{item.title}</h1>
-              <p className="font-bold text-xl md:text-3xl text-[#FFFFFF]">{item.price}</p>
+              <h1 className="font-bold text-lg md:text-2xl text-[#F9F9F9]">{item.title}</h1>
+              <p className="font-bold text-lg md:text-3xl text-[#F9F9F9]">{item.price}</p>
             </div>
             <p className="text-[#C6C7C8] text-sm sm:text-base lg:text-xl py-3">{item.para}</p>
             <button className="w-full h-16 bg-[#06B8FF63] border border-[#06B8FF] text-white rounded-2xl mt-3 cursor-pointer duration-200 hover:scale-102 hover:shadow-2xl hover:shadow-[#06B8FF42]">{item.btn}</button>
