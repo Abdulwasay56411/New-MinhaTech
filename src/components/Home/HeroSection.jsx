@@ -1,8 +1,22 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react'; 
+import { motion, AnimatePresence } from 'framer-motion'; 
 import { HashLink } from 'react-router-hash-link';
 
 const HeroSection = () => {
+
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+   
+    if (document.readyState === 'complete') {
+      setIsLoaded(true);
+    } else {
+      const handleLoad = () => setIsLoaded(true);
+      window.addEventListener('load', handleLoad);
+      return () => window.removeEventListener('load', handleLoad);
+    }
+  }, []);
+
   const heroImages = [
     { id: 1, image: "/hero 1.png" },
     { id: 2, image: "/hero 2.png" },
@@ -18,36 +32,46 @@ const HeroSection = () => {
       id='home'
       className='relative isolate w-full bg-[url("/herobg.png")] bg-cover bg-center overflow-hidden lg:-mt-33.75 -mt-27.5'
     >
-      <motion.div
-        animate={{
-          scale: [1, 1.1, 1],
-          opacity: [0.1, 0.15, 0.1],
-          x: [0, -15, 0],
-        }}
-        transition={{
-          duration: 10,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        className='hidden lg:block absolute -bottom-[20%] left-[-20%] md:left-[-5%] w-75 md:w-125 h-75 md:h-125 rounded-full blur-[100px] md:blur-[140px] pointer-events-none z-[-1]'
-        style={{ backgroundColor: 'green' }}
-      />
+      <AnimatePresence>
+        {isLoaded && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{
+                scale: [1, 1.1, 1],
+                opacity: [0.1, 0.15, 0.1],
+                x: [0, -15, 0],
+              }}
+              transition={{
+                duration: 10,
+                repeat: Infinity,
+                ease: "easeInOut",
+                opacity: { duration: 2 } // Smooth fade-in on load
+              }}
+              className='hidden lg:block absolute -bottom-[20%] left-[-20%] md:left-[-5%] w-75 md:w-125 h-75 md:h-125 rounded-full blur-[100px] md:blur-[140px] pointer-events-none z-[-1]'
+              style={{ backgroundColor: 'green' }}
+            />
 
-      <motion.div
-        animate={{
-          scale: [1.1, 1, 1.1],
-          opacity: [0.1, 0.18, 0.1],
-          x: [0, 20, 0],
-          y: [0, -10, 0],
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        className='hidden lg:block absolute top-[5%] right-[-20%] md:right-[-5%] w-87.5 md:w-137.5 h-87.5 md:h-137.5 rounded-full blur-[100px] md:blur-[150px] pointer-events-none z-[-1]'
-        style={{ backgroundColor: '#00FB94' }}
-      />
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{
+                scale: [1.1, 1, 1.1],
+                opacity: [0.1, 0.18, 0.1],
+                x: [0, 20, 0],
+                y: [0, -10, 0],
+              }}
+              transition={{
+                duration: 8,
+                repeat: Infinity,
+                ease: "easeInOut",
+                opacity: { duration: 2 } 
+              }}
+              className='hidden lg:block absolute top-[5%] right-[-20%] md:right-[-5%] w-87.5 md:w-137.5 h-87.5 md:h-137.5 rounded-full blur-[100px] md:blur-[150px] pointer-events-none z-[-1]'
+              style={{ backgroundColor: '#00FB94' }}
+            />
+          </>
+        )}
+      </AnimatePresence>
 
       <div className='relative z-10 max-w-350 mx-auto px-5 pt-32 lg:pt-52'>
         <motion.div
@@ -57,7 +81,6 @@ const HeroSection = () => {
           viewport={{ once: true, amount: 0.1 }}
           className='flex flex-col lg:flex-row items-stretch justify-between gap-8 lg:gap-12'
         >
-
           {/* TEXT SECTION */}
           <div className='relative w-full lg:w-[48%] xl:w-[45%] pt-10 lg:pt-20 text-center lg:text-left space-y-3 md:space-y-5'>
             <h1 className='font-bold text-3xl sm:text-4xl md:text-5xl lg:text-[52px] leading-8 sm:leading-12 lg:leading-16 tracking-wide text-[#F2F6F7]'>
@@ -84,7 +107,6 @@ const HeroSection = () => {
 
           {/* IMAGE SECTION */}
           <div className='relative w-full lg:w-[50%] flex justify-center lg:justify-end items-start lg:-mt-20 overflow-hidden'>
-
             {/* MOBILE */}
             <div className='lg:hidden flex gap-2 sm:gap-3 justify-center'>
               {[1, 2].map((col) => (
@@ -126,7 +148,6 @@ const HeroSection = () => {
                 </div>
               ))}
             </div>
-
           </div>
         </motion.div>
       </div>

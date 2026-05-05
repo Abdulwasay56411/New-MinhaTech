@@ -7,11 +7,13 @@ const mail = [
     id: 1,
     title: "info@minhatech.org",
     image: "/mail.png",
+    link: "mailto:info@minhatech.org",
   },
   {
     id: 2,
     title: "+92 315 4666899",
     image: "/phone.png",
+    link: "tel:+923154666899",
   },
   {
     id: 3,
@@ -56,12 +58,14 @@ const GetInTouch = () => {
       <div className="flex flex-wrap justify-center lg:justify-between gap-4">
         <div>
           {mail.map((item) => (
-            <div key={item.id} className="flex items-center gap-2">
+            <a href={item.link}>
+              <div key={item.id} className="flex items-center gap-2">
               <div className="flex justify-center items-center w-14 h-14 border my-4 rounded-2xl border-[#06B8FF33] bg-[#06B8FF1A] backdrop-blur-xl shadow-2xl shadow-[#06B8FF33]">
                 <img className="w-7 h-7 object-contain" src={item.image} alt="" />
               </div>
               <p className="text-[#FFFFFF] text-xl">{item.title}</p>
             </div>
+            </a>
           ))}
           <div className=" w-full md:w-150 mt-7 h-auto border border-[#FFFFFF1A] bg-[#06B8FF26] rounded-[30px] p-8">
             <h1 className="font-semibold text-2xl pb-3 text-[#FFFFFFD4]">Why Choose MinhaTech?</h1>
