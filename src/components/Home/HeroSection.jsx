@@ -14,10 +14,42 @@ const HeroSection = () => {
   const repeatedImages = [...heroImages, ...heroImages, ...heroImages, ...heroImages];
 
   return (
+    <div id='home' className='relative w-full bg-[url("/herobg.png")] bg-cover bg-center overflow-hidden lg:-mt-33.75 -mt-27.5'>
+      
+      {/* --- LEFT SIDE GLOW (Text Side) --- */}
+      <motion.div 
+        animate={{ 
+          scale: [1, 1.1, 1],
+          opacity: [0.1, 0.15, 0.1],
+          x: [0, -15, 0],
+        }}
+        transition={{ 
+          duration: 10, 
+          repeat: Infinity, 
+          ease: "easeInOut" 
+        }}
+        className='absolute bottom-[10%] left-[-5%] w-[300px] md:w-[500px] h-[300px] md:h-[500px] rounded-full blur-[100px] md:blur-[140px] pointer-events-none z-0'
+        style={{ backgroundColor: '#00FB94' }}
+      />
 
-    <div id='home' className='w-full bg-[url("/herobg.png")] bg-cover bg-center overflow-hidden lg:-mt-33.75 -mt-27.5'>
+      {/* --- RIGHT SIDE GLOW (Images Side) --- */}
+      <motion.div 
+        animate={{ 
+          scale: [1.1, 1, 1.1],
+          opacity: [0.1, 0.18, 0.1],
+          x: [0, 20, 0],
+          y: [0, -10, 0]
+        }}
+        transition={{ 
+          duration: 8, 
+          repeat: Infinity, 
+          ease: "easeInOut" 
+        }}
+        className='absolute top-[5%] right-[-5%] w-[350px] md:w-[550px] h-[350px] md:h-[550px] rounded-full blur-[100px] md:blur-[150px] pointer-events-none z-0'
+        style={{ backgroundColor: '#00FB94' }}
+      />
 
-      <div className='max-w-350 mx-auto  px-5 pt-32 lg:pt-52'>
+      <div className='relative z-10 max-w-350 mx-auto px-5 pt-32 lg:pt-52'>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -29,7 +61,7 @@ const HeroSection = () => {
             <h1 className='font-bold text-3xl sm:text-4xl md:text-5xl lg:text-[52px] leading-8 sm:leading-12 lg:leading-16 tracking-wide text-[#F2F6F7] font-poppins'>
               Mobile App<span className='text-[#06A9EA]'> Development</span> <br /> That Drive Results
             </h1>
-            <p className='text-[#C6C7C8] lg:max-w-md tracking-wide text-sm sm:text-base  font-montserrat'>
+            <p className='text-[#C6C7C8] lg:max-w-md tracking-wide text-sm sm:text-base font-montserrat'>
               Transforming ideas into seamless digital experiences people love to use
             </p>
             <div className='flex flex-wrap gap-3 sm:gap-4 pt-3 md:pt-12 justify-center lg:justify-start'>

@@ -81,9 +81,9 @@ const ToolMagic = () => {
           <div className="flex flex-wrap justify-center  gap-5 max-w-250 mx-auto">
             {toolImages.map((item) => (
               <div key={item.id}
-                className="w-32 h-13 sm:w-56 sm:h-20 flex items-center justify-center rounded-xl p-0.5 bg-linear-to-r from-[#00FB9414] to-[#06B8FF80] sm:bg-linear-to-r sm:from-[#06B8FF] sm:to-[#07D580] cursor-pointer hover:scale-105 duration-300"
+                className="w-32 h-13 sm:w-56 sm:h-20 flex items-center justify-center rounded-xl p-0.5  bg-linear-to-r from-[#06B8FF] to-[#07D580] cursor-pointer hover:scale-105 duration-300"
               >
-                <div className="sm:bg-[#0F1D34] w-full h-full rounded-[10px] flex items-center justify-center">
+                <div className="bg-[#0F1D34] w-full h-full rounded-[10px] flex items-center justify-center">
                   <img className="w-8 h-8 sm:w-10 sm:h-10 object-cover" src={item.image} alt="" />
                 </div>
               </div>

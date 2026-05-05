@@ -13,7 +13,7 @@ const image = [
 ];
 
 const Work = () => {
-  const imageTools = [...image, ...image];
+  const imageTools = [...image, ...image, ...image];
   const scrollRef = useRef(null);
   const animationRef = useRef(null);
 

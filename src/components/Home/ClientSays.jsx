@@ -5,9 +5,7 @@ import Heading from "../Heading";
 
 const ClientSays = () => {
   const [currentCard, setCurrentCard] = useState(0);
-
   const [manualIndex, setManualIndex] = useState(0);
-
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -62,22 +60,23 @@ const ClientSays = () => {
         </div>
 
         <div className="max-w-190 px-2 md:px-5 lg:px-10 md:order-2">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={currentCard}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-              transition={{ duration: 0.5 }}
-              className="w-full"
-            >
-              <p className="text-[#FFFFFFD4] text-base md:text-2xl font-montserrat font-light leading-relaxed md:text-left">
-                {item.para}
-              </p>
+          <div className="w-full">
+            
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentCard}
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -20 }}
+                transition={{ duration: 0.5 }}
+                className="w-full"
+              >
+                <p className="text-[#FFFFFFD4] text-base md:text-2xl font-montserrat font-light leading-relaxed md:text-left h-25 md:h-32.5">
+                  {item.para}
+                </p>
 
-              <hr className="border-[#D9D9D987] mt-10 mb-8" />
+                <hr className="border-[#D9D9D987] mt-10 mb-8" />
 
-              <div className="flex gap-4 justify-end sm:justify-between flex-wrap">
                 <div className="flex gap-5">
                   <img className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover" src={item.image} alt={item.name} />
                   <div className="text-left">
@@ -85,33 +84,35 @@ const ClientSays = () => {
                     <p className="text-[#FFFFFFD4] text-sm md:text-base font-montserrat opacity-80">{item.text}</p>
                   </div>
                 </div>
+              </motion.div>
+            </AnimatePresence>
+            <div className="flex gap-4 justify-center mt-5 sm:justify-between flex-wrap  sm:-mt-18 relative z-20">
+               <div className="hidden sm:block"></div>
 
-                <div className="flex flex-col justify-center items-center w-30 sm:w-40 h-11 rounded-4xl bg-[#06B8FF40]">
-                  <div className="flex items-center gap-5 select-none">
-                    {/* Back Button Logic */}
-                    <FaChevronLeft
-                      onClick={handleprev}
-                      className={`text-xl sm:text-2xl transition-opacity duration-300 ${
-                        manualIndex === 0 ? "text-[#00FB9480]" : "text-[#00FB94] cursor-pointer"
-                      }`}
-                    />
-                    
-                    <h1 className="text-[#06B8FF]">
-                      {manualIndex + 1} / {ourClient.length}
-                    </h1>
+               <div className="flex flex-col justify-center items-center w-30 sm:w-40 h-11 rounded-4xl bg-[#06B8FF40]">
+                <div className="flex items-center gap-5 select-none">
+                  <FaChevronLeft
+                    onClick={handleprev}
+                    className={`text-xl sm:text-2xl transition-opacity duration-300 ${
+                      manualIndex === 0 ? "text-[#00FB9480]" : "text-[#00FB94] cursor-pointer"
+                    }`}
+                  />
+                  
+                  <h1 className="text-[#06B8FF] font-bold">
+                    {manualIndex + 1} / {ourClient.length}
+                  </h1>
 
-                    {/* Next Button Logic */}
-                    <FaChevronRight
-                      onClick={handleNext}
-                      className={`text-xl sm:text-2xl transition-opacity duration-300 ${
-                        manualIndex === ourClient.length - 1 ? "text-[#00FB9480]" : "text-[#00FB94] cursor-pointer"
-                      }`}
-                    />
-                  </div>
+                  <FaChevronRight
+                    onClick={handleNext}
+                    className={`text-xl sm:text-2xl transition-opacity duration-300 ${
+                      manualIndex === ourClient.length - 1 ? "text-[#00FB9480]" : "text-[#00FB94] cursor-pointer"
+                    }`}
+                  />
                 </div>
               </div>
-            </motion.div>
-          </AnimatePresence>
+            </div>
+
+          </div>
         </div>
       </div>
     </motion.div>
@@ -121,7 +122,7 @@ const ClientSays = () => {
 export default ClientSays;
 
 const ourClient = [
-  { id: 1, para: "“Working with MinhaTech Pub has been a game changer for us. Their expertise in app design and ideation helped us bring our vision to life, resulting in a product that exceeded our expectations”", image: "/Client.png", name: "Conor Bradley", text: "Senior Marketing Specialist, TechNova" },
-  { id: 2, para: "“From concept to launch, MinhaTech Pub demonstrated exceptional professionalism and creativity. Their team turned our idea into a powerful app that align our business goals.”", image: "/client 2.png", name: "Ahmed Rehman", text: "Founder and Ceo, Revo Tech" },
+  { id: 1, para: "“Working with MinhaTech Pub has been a game changer for us. Their expertise in app design and ideation helped us bring our vision to life.”", image: "/Client.png", name: "Conor Bradley", text: "Senior Marketing Specialist, TechNova" },
+  { id: 2, para: "“From concept to launch, MinhaTech Pub demonstrated exceptional professionalism and creativity. Their team turned our idea into a powerful app.”", image: "/client 2.png", name: "Ahmed Rehman", text: "Founder and Ceo, Revo Tech" },
   { id: 3, para: "“They didn’t just build an app they built a complete digital experience for our users. Highly recommended for anyone serious about quality.”", image: "/client 3.png", name: "James Carter", text: "Creative Director, NovaSphere" },
 ];
