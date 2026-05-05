@@ -29,8 +29,8 @@ const HeroSection = () => {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className='absolute bottom-[10%] left-[-20%] md:left-[-5%] w-75 md:w-125 h-75 md:h-125 rounded-full blur-[100px] md:blur-[140px] pointer-events-none z-[-1]'
-        style={{ backgroundColor: '#065F46' }}
+        className='absolute -bottom-[20%] left-[-20%] md:left-[-5%] w-75 md:w-125 h-75 md:h-125 rounded-full blur-[100px] md:blur-[140px] pointer-events-none z-[-1]'
+        style={{ backgroundColor: 'green' }}
       />
 
       <motion.div
