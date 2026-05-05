@@ -98,13 +98,13 @@ const OurProject = () => {
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.2, ease: "easeOut" }}
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.05 }}
       className='max-w-350 mx-auto py-10 px-5'>
       <Heading title="Success Stories" para="Premium Projects show casing our Impact" />
       <div className='grid md:grid-cols-1 lg:grid-cols-2 justify-items-center gap-x-5 gap-y-6'>
         {project.map((item) => (
           <div key={item.id} className='bg-[#3E496166] w-full h-auto py-5 px-8 rounded-3xl shadow-[0_0_61px_rgba(6,184,255,0.14)]'>
-            <img className='w-178 h-123.75 object-contain' src={item.image} alt="" />
+            <img className='w-full h-auto object-cover' src={item.image} alt="" />
             <h1 className='font-bold text-2xl sm:text-3xl text-[#F8F8F8] px-2 py-8'>{item.title}</h1>
             {item.sections.map((sec, i) => (
               <div key={i} className='py-4 px-2'>
