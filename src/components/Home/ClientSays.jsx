@@ -75,7 +75,7 @@ const ClientSays = () => {
                   {item.para}
                 </p>
 
-                <hr className="border-[#D9D9D987]  lg:mt-10 mb-8" />
+                <hr className="border-[#D9D9D987] mt-5 lg:mt-10 mb-8" />
 
                 <div className="flex gap-5">
                   <img className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover" src={item.image} alt={item.name} />

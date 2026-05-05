@@ -105,21 +105,21 @@ const OurProject = () => {
         {project.map((item) => (
           <div key={item.id} className='bg-[#3E496166] w-full h-auto py-5 px-8 rounded-3xl shadow-[0_0_61px_rgba(6,184,255,0.14)]'>
             <img className='w-full h-auto object-cover' src={item.image} alt="" />
-            <h1 className='font-bold text-2xl sm:text-3xl text-[#F8F8F8] px-2 py-8'>{item.title}</h1>
+            <h1 className='font-bold text-2xl sm:text-3xl text-[#F8F8F8] pt-8 md:py-8'>{item.title}</h1>
             {item.sections.map((sec, i) => (
-              <div key={i} className='py-4 px-2'>
+              <div key={i} className='py-2'>
                 <h1 className='font-bold text-base sm:text-xl text-[#06A9EA] py-1'>{sec.label}</h1>
-                <p className='text-base sm:text-xl text-[#C6C7C8]'>{sec.text}</p>
+                <p className='text-sm sm:text-lg text-[#C6C7C8]'>{sec.text}</p>
                 <p className='text-[#FFFFFF] text-lg sm:text-2xl font-bold'>{sec.download}</p>
               </div>
             ))}
             <Link to={`/project/${item.slug}`}>
               <div className='group flex items-center gap-1 pt-4'>
-                <p className='px-2 text-[#07D580] font-bold cursor-pointer text-xl'>
+                <p className='text-[#07D580] font-bold cursor-pointer md:text-xl'>
                   {item.link}
                 </p>
                 <img
-                  className='w-8 h-8 cursor-pointer transition-transform duration-300 group-hover:translate-x-2'
+                  className='w-7 h-7 md:w-8 md:h-8 cursor-pointer transition-transform duration-300 group-hover:translate-x-2'
                   src="/Arrow.png"
                   alt=""
                 />

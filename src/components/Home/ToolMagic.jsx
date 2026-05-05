@@ -27,7 +27,7 @@ const processImage = [
   {
     id: 3,
     image: "/developer 1.png",
-    title: "Development",
+    title: "Develop",
   },
   {
     id: 4,
@@ -89,7 +89,7 @@ const ToolMagic = () => {
       >
         <div className="max-w-350 mx-auto px-10">
           <Heading title="Our Process" para="A proven methodology from concept to market success" />
-          <div className="relative flex flex-wrap justify-center lg:justify-between gap-x-5 gap-y-12 py-5 ">
+          <div className="relative flex flex-wrap justify-center lg:justify-between gap-x-5  py-5 ">
 
             <div className="hidden lg:block absolute top-18 left-0 w-full h-0.5 bg-linear-to-r from-[#06B8FF33] via-[#06B8FF] to-[#06B8FF33] -translate-y-1/2 z-0"></div>
 
@@ -108,7 +108,7 @@ const ToolMagic = () => {
         </div>
         <div className="bg-linear-to-t  from-[#112139] to-[#09182B00] pb-10">
           <Heading title="Tools Behind Our Magic" para="Everything we use to make things happen" />
-          <div className="flex flex-wrap justify-center  gap-5 max-w-250 mx-auto">
+          <div className="flex flex-wrap justify-center  gap-5 max-w-250 mx-auto px-5">
             {toolImages.map((item) => (
               <div key={item.id}
                 className="w-32 h-13 sm:w-56 sm:h-20 flex items-center justify-center rounded-xl p-0.5  bg-linear-to-r from-[#06B8FF] to-[#07D580] cursor-pointer hover:scale-105 duration-300"
