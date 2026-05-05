@@ -11,12 +11,12 @@ const mail = [
   {
     id: 2,
     title: "+92 315 4666899",
-    image: "phone.png",
+    image: "/phone.png",
   },
   {
     id: 3,
     title: "Lahore , Pakistan",
-    image: "location.png",
+    image: "/location.png",
   },
 ];
 

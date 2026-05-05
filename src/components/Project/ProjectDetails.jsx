@@ -138,17 +138,17 @@ const ProjectDetails = () => {
         >
           <motion.div variants={fadeInUp}>
             <h1 className="text-[#F2F6F7] font-bold text-3xl">Overview</h1>
-            <p className="text-[#C6C7C8] text-xl py-2">{item.overView}</p>
+            <p className="text-[#C6C7C8] text-sm sm:text-base md:text-lg lg:text-xl py-2">{item.overView}</p>
           </motion.div>
 
           <motion.div variants={fadeInUp}>
             <h1 className="text-[#F2F6F7] font-bold text-3xl">The Challenge</h1>
-            <p className="text-[#C6C7C8] text-xl py-2">{item.challenge}</p>
+            <p className="text-[#C6C7C8] text-sm sm:text-base md:text-lg lg:text-xl py-2">{item.challenge}</p>
           </motion.div>
 
           <motion.div variants={fadeInUp}>
             <h1 className="text-[#F2F6F7] font-bold text-3xl">Our Solutions</h1>
-            <p className="text-[#C6C7C8] text-xl py-2">{item.solution}</p>
+            <p className="text-[#C6C7C8] text-sm sm:text-base md:text-lg lg:text-xl py-2">{item.solution}</p>
           </motion.div>
 
           <motion.div variants={fadeInUp}>
@@ -156,8 +156,8 @@ const ProjectDetails = () => {
             <div className="flex flex-col gap-3">
               {item.results?.map((res, index) => (
                 <div key={index} className="flex items-center gap-2">
-                  <img className="w-4 h-4 object-cover" src="/result.png" alt="bullet" />
-                  <p className="text-[#C6C7C8] text-xl">{res}</p>
+                  <img className="w-3 h-3 sm:w-4 sm:h-4 object-cover" src="/result.png" alt="bullet" />
+                  <p className="text-[#C6C7C8] text-xs sm:text-base md:text-lg lg:text-xl">{res}</p>
                 </div>
               ))}
             </div>
@@ -176,8 +176,8 @@ const ProjectDetails = () => {
             <div className="flex flex-col gap-4">
               {item.features?.map((res, index) => (
                 <div key={index} className="flex items-center gap-2">
-                  <img className="w-4 h-4 object-cover" src="/result.png" alt="bullet" />
-                  <p className="text-[#C6C7C8] text-xl">{res}</p>
+                  <img className="w-3 h-3 sm:w-4 sm:h-4 object-cover" src="/result.png" alt="bullet" />
+                  <p className="text-[#C6C7C8] text-sm sm:text-base md:text-lg lg:text-xl">{res}</p>
                 </div>
               ))}
             </div>
