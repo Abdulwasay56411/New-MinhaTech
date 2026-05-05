@@ -7,7 +7,7 @@ import { motion, useMotionValue, useTransform, animate, useInView } from "framer
 const Counter = ({ value }) => {
   const ref = useRef(null);
 
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isInView = useInView(ref, { once: true, amount: 0.1 });
 
   const numericPart = value.replace(/[^0-9.]/g, "");
   const numericValue = parseFloat(numericPart) || 0;
