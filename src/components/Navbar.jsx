@@ -59,9 +59,15 @@ const Navbar = () => {
               +92 315 4666899
             </p>
           <div className="hidden sm:flex items-center gap-3 lg:gap-5">
-            <FaLinkedinIn size={14} className="hover:text-[#06B8FF] cursor-pointer" />
-            <FaInstagram size={14} className="hover:text-[#06B8FF] cursor-pointer"/>
-            <FaFacebookF size={14} className="hover:text-[#06B8FF] cursor-pointer "/>
+          <a href="https://www.linkedin.com/company/minhatech/" target="_blank">
+          <FaLinkedinIn size={14} className="hover:text-[#06B8FF] cursor-pointer" />
+          </a>
+          <a href="https://www.instagram.com/minhatechofficial?igsh=dW1mb3YxaDdtazlr" target="_blank">
+          <FaInstagram size={14} className="hover:text-[#06B8FF] cursor-pointer"/>
+          </a>
+         <a href="https://www.facebook.com/share/1JcuY4LJoR/?mibextid=wwXIfr" target="_blank">
+         <FaFacebookF size={14} className="hover:text-[#06B8FF] cursor-pointer "/>
+         </a>
           </div>
         </div>
       </div>
