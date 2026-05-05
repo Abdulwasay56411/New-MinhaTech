@@ -115,7 +115,7 @@ const OurProject = () => {
             ))}
             <Link to={`/project/${item.slug}`}>
               <div className='group flex items-center gap-1 pt-4'>
-                <p className='px-2 text-[#07D580] font-bold cursor-pointer hover:scale-105 duration-300 text-xl'>
+                <p className='px-2 text-[#07D580] font-bold cursor-pointer text-xl'>
                   {item.link}
                 </p>
                 <img

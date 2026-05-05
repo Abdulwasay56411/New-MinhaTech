@@ -64,9 +64,9 @@ const Milestones = () => {
         para="Delivering measurable results through innovation, performance and user-focused mobile solutions" 
       />
       
-      <div className="flex items-center my-8">
+      {/* <div className="flex items-center my-8">
         <img className="object-cover" src="/milestones.png" alt="Milestones" />
-      </div>
+      </div> */}
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 py-6 items-start">
         {milestonesData.map((item) => (

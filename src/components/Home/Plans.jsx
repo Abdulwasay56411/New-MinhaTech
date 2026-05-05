@@ -73,7 +73,7 @@ const Plans = () => {
     whileInView={{opacity: 1, y:0}}
     transition={{duration: 1.2, ease: "easeOut"}}
     viewport={{once: true, amount: 0.2}}
-    className="max-w-350 mx-auto px-5 py-7">
+    className="max-w-350 mx-auto px-5 py-7" id="pricing" >
       <Heading title="Transparent Pricing" para="Choose the perfect plan for your project" />
       <div className="grid grid-cols-1 lg:grid-cols-3 justify-items-center gap-5">
         {ourPlans.map((item) => (

@@ -4,6 +4,7 @@ import { IoMdCall } from "react-icons/io";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { HashLink } from "react-router-hash-link";
 import { FaPlus } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 // 1. Variables ko hamesha component se pehle rakhein taake error na aaye
 const navbarLink = [
@@ -48,12 +49,16 @@ const Navbar = () => {
               <MdEmail size={20} />
               info@minhatech.org
             </p>
-            <p className="flex text-xs sm:text-base items-center gap-3">
+            <p className="hidden sm:flex text-xs sm:text-base items-center gap-3">
               <IoMdCall size={20} />
               +92 315 4666899
             </p>
           </div>
-          <div className="flex items-center gap-3 lg:gap-5">
+          <p className="flex sm:hidden text-xs sm:text-base items-center gap-3">
+              <IoMdCall size={20} />
+              +92 315 4666899
+            </p>
+          <div className="hidden sm:flex items-center gap-3 lg:gap-5">
             <FaLinkedinIn size={14} className="hover:text-[#06B8FF] cursor-pointer" />
             <FaInstagram size={14} className="hover:text-[#06B8FF] cursor-pointer"/>
             <FaFacebookF size={14} className="hover:text-[#06B8FF] cursor-pointer "/>
@@ -63,7 +68,9 @@ const Navbar = () => {
       <div className="w-full transition-all duration-300 shadow-xl p bg-[#0A0D21]/20 backdrop-blur-2xl">
         <div className="max-w-350 mx-auto px-5 py-2">
           <div className="w-full flex justify-between items-center px-5 py-2 bg-[#8EDFFF33] rounded-[10px]">
-            <img className="w-18 sm:w-23 sm:h-15 object-contain" src="/MinhaTech.png" alt="MinhaTech Logo" />
+          <Link to="/">
+          <img className="w-18 sm:w-23 sm:h-15 object-contain" src="/MinhaTech.png" alt="MinhaTech Logo" />
+          </Link>
             
             <div className="hidden md:flex gap-10 items-center">
               {navbarLink.map((item) => (

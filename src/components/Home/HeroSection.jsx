@@ -29,7 +29,7 @@ const HeroSection = () => {
           ease: "easeInOut" 
         }}
         className='absolute bottom-[10%] left-[-5%] w-75 md:w-125 h-75 md:h-125 rounded-full blur-[100px] md:blur-[140px] pointer-events-none z-0'
-        style={{ backgroundColor: '#00FB94' }}
+        style={{ backgroundColor: '#021A10' }}
       />
       <motion.div 
         animate={{ 

@@ -22,7 +22,7 @@ const Work = () => {
     if (!scrollElement) return;
 
     let position = 0;
-    const speed = 2;
+    const speed = 1;
 
     const animate = () => {
       if (scrollElement) {

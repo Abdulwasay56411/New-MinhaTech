@@ -40,7 +40,7 @@ const AskedQuestion = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.2 }}
-            className='max-w-350 mx-auto px-5'>
+            className='max-w-350 mx-auto px-5 py-5'>
             <Heading title="Frequently Asked Questions" para="Everything you need to know about working with us" />
             <div className='flex flex-col items-center justify-center gap-5'>
                 {question.map((item) => (
