@@ -43,7 +43,7 @@ const ClientSays = () => {
       <Heading title="Clients Success Stories" para="Hear from founders and teams we've helped succeed" />
 
       <div className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-16">
-        <div className="relative w-80 h-80 flex shrink-0 items-center justify-center md:order-1">
+        <div className="relative w-50 h-50 sm:w-80 sm:h-80 flex shrink-0 items-center justify-center md:order-1">
           <motion.div
             animate={{ rotate: 360 }}
             transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
@@ -56,7 +56,7 @@ const ClientSays = () => {
               </text>
             </svg>
           </motion.div>
-          <img src="/Vector.png" alt="quotes" className="w-24 h-auto z-10" />
+          <img src="/Vector.png" alt="quotes" className="w-18 sm:w-24 h-auto z-10" />
         </div>
 
         <div className="max-w-190 px-2 md:px-5 lg:px-10 md:order-2">
