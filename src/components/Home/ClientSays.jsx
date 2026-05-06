@@ -1,12 +1,19 @@
-import React, { useState, useEffect } from "react"; 
-import { motion, AnimatePresence } from "framer-motion"; 
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Heading from "../Heading";
 
+const ourClient = [
+  { id: 1, para: "We hired Minhatech to develop our Voice Drive GPS application and the experience was excellent from start to finish. They understood our vision perfectly and delivered a high quality app with smooth voice navigation and smart route planning features", image: "/Client.png", name: "Founder", text: "Viral Stuido" },
+  { id: 2, para: "What really sets Minhatech apart is not just their technical skills but the way they approach a project with ownership, clarity and attention to every small detail. The entire process felt structured, stress-free and well managed.", image: "/client 2.png", name: "Sulman Ahmad", text: "Founder & CeoSartaj Develoeprs" },
+  { id: 3, para: "Wasiq and his team showed a strong sense of responsibility and professionalism throughout the project. Everything was delivered on time with great attention to detail. It was a pleasure working with Minhatech and I would be happy to collaborate again.", image: "/client 3.png", name: " Ahmed Al-Farsi ", text: "Entrepreneur (UAE)" },
+  { id: 4, para: "We approached Minhatech with a highly complex idea that required strong technical expertise and careful execution. From day one, the team demonstrated a deep overall understanding of the challenges and handled everything with confidence and clarity.", image: "/client 4.png", name: "James Walker ", text: "CTO (UK)" },
+];
+
 const ClientSays = () => {
   const [currentCard, setCurrentCard] = useState(0);
-  const [manualIndex, setManualIndex] = useState(0);
 
+  // Auto-slide logic
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentCard((prev) => (prev < ourClient.length - 1 ? prev + 1 : 0));
@@ -14,20 +21,13 @@ const ClientSays = () => {
     return () => clearInterval(timer);
   }, []);
 
+  // Manual Handlers
   const handleNext = () => {
-    if (manualIndex < ourClient.length - 1) {
-      const nextIndex = manualIndex + 1;
-      setManualIndex(nextIndex);
-      setCurrentCard(nextIndex); 
-    }
+    setCurrentCard((prev) => (prev < ourClient.length - 1 ? prev + 1 : 0));
   };
 
   const handleprev = () => {
-    if (manualIndex > 0) {
-      const prevIndex = manualIndex - 1;
-      setManualIndex(prevIndex);
-      setCurrentCard(prevIndex); 
-    }
+    setCurrentCard((prev) => (prev > 0 ? prev - 1 : ourClient.length - 1));
   };
 
   const item = ourClient[currentCard];
@@ -43,6 +43,7 @@ const ClientSays = () => {
       <Heading title="Clients Success Stories" para="Hear from founders and teams we've helped succeed" />
 
       <div className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-16">
+        {/* Animated Circle Logo Section */}
         <div className="relative w-50 h-50 sm:w-80 sm:h-80 flex shrink-0 items-center justify-center md:order-1">
           <motion.div
             animate={{ rotate: 360 }}
@@ -59,6 +60,7 @@ const ClientSays = () => {
           <img src="/Vector.png" alt="quotes" className="w-18 sm:w-24 h-auto z-10" />
         </div>
 
+        {/* Testimonial Content Section */}
         <div className="max-w-190 px-2 md:px-5 lg:px-10 md:order-2">
           <div className="w-full">
             
@@ -86,27 +88,26 @@ const ClientSays = () => {
                 </div>
               </motion.div>
             </AnimatePresence>
-            <div className="flex gap-4 justify-center mt-8 sm:justify-between flex-wrap  sm:-mt-18 relative z-20">
+
+            {/* Pagination / Controls */}
+            <div className="flex gap-4 justify-center mt-8 sm:justify-between flex-wrap sm:-mt-18 relative z-20">
                <div className="hidden sm:block"></div>
 
                <div className="flex flex-col justify-center items-center w-26 sm:w-40 h-10 rounded-4xl bg-[#06B8FF40]">
                 <div className="flex items-center gap-2 sm:gap-3 select-none">
                   <FaChevronLeft
                     onClick={handleprev}
-                    className={`text-base sm:text-xl transition-opacity duration-300 ${
-                      manualIndex === 0 ? "text-[#00FB9480]" : "text-[#00FB94] cursor-pointer"
-                    }`}
+                    className="text-base sm:text-xl text-[#00FB94] cursor-pointer hover:opacity-70 transition-opacity"
                   />
                   
+                  {/* Yeh number ab auto change hoga */}
                   <h1 className="text-[#06B8FF] font-bold">
-                    {manualIndex + 1} / {ourClient.length}
+                    {currentCard + 1} / {ourClient.length}
                   </h1>
 
                   <FaChevronRight
                     onClick={handleNext}
-                    className={`text-base sm:text-xl transition-opacity duration-300 ${
-                      manualIndex === ourClient.length - 1 ? "text-[#00FB9480]" : "text-[#00FB94] cursor-pointer"
-                    }`}
+                    className="text-base sm:text-xl text-[#00FB94] cursor-pointer hover:opacity-70 transition-opacity"
                   />
                 </div>
               </div>
@@ -120,10 +121,3 @@ const ClientSays = () => {
 };
 
 export default ClientSays;
-
-const ourClient = [
-  { id: 1, para: "We hired Minhatech to develop our Voice Drive GPS application and the experience was excellent from start to finish. They understood our vision perfectly and delivered a high quality app with smooth voice navigation and smart route planning features", image: "/Client.png", name: "Founder", text: "Viral Stuido" },
-  { id: 2, para: "What really sets Minhatech apart is not just their technical skills but the way they approach a project with ownership, clarity and attention to every small detail. The entire process felt structured, stress-free and well managed.", image: "/client 2.png", name: "Sulman Ahmad", text: "Founder & CeoSartaj Develoeprs" },
-  { id: 3, para: "Wasiq and his team showed a strong sense of responsibility and professionalism throughout the project. Everything was delivered on time with great attention to detail. It was a pleasure working with Minhatech and I would be happy to collaborate again.",image: "/client 3.png", name: " Ahmed Al-Farsi ", text: "Entrepreneur (UAE)" },
-  { id: 4, para: "We approached Minhatech with a highly complex idea that required strong technical expertise and careful execution. From day one, the team demonstrated a deep overall understanding of the challenges and handled everything with confidence and clarity.",image: "/client 4.png", name: "James Walker ", text: "CTO (UK)" },
-];
