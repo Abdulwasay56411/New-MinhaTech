@@ -77,17 +77,17 @@ const GetInTouch = () => {
                 <div className="ml-16 flex gap-4 animate-in fade-in slide-in-from-top-2 duration-300">
                   <a
                     href={item.link}
-                    className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 transition"
+                    className="bg-[#0598D3] text-white px-4 py-2 rounded-lg text-sm font-semibold hover:scale-105 transition"
                   >
-                    📞 Call Now
+                     Call Now
                   </a>
                   <a
                     href={item.whatsapp}
                     target="_blank"
                     rel="noreferrer"
-                    className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-green-700 transition"
+                    className="bg-[#07D580] text-white px-4 py-2 rounded-lg text-sm font-semibold hover:scale-105 transition"
                   >
-                    🟢 WhatsApp
+                     WhatsApp
                   </a>
                 </div>
               )}
