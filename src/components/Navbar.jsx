@@ -45,39 +45,48 @@ const Navbar = () => {
       <div className="bg-[#033C53] w-full">
         <div className="max-w-350 mx-auto flex flex-row justify-between items-center px-5 py-1.5 text-white">
           <div className="flex flex-row items-center gap-3 sm:gap-10">
-            <p className="flex text-xs sm:text-base items-center gap-3">
+            <a
+              href="mailto:info@minhatech.org"
+              className="flex text-xs sm:text-base items-center gap-3 hover:text-[#06B8FF] transition-colors"
+            >
               <MdEmail size={20} />
               info@minhatech.org
-            </p>
-            <p className="hidden sm:flex text-xs sm:text-base items-center gap-3">
+            </a>
+            <a
+              href="tel:+923154666899"
+              className="hidden sm:flex text-xs sm:text-base items-center gap-3 mt-2 hover:text-[#06B8FF] transition-colors"
+            >
               <IoMdCall size={20} />
               +92 315 4666899
-            </p>
+            </a>
           </div>
-          <p className="flex sm:hidden text-xs sm:text-base items-center gap-3">
-              <IoMdCall size={20} />
-              +92 315 4666899
-            </p>
+          <a
+            href="tel:+923154666899"
+            className="flex sm:hidden text-xs sm:text-base items-center gap-3 mt-2 hover:text-[#06B8FF] transition-colors"
+          >
+            <IoMdCall size={20} />
+            +92 315 4666899
+          </a>
           <div className="hidden sm:flex items-center gap-3 lg:gap-5">
-          <a href="https://www.linkedin.com/company/minhatech/" target="_blank">
-          <FaLinkedinIn size={14} className="hover:text-[#06B8FF] cursor-pointer" />
-          </a>
-          <a href="https://www.instagram.com/minhatechofficial/" target="_blank">
-          <FaInstagram size={14} className="hover:text-[#06B8FF] cursor-pointer"/>
-          </a>
-         <a href="https://www.facebook.com/minhatechofficial/" target="_blank">
-         <FaFacebookF size={14} className="hover:text-[#06B8FF] cursor-pointer "/>
-         </a>
+            <a href="https://www.linkedin.com/company/minhatech/" target="_blank">
+              <FaLinkedinIn size={14} className="hover:text-[#06B8FF] cursor-pointer" />
+            </a>
+            <a href="https://www.instagram.com/minhatechofficial/" target="_blank">
+              <FaInstagram size={14} className="hover:text-[#06B8FF] cursor-pointer" />
+            </a>
+            <a href="https://www.facebook.com/minhatechofficial/" target="_blank">
+              <FaFacebookF size={14} className="hover:text-[#06B8FF] cursor-pointer " />
+            </a>
           </div>
         </div>
       </div>
       <div className="w-full transition-all duration-300 shadow-xl p bg-[#0A0D21]/20 backdrop-blur-2xl">
         <div className="max-w-350 mx-auto px-5 py-2">
           <div className="w-full flex justify-between items-center px-5 py-2 bg-[#8EDFFF33] rounded-[10px]">
-          <Link to="/">
-          <img className="w-18 sm:w-23 sm:h-15 object-contain" src="/MinhaTech.png" alt="MinhaTech Logo" />
-          </Link>
-            
+            <Link to="/">
+              <img className="w-18 sm:w-23 sm:h-15 object-contain" src="/MinhaTech.png" alt="MinhaTech Logo" />
+            </Link>
+
             <div className="hidden md:flex gap-10 items-center">
               {navbarLink.map((item) => (
                 <ul key={item.id} className="group relative py-2">
@@ -111,7 +120,7 @@ const Navbar = () => {
                 </div>
                 <FaPlus className={`text-xs text-white transition-all duration-300 ${isOpen ? "rotate-45" : "rotate-0"}`} />
               </div>
-              
+
               <div className={`absolute right-0 top-10 w-41 h-auto shadow-2xl rounded-lg px-5 py-4 text-white bg-[#0A1E38] transform transition-all duration-300 z-50 ${isOpen ? "translate-x-0 opacity-100 scale-100" : "translate-x-10 opacity-0 scale-95 pointer-events-none"}`}>
                 {menuNavbar.map((item) => (
                   <HashLink key={item.id} smooth to={item.Link} onClick={() => setIsOpen(false)}>

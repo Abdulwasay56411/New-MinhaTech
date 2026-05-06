@@ -63,7 +63,7 @@ const GetInTouch = () => {
         <div>
           {mail.map((item) => (
             <div key={item.id} className="relative">
-              {/* Agar phone number hai to click par menu khule, warna direct link */}
+             
               <div
                 onClick={() => item.id === 2 ? setShowOptions(showOptions === 2 ? null : 2) : window.location.href = item.link}
                 className="flex items-center gap-2 cursor-pointer"
