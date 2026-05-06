@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Heading from "../Heading";
 import { motion } from "framer-motion";
 
@@ -14,10 +14,11 @@ const mail = [
     title: "+92 315 4666899",
     image: "/phone.png",
     link: "tel:+923154666899",
+    whatsapp: "https://wa.me/923154666899",
   },
   {
     id: 3,
-    title: "Lahore , Pakistan",
+    title: "Lahore, Pakistan",
     image: "/location.png",
   },
 ];
@@ -47,6 +48,9 @@ const choose = [
 
 
 const GetInTouch = () => {
+
+  const [showOptions, setShowOptions] = useState(null);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -58,14 +62,36 @@ const GetInTouch = () => {
       <div className="flex flex-wrap justify-center lg:justify-between gap-4">
         <div>
           {mail.map((item) => (
-            <a href={item.link}>
-              <div key={item.id} className="flex items-center gap-2">
-              <div className="flex justify-center items-center w-14 h-14 border my-4 rounded-2xl border-[#06B8FF33] bg-[#06B8FF1A] backdrop-blur-xl shadow-2xl shadow-[#06B8FF33]">
-                <img className="w-7 h-7 object-contain" src={item.image} alt="" />
+            <div key={item.id} className="relative">
+              {/* Agar phone number hai to click par menu khule, warna direct link */}
+              <div
+                onClick={() => item.id === 2 ? setShowOptions(showOptions === 2 ? null : 2) : window.location.href = item.link}
+                className="flex items-center gap-2 cursor-pointer"
+              >
+                <div className="flex justify-center items-center w-14 h-14 border my-4 rounded-2xl border-[#06B8FF33] bg-[#06B8FF1A] backdrop-blur-xl shadow-2xl shadow-[#06B8FF33]">
+                  <img className="w-7 h-7 object-contain" src={item.image} alt={item.title} />
+                </div>
+                <p className="text-[#FFFFFF] text-xl">{item.title}</p>
               </div>
-              <p className="text-[#FFFFFF] text-xl">{item.title}</p>
+              {item.id === 2 && showOptions === 2 && (
+                <div className="ml-16 flex gap-4 animate-in fade-in slide-in-from-top-2 duration-300">
+                  <a
+                    href={item.link}
+                    className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 transition"
+                  >
+                    📞 Call Now
+                  </a>
+                  <a
+                    href={item.whatsapp}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-green-700 transition"
+                  >
+                    🟢 WhatsApp
+                  </a>
+                </div>
+              )}
             </div>
-            </a>
           ))}
           <div className=" w-full md:w-150 mt-7 h-auto border border-[#FFFFFF1A] bg-[#06B8FF26] rounded-[30px] p-8">
             <h1 className="font-semibold text-2xl pb-3 text-[#FFFFFF]">Why Choose MinhaTech?</h1>
