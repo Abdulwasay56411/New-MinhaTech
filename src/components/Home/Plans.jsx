@@ -96,7 +96,7 @@ const Plans = () => {
               }}
             />
             <h1 className="text-2xl font-bold pb-4 text-[#F9F9F9]">
-              {item.amount} <span className="text-base font-normal">/ month</span>
+              {item.amount} <span className="text-base font-normal text-[#C6C7C8]">/ month</span>
             </h1>
             <button className="w-full h-15 rounded-2xl text-lg font-medium my-4 text-[#F9F9F9] border border-[#06B8FF] bg-[#06B8FF42] cursor-pointer duration-200 hover:bg-linear-to-r hover:from-[#00FB94] hover:to-[#06B8FF] hover:shadow-2xl hover:shadow-[#06B8FF42] hover:scale-102">
               {item.btn}

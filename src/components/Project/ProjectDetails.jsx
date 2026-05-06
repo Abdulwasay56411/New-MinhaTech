@@ -113,7 +113,7 @@ const ProjectDetails = () => {
             key={i}
             variants={fadeInUp}
             whileHover={{ y: -10 }}
-            className="w-full flex flex-col items-center justify-center border border-[#06B8FF21] bg-[#06B8FF21] rounded-2xl shadow-[0px_4px_36.6px_0px_rgba(6,184,255,0.2)] p-5"
+            className="w-full flex flex-col items-center justify-center border border-[#06B8FF21] bg-[#06B8FF21] rounded-2xl shadow-[0px_4px_20px_0px_rgba(6,184,255,0.2)] p-5"
           >
             <img className="w-7 h-7 object-cover" src={stat.icon} alt={stat.label} />
 
