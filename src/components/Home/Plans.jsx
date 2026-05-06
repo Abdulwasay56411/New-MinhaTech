@@ -129,7 +129,7 @@ const Plans = () => {
               <h1 className="font-bold text-2xl md:text-2xl text-[#F9F9F9]">{item.title}</h1>
               <p className="font-bold text-lg md:text-3xl text-[#F9F9F9]">{item.price}</p>
             </div>
-            <p className="text-[#C6C7C8] text-base lg:text-xl py-3">{item.para}</p>
+            <p className="text-[#C6C7C8] text-base lg:text-[22px] py-3">{item.para}</p>
             <button className="w-full h-16 bg-[#06B8FF63] border border-[#06B8FF] text-white rounded-2xl mt-3 cursor-pointer duration-200 hover:scale-102 hover:shadow-2xl hover:shadow-[#06B8FF42]">{item.btn}</button>
           </div>
         ))}

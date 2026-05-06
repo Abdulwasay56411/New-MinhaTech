@@ -103,7 +103,7 @@ const GetInTouch = () => {
             ))}
           </div>
         </div>
-        <div className="w-140 h-137 rounded-3xl bg-[#06B8FF26] border border-[#FFFFFF33] backdrop-blur-2xl mt-2 shadow-2xl shadow-[#06B8FF33] p-5">
+        <div className="w-140 h-137 rounded-3xl bg-[#06B8FF26] border border-[#FFFFFF33] backdrop-blur-2xl  shadow-2xl shadow-[#06B8FF33] p-5">
           <form action="https://formsubmit.co/info@minhatech.org" method="POST">
             <label className="block text-white">First Name</label>
             <input
