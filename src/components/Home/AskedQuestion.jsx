@@ -50,7 +50,7 @@ const AskedQuestion = () => {
                     >
                         <div className='py-5 px-5 sm:px-10'>
                             <div className='flex justify-between items-center gap-5'>
-                                <h1 className='font-medium text-lg sm:text-xl text-[#E5E5E5]'>{item.title}</h1>
+                                <h1 className='font-medium text-base sm:text-xl text-[#E5E5E5]'>{item.title}</h1>
                                 <div
                                     onClick={() => setIsOpen(isOpen === item.id ? null : item.id)}
                                     className='shrink-0 flex justify-center items-center w-9 h-9 rounded-full cursor-pointer bg-[#0598D3]'

@@ -71,7 +71,7 @@ const GetInTouch = () => {
                 <div className="flex justify-center items-center w-10 h-10 sm:w-14 sm:h-14 border my-2 sm:my-4 rounded-xl sm:rounded-2xl border-[#06B8FF33] bg-[#06B8FF1A] backdrop-blur-xl shadow-2xl shadow-[#06B8FF33]">
                   <img className="w-5 h-5 sm:w-7 sm:h-7 object-contain" src={item.image} alt={item.title} />
                 </div>
-                <p className="text-[#FFFFFF] text-xl">{item.title}</p>
+                <p className="text-[#FFFFFF] text-lg sm:text-xl">{item.title}</p>
               </div>
               {item.id === 2 && showOptions === 2 && (
                 <div className="ml-16 flex gap-4 animate-in fade-in slide-in-from-top-2 duration-300">

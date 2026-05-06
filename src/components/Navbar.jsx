@@ -53,7 +53,7 @@ const Navbar = () => {
             </a>
             <a
               href="tel:+923154666899"
-              className="hidden sm:flex text-xs sm:text-base items-center gap-3 mt-2 hover:text-[#06B8FF] transition-colors"
+              className="hidden sm:flex text-xs sm:text-base items-center gap-3  hover:text-[#06B8FF] transition-colors"
             >
               <IoMdCall size={20} />
               +92 315 4666899

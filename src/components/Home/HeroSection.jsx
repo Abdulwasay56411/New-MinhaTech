@@ -70,7 +70,7 @@ const HeroSection = () => {
                 duration: 10,
                 repeat: Infinity,
                 ease: "easeInOut",
-                opacity: { duration: 2 } // Smooth fade-in on load
+                opacity: { duration: 2 }
               }}
               className='hidden lg:block absolute -bottom-[20%] left-[-20%] md:left-[-5%] w-75 md:w-125 h-75 md:h-125 rounded-full blur-[100px] md:blur-[140px] pointer-events-none z-[-1]'
               style={{ backgroundColor: 'green' }}
@@ -132,7 +132,7 @@ const HeroSection = () => {
           {/* IMAGE SECTION */}
           <div className='relative w-full lg:w-[50%] flex justify-center lg:justify-end items-start lg:-mt-20 overflow-hidden'>
             {/* MOBILE */}
-            <div className='lg:hidden flex gap-2 sm:gap-3 justify-center'>
+            <div className='lg:hidden flex gap-5 justify-center'>
               {[1, 2].map((col) => (
                 <div key={col} className='relative h-80 sm:h-96 w-32 sm:w-40 overflow-hidden rounded-xl'>
                   <motion.div

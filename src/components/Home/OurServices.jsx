@@ -18,7 +18,7 @@ const OurServices = () => {
               <img className='w-15 h-15 object-cover' src={item.image} alt="" />
               <h1 className='text-[#FFFFFF] font-semibold text-base sm:text-xl tracking-wider py-5'>
                 {item.title}
-                <span className='sm:block'>{item.span}</span>
+                <span className='sm:block'> {item.span}</span>
               </h1>
               <p className='text-[#C6C7C8] text-sm sm:text-base'>{item.para}</p>
             </div>

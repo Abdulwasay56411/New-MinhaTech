@@ -61,7 +61,7 @@ const Footer = () => {
               ))}
             </div>
           </div>
-          <div className="flex flex-col lg:flex-row gap-10 sm:gap-20">
+          <div className="flex flex-col lg:flex-row gap-6 sm:gap-20">
             {footerText.map((section) => (
               <div key={section.id}>
                 <h2 className="font-bold text-white mb-4 text-2xl">{section.title}</h2>
