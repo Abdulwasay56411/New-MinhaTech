@@ -10,7 +10,7 @@ const navbarLink = [
   { id: 1, name: "Home", Link: "/#home" },
   { id: 2, name: "About Us", Link: "/#about" },
   { id: 3, name: "Services", Link: "/#services" },
-  { id: 4, name: "Project", Link: "/#project" },
+  { id: 4, name: "Projects", Link: "/#project" },
 ];
 
 const menuNavbar = [

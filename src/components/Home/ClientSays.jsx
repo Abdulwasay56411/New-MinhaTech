@@ -13,7 +13,6 @@ const ourClient = [
 const ClientSays = () => {
   const [currentCard, setCurrentCard] = useState(0);
 
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentCard((prev) => (prev < ourClient.length - 1 ? prev + 1 : 0));
@@ -22,13 +21,19 @@ const ClientSays = () => {
   }, []);
 
   const handleNext = () => {
-    setCurrentCard((prev) => (prev < ourClient.length - 1 ? prev + 1 : 0));
+    if (currentCard < ourClient.length - 1) {
+      setCurrentCard((prev) => prev + 1);
+    }
   };
 
   const handleprev = () => {
-    setCurrentCard((prev) => (prev > 0 ? prev - 1 : ourClient.length - 1));
+    if (currentCard > 0) {
+      setCurrentCard((prev) => prev - 1);
+    }
   };
 
+  const isFirstCard = currentCard === 0;
+  const isLastCard = currentCard === ourClient.length - 1;
   const item = ourClient[currentCard];
 
   return (
@@ -42,7 +47,6 @@ const ClientSays = () => {
       <Heading title="Clients Success Stories" para="Hear from founders and teams we've helped succeed" />
 
       <div className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-16">
-
         <div className="relative w-50 h-50 sm:w-80 sm:h-80 flex shrink-0 items-center justify-center md:order-1">
           <motion.div
             animate={{ rotate: 360 }}
@@ -58,11 +62,8 @@ const ClientSays = () => {
           </motion.div>
           <img src="/Vector.png" alt="quotes" className="w-18 sm:w-24 h-auto z-10" />
         </div>
-
-        {/* Testimonial Content Section */}
         <div className="max-w-190 px-2 md:px-5 lg:px-10 md:order-2">
           <div className="w-full">
-            
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentCard}
@@ -87,26 +88,33 @@ const ClientSays = () => {
                 </div>
               </motion.div>
             </AnimatePresence>
-
-            {/* Pagination / Controls */}
             <div className="flex gap-4 justify-center mt-8 sm:justify-between flex-wrap sm:-mt-18 relative z-20">
-               <div className="hidden sm:block"></div>
+              <div className="hidden sm:block"></div>
 
-               <div className="flex flex-col justify-center items-center w-26 sm:w-40 h-10 rounded-4xl bg-[#06B8FF40]">
+              <div className="flex flex-col justify-center items-center w-26 sm:w-40 h-10 rounded-4xl bg-[#06B8FF40]">
                 <div className="flex items-center gap-2 sm:gap-3 select-none">
+                
                   <FaChevronLeft
                     onClick={handleprev}
-                    className="text-base sm:text-xl text-[#00FB94] cursor-pointer hover:opacity-70 transition-opacity"
+                    className={`text-base sm:text-xl transition-all duration-300 ${
+                      isFirstCard 
+                        ? "text-[#00FB9480]" 
+                        : "text-[#00FB94] cursor-pointer "
+                    }`}
                   />
                   
-                  {/* Yeh number ab auto change hoga */}
                   <h1 className="text-[#06B8FF] font-bold">
                     {currentCard + 1} / {ourClient.length}
                   </h1>
 
+                  {/* Next Button */}
                   <FaChevronRight
                     onClick={handleNext}
-                    className="text-base sm:text-xl text-[#00FB94] cursor-pointer hover:opacity-70 transition-opacity"
+                    className={`text-base sm:text-xl transition-all duration-300 ${
+                      isLastCard 
+                        ? "text-gray-500 opacity-40 cursor-not-allowed" 
+                        : "text-[#00FB94] cursor-pointer hover:opacity-70"
+                    }`}
                   />
                 </div>
               </div>
