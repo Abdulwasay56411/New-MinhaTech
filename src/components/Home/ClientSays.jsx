@@ -75,7 +75,7 @@ const ClientSays = () => {
                   {item.para}
                 </p>
 
-                <hr className="border-[#D9D9D987] mt-5 lg:mt-10 mb-8" />
+                <hr className="border-[#D9D9D987] mt-8 lg:mt-18 mb-8" />
 
                 <div className="flex gap-5">
                   <img className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover" src={item.image} alt={item.name} />
@@ -122,7 +122,8 @@ const ClientSays = () => {
 export default ClientSays;
 
 const ourClient = [
-  { id: 1, para: "“Working with MinhaTech Pub has been a game changer for us. Their expertise in app design and ideation helped us bring our vision to life.”", image: "/Client.png", name: "Conor Bradley", text: "Senior Marketing Specialist, TechNova" },
-  { id: 2, para: "“From concept to launch, MinhaTech Pub demonstrated exceptional professionalism and creativity. Their team turned our idea into a powerful app.”", image: "/client 2.png", name: "Ahmed Rehman", text: "Founder and Ceo, Revo Tech" },
-  { id: 3, para: "“They didn’t just build an app they built a complete digital experience for our users. Highly recommended for anyone serious about quality.”", image: "/client 3.png", name: "James Carter", text: "Creative Director, NovaSphere" },
+  { id: 1, para: "We hired Minhatech to develop our Voice Drive GPS application and the experience was excellent from start to finish. They understood our vision perfectly and delivered a high quality app with smooth voice navigation and smart route planning features", image: "/Client.png", name: "Founder", text: "Viral Stuido" },
+  { id: 2, para: "What really sets Minhatech apart is not just their technical skills but the way they approach a project with ownership, clarity and attention to every small detail. The entire process felt structured, stress-free and well managed.", image: "/client 2.png", name: "Sulman Ahmad", text: "Founder & CeoSartaj Develoeprs" },
+  { id: 3, para: "Wasiq and his team showed a strong sense of responsibility and professionalism throughout the project. Everything was delivered on time with great attention to detail. It was a pleasure working with Minhatech and I would be happy to collaborate again.",image: "/client 3.png", name: " Ahmed Al-Farsi ", text: "Entrepreneur (UAE)" },
+  { id: 4, para: "We approached Minhatech with a highly complex idea that required strong technical expertise and careful execution. From day one, the team demonstrated a deep overall understanding of the challenges and handled everything with confidence and clarity.",image: "/client 4.png", name: "James Walker ", text: "CTO (UK)" },
 ];
