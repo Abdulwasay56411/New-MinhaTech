@@ -139,7 +139,7 @@ const HeroSection = () => {
                     className='flex flex-col gap-3 sm:gap-4'
                     animate={{ y: col === 1 ? ["0%", "-50%"] : ["-50%", "0%"] }}
                     transition={{
-                      duration: 100,
+                      duration: 120,
                       repeat: Infinity,
                       ease: "linear",
                     }}
@@ -160,7 +160,7 @@ const HeroSection = () => {
                     className='flex flex-col gap-5 xl:gap-6 pt-5'
                     animate={{ y: col === 1 ? ["0%", "-50%"] : ["-50%", "0%"] }}
                     transition={{
-                      duration: 100,
+                      duration: 120,
                       repeat: Infinity,
                       ease: "linear",
                     }}
