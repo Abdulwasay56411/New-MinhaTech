@@ -49,7 +49,7 @@ const HeroSection = () => {
     { id: 29, image: "/hero 29.png" },
   ];
 
-  const repeatedImages = [...heroImages, ...heroImages, ...heroImages, ...heroImages];
+  const repeatedImages = [...heroImages, ...heroImages,];
 
   return (
     <div
