@@ -71,11 +71,11 @@ const ClientSays = () => {
                 transition={{ duration: 0.5 }}
                 className="w-full"
               >
-                <p className="text-[#FFFFFFD4] text-base md:text-2xl font-light leading-relaxed md:text-left h-25 md:h-32.5">
+                <p className="text-[#FFFFFFD4] text-base md:text-2xl font-light leading-relaxed md:text-left h-auto pb-5">
                   {item.para}
                 </p>
 
-                <hr className="border-[#D9D9D987] mt-8 lg:mt-18 mb-8" />
+                <hr className="border-[#D9D9D987] mb-8" />
 
                 <div className="flex gap-5">
                   <img className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover" src={item.image} alt={item.name} />

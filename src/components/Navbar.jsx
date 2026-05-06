@@ -8,9 +8,9 @@ import { Link } from "react-router-dom";
 
 const navbarLink = [
   { id: 1, name: "Home", Link: "/#home" },
-  { id: 2, name: "Projects", Link: "/#project" },
+  { id: 2, name: "About Us", Link: "/#about" },
   { id: 3, name: "Services", Link: "/#services" },
-  { id: 4, name: "About Us", Link: "/#about" },
+  { id: 4, name: "Project", Link: "/#project" },
 ];
 
 const menuNavbar = [
