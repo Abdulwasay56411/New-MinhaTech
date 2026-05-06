@@ -62,26 +62,26 @@ const ProjectDetails = () => {
 
 
   return (
-    <div className="max-w-350 mx-auto px-5 pt-20 overflow-x-hidden">
+    <div className="max-w-350 mx-auto px-5 pt-10 sm:pt-20 overflow-x-hidden">
       <motion.div initial="hidden" animate="visible" variants={fadeInUp}>
         <Link to="/" className="inline-block">
           <div className="flex items-center gap-2 hover:-translate-x-1.25 transition-transform duration-300">
-            <IoArrowBack className="text-[#FFFFFFD4] text-2xl" />
-            <p className="text-[#FFFFFFED] text-xl ">Back to Home</p>
+            <IoArrowBack className="text-[#FFFFFFD4] text-xl sm:text-2xl" />
+            <p className="text-[#FFFFFFED] text-base sm:text-xl ">Back to Home</p>
           </div>
         </Link>
       </motion.div>
-      <motion.div initial="hidden" animate="visible" variants={fadeInUp} className="pt-10">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-[#FFFFFF] py-2">
+      <motion.div initial="hidden" animate="visible" variants={fadeInUp} className="pt-5 sm:pt-10">
+        <h1 className="text-[26px] sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#FFFFFF] sm:py-2">
           {item.heroTitle}
         </h1>
-        <p className="text-[#C6C7C8] text-xl">{item.heroDesc}</p>
+        <p className="text-[#C6C7C8] text-base sm:text-xl">{item.heroDesc}</p>
       </motion.div>
       <motion.div
         initial="hidden"
         animate="visible"
         variants={fadeInUp}
-        className="flex items-center justify-between py-5 sm:max-w-150 lg:max-w-200 gap-2 lg:gap-5"
+        className="flex items-center justify-between pt-6 pb-5 sm:max-w-150 lg:max-w-200 gap-2 lg:gap-5"
       >
         <p className="text-[#C6C7C8] text-xs sm:text-sm md:text-base lg:text-xl">Client: <span className="text-[#FFFFFFED] font-semibold"> {item.client}</span></p>
         <p className="text-[#C6C7C8] text-xs sm:text-sm md:text-base lg:text-xl">Duration: <span className="text-[#FFFFFFED] font-semibold"> {item.duration}</span></p>
@@ -92,7 +92,7 @@ const ProjectDetails = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         variants={fadeInUp}
-        className="w-full bg-[#06B8FF33] rounded-4xl my-10 p-5 overflow-hidden"
+        className="w-full bg-[#06B8FF33] rounded-3xl sm:rounded-4xl my-5 p-5 overflow-hidden"
       >
         <img className="w-full object-cover rounded-2xl" src={item.image} alt="" />
       </motion.div>
@@ -101,13 +101,13 @@ const ProjectDetails = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
         variants={staggerContainer}
-        className="grid grid-cols-2 md:grid-cols-4 gap-5 my-20"
+        className="grid grid-cols-2 md:grid-cols-4 gap-5 mt-10 mb-14 sm:my-20"
       >
         {[
-          { label: "Downloads", value: item.downloads },
-          { label: "App Rating", value: item.rating },
-          { label: "Active users", value: item.user },
-          { label: "Retention", value: item.retention }
+          { label: "Downloads", value: item.downloads, icon: item.icon1 },
+          { label: "App Rating", value: item.rating, icon: item.icon2 },
+          { label: "Active users", value: item.user, icon: item.icon3 },
+          { label: "Retention", value: item.retention, icon: item.icon4 }
         ].map((stat, i) => (
           <motion.div
             key={i}
@@ -115,49 +115,49 @@ const ProjectDetails = () => {
             whileHover={{ y: -10 }}
             className="w-full flex flex-col items-center justify-center border border-[#06B8FF21] bg-[#06B8FF21] rounded-2xl shadow-[0px_4px_36.6px_0px_rgba(6,184,255,0.2)] p-5"
           >
-            <img className="w-7 h-7 object-cover" src="/download.png" alt="" />
+            <img className="w-7 h-7 object-cover" src={stat.icon} alt={stat.label} />
+
             <p className="text-[#FFFFFF] font-bold text-2xl md:text-3xl lg:text-4xl py-2">
-
               <Counter value={stat.value} />
-
               <span className="ml-1 text-white">
                 {stat.label === "App Rating" ? " / 5" : stat.value.replace(/[0-9.]/g, "")}
               </span>
             </p>
+
             <p className="text-[#C6C7C8] text-sm md:text-base lg:text-lg">{stat.label}</p>
           </motion.div>
         ))}
       </motion.div>
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch mb-20">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch lg:mb-20">
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
           variants={staggerContainer}
-          className="lg:col-span-7 flex flex-col gap-10"
+          className="lg:col-span-7 flex flex-col gap-5 sm:gap-10"
         >
           <motion.div variants={fadeInUp}>
-            <h1 className="text-[#F2F6F7] font-bold text-3xl">Overview</h1>
-            <p className="text-[#C6C7C8] text-sm sm:text-base md:text-lg lg:text-xl py-2">{item.overView}</p>
+            <h1 className="text-[#F2F6F7] font-bold text-2xl sm:text-3xl">Overview</h1>
+            <p className="text-[#C6C7C8] text-base md:text-lg lg:text-xl py-2">{item.overView}</p>
           </motion.div>
 
           <motion.div variants={fadeInUp}>
-            <h1 className="text-[#F2F6F7] font-bold text-3xl">The Challenge</h1>
-            <p className="text-[#C6C7C8] text-sm sm:text-base md:text-lg lg:text-xl py-2">{item.challenge}</p>
+            <h1 className="text-[#F2F6F7] font-bold text-2xl sm:text-3xl">The Challenge</h1>
+            <p className="text-[#C6C7C8] text-base md:text-lg lg:text-xl py-2">{item.challenge}</p>
           </motion.div>
 
           <motion.div variants={fadeInUp}>
-            <h1 className="text-[#F2F6F7] font-bold text-3xl">Our Solutions</h1>
-            <p className="text-[#C6C7C8] text-sm sm:text-base md:text-lg lg:text-xl py-2">{item.solution}</p>
+            <h1 className="text-[#F2F6F7] font-bold text-2xl sm:text-3xl">Our Solutions</h1>
+            <p className="text-[#C6C7C8] text-base md:text-lg lg:text-xl py-2">{item.solution}</p>
           </motion.div>
 
           <motion.div variants={fadeInUp}>
-            <h1 className="text-[#F2F6F7] font-bold text-3xl mb-4">Key Results</h1>
+            <h1 className="text-[#F2F6F7] font-bold text-2xl sm:text-3xl mb-4">Key Results</h1>
             <div className="flex flex-col gap-3">
               {item.results?.map((res, index) => (
-                <div key={index} className="flex items-center gap-2">
-                  <img className="w-3 h-3 sm:w-4 sm:h-4 object-cover" src="/result.png" alt="bullet" />
-                  <p className="text-[#C6C7C8] text-xs sm:text-base md:text-lg lg:text-xl">{res}</p>
+                <div key={index} className="flex items-center gap-3">
+                  <img className="w-4 h-4 object-cover" src="/result.png" alt="bullet" />
+                  <p className="text-[#C6C7C8] text-base md:text-lg lg:text-xl">{res}</p>
                 </div>
               ))}
             </div>
@@ -171,20 +171,20 @@ const ProjectDetails = () => {
           variants={fadeInUp}
           className="lg:col-span-5 flex flex-col gap-5"
         >
-          <div className="bg-[#06B8FF29] rounded-4xl p-8 border border-[#06B8FF21] flex-1">
-            <h1 className="text-[#F2F6F7] font-bold text-3xl mb-5">Features</h1>
+          <div className="bg-[#06B8FF29] rounded-3xl sm:rounded-4xl p-6 border border-[#06B8FF21] flex-1">
+            <h1 className="text-[#F2F6F7] font-bold text-2xl mb-5">Features</h1>
             <div className="flex flex-col gap-4">
               {item.features?.map((res, index) => (
-                <div key={index} className="flex items-center gap-2">
-                  <img className="w-3 h-3 sm:w-4 sm:h-4 object-cover" src="/result.png" alt="bullet" />
+                <div key={index} className="flex items-center gap-3">
+                  <img className="w-3.5 h-3.5 sm:w-4 sm:h-4 object-cover" src="/result.png" alt="bullet" />
                   <p className="text-[#C6C7C8] text-sm sm:text-base md:text-lg lg:text-xl">{res}</p>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="bg-[#06D27E29] rounded-4xl p-8 border border-[#06D27E21] flex-1">
-            <h1 className="text-[#F2F6F7] font-bold text-3xl my-5">Technologies</h1>
+          <div className="bg-[#06D27E29] rounded-3xl sm:rounded-4xl p-6 border border-[#06D27E21] flex-1">
+            <h1 className="text-[#F2F6F7] font-bold text-2xl my-5">Technologies</h1>
             <div className="flex flex-wrap gap-3 py-5">
               {[item.figma, item.react, item.Cloud].map((tech, i) => (
                 tech && (
@@ -192,7 +192,7 @@ const ProjectDetails = () => {
                     key={i}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="px-6 py-2 text-xl text-[#F8F8F8] border border-[#00FB94] bg-[#00FB9433] rounded-2xl"
+                    className="px-6 py-2 sm:text-xl text-[#F8F8F8] border border-[#00FB94] bg-[#00FB9433] rounded-xl sm:rounded-2xl"
                   >
                     {tech}
                   </motion.button>
