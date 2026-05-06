@@ -62,10 +62,10 @@ const Navbar = () => {
           <a href="https://www.linkedin.com/company/minhatech/" target="_blank">
           <FaLinkedinIn size={14} className="hover:text-[#06B8FF] cursor-pointer" />
           </a>
-          <a href="https://www.instagram.com/minhatechofficial?igsh=dW1mb3YxaDdtazlr" target="_blank">
+          <a href="https://www.instagram.com/minhatechofficial/" target="_blank">
           <FaInstagram size={14} className="hover:text-[#06B8FF] cursor-pointer"/>
           </a>
-         <a href="https://www.facebook.com/share/1JcuY4LJoR/?mibextid=wwXIfr" target="_blank">
+         <a href="https://www.facebook.com/minhatechofficial/" target="_blank">
          <FaFacebookF size={14} className="hover:text-[#06B8FF] cursor-pointer "/>
          </a>
           </div>

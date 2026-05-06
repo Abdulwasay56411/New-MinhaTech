@@ -22,9 +22,9 @@ const footerText = [
 ];
 
 const socialLinks = [
-  { Icon: FaInstagram, url: "https://www.instagram.com/minhatechofficial?igsh=dW1mb3YxaDdtazlr" },
+  { Icon: FaInstagram, url: "https://www.instagram.com/minhatechofficial/" },
   { Icon: FaLinkedinIn, url: "https://www.linkedin.com/company/minhatech/" },
-  { Icon: FaFacebookF, url: "https://www.facebook.com/share/1JcuY4LJoR/?mibextid=wwXIfr" },
+  { Icon: FaFacebookF, url: "https://www.facebook.com/minhatechofficial/" },
 ];
 
 const Footer = () => {

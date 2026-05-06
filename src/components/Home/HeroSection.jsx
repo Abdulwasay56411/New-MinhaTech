@@ -139,7 +139,7 @@ const HeroSection = () => {
                     className='flex flex-col gap-3 sm:gap-4'
                     animate={{ y: col === 1 ? ["0%", "-50%"] : ["-50%", "0%"] }}
                     transition={{
-                      duration: 120,
+                      duration: 150,
                       repeat: Infinity,
                       ease: "linear",
                     }}
@@ -160,13 +160,13 @@ const HeroSection = () => {
                     className='flex flex-col gap-5 xl:gap-6 pt-5'
                     animate={{ y: col === 1 ? ["0%", "-50%"] : ["-50%", "0%"] }}
                     transition={{
-                      duration: 120,
+                      duration: 150,
                       repeat: Infinity,
                       ease: "linear",
                     }}
                   >
                     {repeatedImages.map((img, index) => (
-                      <img key={`desk-${col}-${index}`} src={img.image} className='w-full h-auto rounded-xl shadow-2xl' alt="" />
+                      <img key={`desk-${col}-${index}`} src={img.image} className='w-full  h-auto rounded-xl shadow-[0_0px_10px_rgba(8,112,184,0.7)]' alt="" />
                     ))}
                   </motion.div>
                 </div>
