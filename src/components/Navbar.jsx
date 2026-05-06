@@ -42,8 +42,8 @@ const Navbar = () => {
     <div className="sticky top-0 left-0 z-50 w-full">
       {/* Topbar */}
       <div className="bg-[#033C53] w-full">
-        <div className="max-w-350 mx-auto flex flex-row justify-between items-center px-5 py-1.5 text-white">
-          <div className="flex flex-row items-center gap-3 sm:gap-10">
+        <div className="max-w-350 mx-auto flex flex-row justify-between items-center px-6 py-1.5 text-white">
+          <div className="flex flex-row items-center  gap-2 sm:gap-10">
             <a
               href="mailto:info@minhatech.org"
               className="flex text-xs sm:text-base items-center gap-3 hover:text-[#06B8FF] transition-colors"
