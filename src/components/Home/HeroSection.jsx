@@ -116,13 +116,13 @@ const HeroSection = () => {
 
             <div className='flex flex-wrap gap-3 sm:gap-4 pt-3 md:pt-12 justify-center lg:justify-start'>
               <HashLink smooth to="/#contact">
-                <button className='bg-linear-to-r from-[#06A9EA] to-[#06D27E] px-6 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 rounded-3xl text-white font-semibold shadow-lg shadow-blue-500/20 text-xs sm:text-sm md:text-base cursor-pointer hover:scale-105 transition-transform'>
+                <button className='bg-linear-to-r from-[#06A9EA] to-[#06D27E] px-6 sm:px-6 md:px-8 py-3 md:py-4 rounded-3xl text-white font-semibold shadow-lg shadow-blue-500/20 text-xs sm:text-sm md:text-base cursor-pointer hover:scale-105 transition-transform'>
                   Get Free App Consultation
                 </button>
               </HashLink>
 
               <HashLink smooth to="/#pricing">
-                <button className='border border-white/30 px-6 sm:px-7 md:px-10 py-2 sm:py-3 md:py-4 rounded-3xl text-white text-xs sm:text-sm md:text-base cursor-pointer hover:bg-white/10 transition-all'>
+                <button className='border border-white/30 px-6 sm:px-7 md:px-10 py-3 md:py-4 rounded-3xl text-white text-xs sm:text-sm md:text-base cursor-pointer hover:bg-white/10 transition-all'>
                   View Pricing
                 </button>
               </HashLink>

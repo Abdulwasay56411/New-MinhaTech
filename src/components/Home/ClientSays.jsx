@@ -89,11 +89,11 @@ const ClientSays = () => {
             <div className="flex gap-4 justify-center mt-5 sm:justify-between flex-wrap  sm:-mt-18 relative z-20">
                <div className="hidden sm:block"></div>
 
-               <div className="flex flex-col justify-center items-center w-26 sm:w-40 h-11 rounded-4xl bg-[#06B8FF40]">
-                <div className="flex items-center gap-3 select-none">
+               <div className="flex flex-col justify-center items-center w-24 sm:w-40 h-11 rounded-4xl bg-[#06B8FF40]">
+                <div className="flex items-center gap-2 sm:gap-3 select-none">
                   <FaChevronLeft
                     onClick={handleprev}
-                    className={`text-lg sm:text-xl transition-opacity duration-300 ${
+                    className={`text-base sm:text-xl transition-opacity duration-300 ${
                       manualIndex === 0 ? "text-[#00FB9480]" : "text-[#00FB94] cursor-pointer"
                     }`}
                   />
@@ -104,7 +104,7 @@ const ClientSays = () => {
 
                   <FaChevronRight
                     onClick={handleNext}
-                    className={`text-lg sm:text-xl transition-opacity duration-300 ${
+                    className={`text-base sm:text-xl transition-opacity duration-300 ${
                       manualIndex === ourClient.length - 1 ? "text-[#00FB9480]" : "text-[#00FB94] cursor-pointer"
                     }`}
                   />
