@@ -112,7 +112,7 @@ const ClientSays = () => {
                     onClick={handleNext}
                     className={`text-base sm:text-xl transition-all duration-300 ${
                       isLastCard 
-                        ? "text-gray-500 opacity-40 cursor-not-allowed" 
+                        ? "text-[#00FB9480]" 
                         : "text-[#00FB94] cursor-pointer hover:opacity-70"
                     }`}
                   />
