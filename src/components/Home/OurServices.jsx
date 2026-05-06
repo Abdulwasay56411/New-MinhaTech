@@ -44,7 +44,7 @@ const serviceBox = [
     image: "/Ios.png",
     title: "IOS App",
     span: "Development",
-    para: "Premium IOS applications using Swift & SwiftUI for the Apple ecosystem"
+    para: "Crafting premium iOS experiences using Swift and SwiftUI optimized for  Apple ecosystem."
   },
   {
     id: 3,
