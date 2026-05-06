@@ -6,7 +6,6 @@ import { HashLink } from "react-router-hash-link";
 import { FaPlus } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-// 1. Variables ko hamesha component se pehle rakhein taake error na aaye
 const navbarLink = [
   { id: 1, name: "Home", Link: "/#home" },
   { id: 2, name: "Projects", Link: "/#project" },
@@ -62,7 +61,7 @@ const Navbar = () => {
           </div>
           <a
             href="tel:+923154666899"
-            className="flex sm:hidden text-xs sm:text-base items-center gap-3 mt-2 hover:text-[#06B8FF] transition-colors"
+            className="flex sm:hidden text-xs sm:text-base items-center gap-3 hover:text-[#06B8FF] transition-colors"
           >
             <IoMdCall size={20} />
             +92 315 4666899
