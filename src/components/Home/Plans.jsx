@@ -81,7 +81,7 @@ const Plans = () => {
             key={item.id}
             className="bg-[#0B1D33] border border-[#FFFFFF33] hover:bg-[#00D8FF]/20 hover:shadow-[0_10px_50px_-10px_rgba(0,216,255,0.2)] duration-200 cursor-pointer w-full h-auto p-5 mx-2 rounded-4xl"
           >
-            <h1 className="text-[#F9F9F9] font-medium text-2xl">
+            <h1 className="text-[#F9F9F9] font-bold text-xl sm:text-2xl">
               {item.title}
             </h1>
             <p className="text-base text-[#C6C7C8]">
@@ -96,12 +96,12 @@ const Plans = () => {
               }}
             />
             <h1 className="text-2xl font-bold pb-4 text-[#F9F9F9]">
-              {item.amount} <span className="text-lg font-normal">/ month</span>
+              {item.amount} <span className="text-base font-normal">/ month</span>
             </h1>
-            <button className="w-full h-15 rounded-2xl text-lg font-medium mb-8 text-[#F9F9F9] border border-[#06B8FF] bg-[#06B8FF42] cursor-pointer duration-200 hover:bg-linear-to-r hover:from-[#00FB94] hover:to-[#06B8FF] hover:shadow-2xl hover:shadow-[#06B8FF42] hover:scale-102">
+            <button className="w-full h-15 rounded-2xl text-lg font-medium my-4 text-[#F9F9F9] border border-[#06B8FF] bg-[#06B8FF42] cursor-pointer duration-200 hover:bg-linear-to-r hover:from-[#00FB94] hover:to-[#06B8FF] hover:shadow-2xl hover:shadow-[#06B8FF42] hover:scale-102">
               {item.btn}
             </button>
-            <div>
+            <div className="pt-3">
               {[
                 item.text1,
                 item.text2,
@@ -110,7 +110,7 @@ const Plans = () => {
                 item.text5,
                 item.text6,
               ].map((text, idx) => (
-                <div key={idx} className="flex items-center gap-4 pt-4">
+                <div key={idx} className="flex items-center gap-3 sm:gap-4 pt-2 sm:pt-4">
                   <img className="w-4 h-4" src="/Tick.png" alt="" />
                   <p className="text-lg text-[#C6C7C8] ">
                     {text}
@@ -121,15 +121,15 @@ const Plans = () => {
           </div>
         ))}
       </div>
-      <div className="flex flex-col lg:flex-row gap-5 mt-2 ">
+      <div className="flex flex-col lg:flex-row gap-5 mt-5 sm:mt-2 ">
         {hire.map((item) => (
           <div key={item.id} className="w-full h-auto lg:my-5 p-8 rounded-[30px] bg-[#0B1D33] border border-[#FFFFFF33]">
             <img className="w-17 h-15 object-contain mb-5" src={item.image} alt="" />
             <div className="flex flex-wrap items-center justify-between gap-2">
-              <h1 className="font-bold text-lg md:text-2xl text-[#F9F9F9]">{item.title}</h1>
+              <h1 className="font-bold text-2xl md:text-2xl text-[#F9F9F9]">{item.title}</h1>
               <p className="font-bold text-lg md:text-3xl text-[#F9F9F9]">{item.price}</p>
             </div>
-            <p className="text-[#C6C7C8] text-sm sm:text-base lg:text-xl py-3">{item.para}</p>
+            <p className="text-[#C6C7C8] text-base lg:text-xl py-3">{item.para}</p>
             <button className="w-full h-16 bg-[#06B8FF63] border border-[#06B8FF] text-white rounded-2xl mt-3 cursor-pointer duration-200 hover:scale-102 hover:shadow-2xl hover:shadow-[#06B8FF42]">{item.btn}</button>
           </div>
         ))}

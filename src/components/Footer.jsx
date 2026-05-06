@@ -29,7 +29,7 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer className="mt-20 bg-linear-to-t from-[#12253E] to-[#12253E00] w-full py-2">
+    <footer className="sm:mt-20 bg-linear-to-t from-[#12253E] to-[#12253E00] w-full py-2">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -46,7 +46,7 @@ const Footer = () => {
               From Idea to App Store, we deliver excellence.
             </p>
 
-            <div className="flex items-center gap-3 my-8">
+            <div className="flex items-center gap-3 mt-8 sm:my-8">
               {socialLinks.map((item, i) => (
                 <a
                   key={i}
@@ -54,7 +54,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <div className="bg-[#06B8FF26] border border-[#06B8FF26] text-white w-8 h-8 sm:w-12 sm:h-12 flex items-center justify-center rounded-2xl cursor-pointer duration-200 hover:scale-105 hover:text-[#06B8FF] hover:border-[#06B8FF]">
+                  <div className="bg-[#06B8FF26] border border-[#06B8FF26] text-white w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-xl sm:rounded-2xl cursor-pointer duration-200 hover:scale-105 hover:text-[#06B8FF] hover:border-[#06B8FF]">
                     <item.Icon size={22} />
                   </div>
                 </a>
@@ -64,7 +64,7 @@ const Footer = () => {
           <div className="flex flex-col lg:flex-row gap-10 sm:gap-20">
             {footerText.map((section) => (
               <div key={section.id}>
-                <h2 className="font-bold text-white mb-4 text-xl">{section.title}</h2>
+                <h2 className="font-bold text-white mb-4 text-2xl">{section.title}</h2>
                 {section.links.map((link, index) => (
                   <p key={index} className="text-[#C6C7C8] cursor-pointer hover:text-[#06B8FF] mb-2 whitespace-nowrap hover:scale-102">
                     {link}
@@ -76,7 +76,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-16 overflow-hidden">
-          <h1 className="text-shine text-[clamp(40px,13.5vw,200px)] sm:text-[clamp(40px,14vw,200px)] md:text-[clamp(40px,14.5vw,200px)] font-bold text-[#FFFFFF1A] uppercase tracking-[0.07em] leading-none w-full">
+          <h1 className="text-shine text-[clamp(40px,13.5vw,200px)] sm:text-[clamp(40px,14vw,200px)] md:text-[clamp(40px,14.5vw,200px)] font-extrabold text-[#FFFFFF1A] uppercase tracking-[0.07em] leading-none w-full">
             MINHATECH
           </h1>
         </div>

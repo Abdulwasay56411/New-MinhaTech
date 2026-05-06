@@ -63,13 +63,13 @@ const GetInTouch = () => {
         <div>
           {mail.map((item) => (
             <div key={item.id} className="relative">
-             
+
               <div
                 onClick={() => item.id === 2 ? setShowOptions(showOptions === 2 ? null : 2) : window.location.href = item.link}
                 className="flex items-center gap-2 cursor-pointer"
               >
-                <div className="flex justify-center items-center w-14 h-14 border my-4 rounded-2xl border-[#06B8FF33] bg-[#06B8FF1A] backdrop-blur-xl shadow-2xl shadow-[#06B8FF33]">
-                  <img className="w-7 h-7 object-contain" src={item.image} alt={item.title} />
+                <div className="flex justify-center items-center w-10 h-10 sm:w-14 sm:h-14 border my-2 sm:my-4 rounded-xl sm:rounded-2xl border-[#06B8FF33] bg-[#06B8FF1A] backdrop-blur-xl shadow-2xl shadow-[#06B8FF33]">
+                  <img className="w-5 h-5 sm:w-7 sm:h-7 object-contain" src={item.image} alt={item.title} />
                 </div>
                 <p className="text-[#FFFFFF] text-xl">{item.title}</p>
               </div>
@@ -79,7 +79,7 @@ const GetInTouch = () => {
                     href={item.link}
                     className="bg-[#0598D3] text-white px-4 py-2 rounded-lg text-sm font-semibold hover:scale-105 transition"
                   >
-                     Call Now
+                    Call Now
                   </a>
                   <a
                     href={item.whatsapp}
@@ -87,23 +87,23 @@ const GetInTouch = () => {
                     rel="noreferrer"
                     className="bg-[#07D580] text-white px-4 py-2 rounded-lg text-sm font-semibold hover:scale-105 transition"
                   >
-                     WhatsApp
+                    WhatsApp
                   </a>
                 </div>
               )}
             </div>
           ))}
-          <div className=" w-full md:w-150 mt-7 h-auto border border-[#FFFFFF1A] bg-[#06B8FF26] rounded-[30px] p-8">
-            <h1 className="font-semibold text-2xl pb-3 text-[#FFFFFF]">Why Choose MinhaTech?</h1>
+          <div className=" w-full md:w-150 mt-7 h-auto border border-[#FFFFFF1A] bg-[#06B8FF26] rounded-3xl p-8">
+            <h1 className="font-bold text-xl sm:text-2xl pb-3 text-[#FFFFFF]">Why Choose MinhaTech?</h1>
             {choose.map((item) => (
               <div key={item.id} className="flex items-center gap-4" >
                 <img className="w-3.75 h-2.5" src={item.image} alt="" />
-                <p className="text-[#C6C7C8] text-base sm:text-base py-1.5">{item.text}</p>
+                <p className="text-[#C6C7C8] text-base py-1.5">{item.text}</p>
               </div>
             ))}
           </div>
         </div>
-        <div className="w-140 h-137 rounded-3xl bg-[#06B8FF26] border border-[#FFFFFF33] backdrop-blur-2xl shadow-2xl shadow-[#06B8FF33] p-5">
+        <div className="w-140 h-137 rounded-3xl bg-[#06B8FF26] border border-[#FFFFFF33] backdrop-blur-2xl mt-2 shadow-2xl shadow-[#06B8FF33] p-5">
           <form action="https://formsubmit.co/info@minhatech.org" method="POST">
             <label className="block text-white">First Name</label>
             <input

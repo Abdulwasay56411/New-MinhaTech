@@ -86,10 +86,10 @@ const ClientSays = () => {
                 </div>
               </motion.div>
             </AnimatePresence>
-            <div className="flex gap-4 justify-center mt-5 sm:justify-between flex-wrap  sm:-mt-18 relative z-20">
+            <div className="flex gap-4 justify-center mt-8 sm:justify-between flex-wrap  sm:-mt-18 relative z-20">
                <div className="hidden sm:block"></div>
 
-               <div className="flex flex-col justify-center items-center w-24 sm:w-40 h-11 rounded-4xl bg-[#06B8FF40]">
+               <div className="flex flex-col justify-center items-center w-26 sm:w-40 h-10 rounded-4xl bg-[#06B8FF40]">
                 <div className="flex items-center gap-2 sm:gap-3 select-none">
                   <FaChevronLeft
                     onClick={handleprev}
