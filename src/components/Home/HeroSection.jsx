@@ -7,7 +7,6 @@ const HeroSection = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-
     if (document.readyState === 'complete') {
       setIsLoaded(true);
     } else {
@@ -18,38 +17,19 @@ const HeroSection = () => {
   }, []);
 
   const heroImages = [
-    { id: 1, image: "/hero 1.png" },
-    { id: 2, image: "/hero 2.png" },
-    { id: 3, image: "/hero 3.png" },
-    { id: 4, image: "/hero 4.png" },
-    { id: 5, image: "/hero 5.png" },
-    { id: 6, image: "/hero 6.png" },
-    { id: 7, image: "/hero 7.png" },
-    { id: 8, image: "/hero 8.png" },
-    { id: 9, image: "/hero 9.png" },
-    { id: 10, image: "/hero 10.png" },
-    { id: 11, image: "/hero 11.png" },
-    { id: 12, image: "/hero 12.png" },
-    { id: 13, image: "/hero 13.png" },
-    { id: 14, image: "/hero 14.png" },
-    { id: 15, image: "/hero 15.png" },
-    { id: 16, image: "/hero 16.png" },
-    { id: 17, image: "/hero 17.png" },
-    { id: 18, image: "/hero 18.png" },
-    { id: 19, image: "/hero 19.png" },
-    { id: 20, image: "/hero 20.png" },
-    { id: 21, image: "/hero 21.png" },
-    { id: 22, image: "/hero 22.png" },
-    { id: 23, image: "/hero 23.png" },
-    { id: 24, image: "/hero 24.png" },
-    { id: 25, image: "/hero 25.png" },
-    { id: 26, image: "/hero 26.png" },
-    { id: 27, image: "/hero 27.png" },
-    { id: 28, image: "/hero 28.png" },
-    { id: 29, image: "/hero 29.png" },
+    { id: 1, image: "/hero 1.png" }, { id: 2, image: "/hero 2.png" }, { id: 3, image: "/hero 3.png" },
+    { id: 4, image: "/hero 4.png" }, { id: 5, image: "/hero 5.png" }, { id: 6, image: "/hero 6.png" },
+    { id: 7, image: "/hero 7.png" }, { id: 8, image: "/hero 8.png" }, { id: 9, image: "/hero 9.png" },
+    { id: 10, image: "/hero 10.png" }, { id: 11, image: "/hero 11.png" }, { id: 12, image: "/hero 12.png" },
+    { id: 13, image: "/hero 13.png" }, { id: 14, image: "/hero 14.png" }, { id: 15, image: "/hero 15.png" },
+    { id: 16, image: "/hero 16.png" }, { id: 17, image: "/hero 17.png" }, { id: 18, image: "/hero 18.png" },
+    { id: 19, image: "/hero 19.png" }, { id: 20, image: "/hero 20.png" }, { id: 21, image: "/hero 21.png" },
+    { id: 22, image: "/hero 22.png" }, { id: 23, image: "/hero 23.png" }, { id: 24, image: "/hero 24.png" },
+    { id: 25, image: "/hero 25.png" }, { id: 26, image: "/hero 26.png" }, { id: 27, image: "/hero 27.png" },
+    { id: 28, image: "/hero 28.png" }, { id: 29, image: "/hero 29.png" },
   ];
 
-  const repeatedImages = [...heroImages, ...heroImages,];
+  const repeatedImages = [...heroImages, ...heroImages];
 
   return (
     <div
@@ -139,10 +119,11 @@ const HeroSection = () => {
                     className='flex flex-col gap-3 sm:gap-4'
                     animate={{ y: col === 1 ? ["0%", "-50%"] : ["-50%", "0%"] }}
                     transition={{
-                      duration: 150,
+                      duration: 300,
                       repeat: Infinity,
                       ease: "linear",
                     }}
+                    style={{ willChange: "transform" }}
                   >
                     {repeatedImages.map((img, index) => (
                       <img key={`mobile-${col}-${index}`} src={img.image} className='w-full h-auto rounded-lg' alt="" />
@@ -160,13 +141,14 @@ const HeroSection = () => {
                     className='flex flex-col gap-5 xl:gap-6 pt-5'
                     animate={{ y: col === 1 ? ["0%", "-50%"] : ["-50%", "0%"] }}
                     transition={{
-                      duration: 150,
+                      duration: 300,
                       repeat: Infinity,
                       ease: "linear",
                     }}
+                    style={{ willChange: "transform" }}
                   >
                     {repeatedImages.map((img, index) => (
-                      <img key={`desk-${col}-${index}`} src={img.image} className='w-full  h-auto rounded-xl shadow-[0_0px_10px_rgba(8,112,184,0.7)]' alt="" />
+                      <img key={`desk-${col}-${index}`} src={img.image} className='w-full h-auto rounded-xl shadow-[0_0px_10px_rgba(8,112,184,0.7)]' alt="" />
                     ))}
                   </motion.div>
                 </div>
