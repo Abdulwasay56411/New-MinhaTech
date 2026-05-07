@@ -66,7 +66,7 @@ const Navbar = () => {
             <IoMdCall size={14} className="text-[#60C1E7]" />
             +92 315 4666899
           </a>
-          <div className="hidden sm:flex items-center gap-3 lg:gap-5">
+          <div className="hidden sm:flex items-center gap-3">
             <a href="https://www.linkedin.com/company/minhatech/" target="_blank">
               <FaLinkedinIn size={14} className="hover:text-[#06B8FF] text-[#60C1E7] cursor-pointer" />
             </a>

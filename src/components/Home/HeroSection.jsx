@@ -86,24 +86,34 @@ const HeroSection = () => {
           className='flex flex-col lg:flex-row items-stretch justify-between gap-8 lg:gap-12'
         >
           {/* TEXT SECTION */}
-          <div className='relative w-full lg:w-[48%] xl:w-[45%] pt-10 lg:pt-20 text-center lg:text-left space-y-3 md:space-y-5'>
-            <h1 className='font-bold text-3xl sm:text-4xl md:text-5xl lg:text-[52px] leading-10 sm:leading-12 lg:leading-16 tracking-wide text-[#F2F6F7]'>
-              Mobile App<span className='text-[#06A9EA]'> Development</span> <br /> That Drive Results
+          <div className='relative w-full pt-10 lg:pt-20 text-center lg:text-left space-y-3 md:space-y-5'>
+            <h1 className='font-bold text-[51px] text-[#0ACF83] leading-tight tracking-wide'>
+              Building<span className='text-[#F2F6F7] text-[81px]'> <br /> iOS & Andriod </span> <span className='text-[#06A9EA] block text-[45px]'>Apps that Transform</span>
             </h1>
-            <p className='text-[#C6C7C8] lg:max-w-md tracking-wide text-sm sm:text-base'>
-              Transforming ideas into seamless digital experiences people love to use
+            <p className='text-[#D9E3EF] lg:max-w-152 tracking-wide text-sm sm:text-base'>
+              From concept to market leadership, MinhaTech engineers high performance, secure, and intuitive mobile solutions that set new industry standards
             </p>
 
-            <div className='flex flex-wrap gap-3 sm:gap-4 pt-3 md:pt-12 justify-center lg:justify-start'>
+            <div className='flex flex-wrap gap-3 sm:gap-4 pt-3  justify-center lg:justify-start'>
               <HashLink smooth to="/#contact">
-                <button className='bg-linear-to-r from-[#06A9EA] to-[#06D27E] px-6 sm:px-6 md:px-8 py-3 md:py-4 rounded-3xl text-white font-semibold shadow-lg shadow-blue-500/20 text-xs sm:text-sm md:text-base cursor-pointer hover:scale-105 transition-transform'>
-                  Get Free App Consultation
+                <button className='group relative flex items-center gap-1 bg-linear-to-r from-[#06A9EA] to-[#06D27E] px-6 sm:px-4 py-3 md:py-4 rounded-4xl text-white font-semibold shadow-lg shadow-blue-500/20 text-xs sm:text-sm md:text-base cursor-pointer overflow-hidden'>
+
+                  <div className="relative h-6 flex flex-col overflow-hidden">
+                    <span className="flex items-center gap-1 transition-all duration-500 ease-in-out group-hover:-translate-y-full">
+                      Get Free App Consultation <img className='w-5 h-5' src="/book free.png" alt="" />
+                    </span>
+                    <span className="absolute left-0 top-0 flex items-center gap-1 translate-y-full transition-all duration-500 ease-in-out group-hover:translate-y-0">
+                      Get Free App Consultation <img className='w-5 h-5' src="/book free.png" alt="" />
+                    </span>
+
+                  </div>
+
                 </button>
               </HashLink>
 
               <HashLink smooth to="/#pricing">
-                <button className='border border-white/30 px-6 sm:px-7 md:px-10 py-3 md:py-4 rounded-3xl text-white text-xs sm:text-sm md:text-base cursor-pointer hover:bg-white/10 transition-all'>
-                  View Pricing
+                <button className='group flex items-center gap-1  border border-white/30 px-2 sm:px-4 py-3 md:py-4 rounded-3xl text-white text-xs sm:text-sm md:text-base cursor-pointer hover:bg-white/10 transition-all'>
+                  Explore Options <img className='w-6 h-6 transition-transform duration-300 group-hover:translate-y-1' src="/down arrow.png" alt="" />
                 </button>
               </HashLink>
             </div>
