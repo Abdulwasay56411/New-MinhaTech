@@ -65,7 +65,7 @@ const Milestones = () => {
         para="With innovative ideas and modern development techniques we have successfully built and published high quality mobile apps that continue to engage users and deliver real value" 
       />
 
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-10 lg:py-6 items-start">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 mx-5 lg:gap-10 lg:py-6 items-start">
         {milestonesData.map((item) => (
           <div 
             key={item.id} 
