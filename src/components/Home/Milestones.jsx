@@ -44,12 +44,12 @@ const Counter = ({ endValue, suffix }) => {
 };
 
 const Milestones = () => {
-  // 1. Dummy Data Array
+ 
   const milestonesData = [
-    { id: 1, value: 5, suffix: "B+", label: "Downloads" },
-    { id: 2, value: 98, suffix: "%", label: "Client Satisfaction" },
-    { id: 3, value: 900, suffix: "+", label: "Successful Projects" },
-    { id: 4, value: 300, suffix: "+", label: "Partners" },
+    { id: 1, value: 100, suffix: "+", label: "Published Apps" },
+    { id: 2, value: 5, suffix: "M+", label: "Downlaods" },
+    { id: 3, value: 15, suffix: "+", label: "Partners" },
+    { id: 4, value: 98, suffix: "+", label: "Satisfaction Rate" },
   ];
 
   return (
@@ -60,7 +60,8 @@ const Milestones = () => {
     viewport={{once: true, amount: 0.2}}
     id="about" className="max-w-350 mx-auto px-5 py-10">
       <Heading 
-        title="What We Delivered" 
+        title="What We"
+        subtitle="Delivered" 
         para="Delivering measurable results through innovation, performance and user-focused mobile solutions" 
       />
 
@@ -68,12 +69,12 @@ const Milestones = () => {
         {milestonesData.map((item) => (
           <div 
             key={item.id} 
-            className="w-full h-35 sm:h-44 rounded-3xl bg-[#173C4C] border border-[#FFFFFF1A] flex flex-col justify-between py-8 items-center backdrop-blur-sm"
+            className="w-full h-37 rounded-[14px] bg-[#0F1D3426] border border-[#06B8FF] flex flex-col justify-between py-8 items-center backdrop-blur-sm"
           >
-            <h1 className="text-[#FFFFFF] font-semibold text-3xl sm:text-5xl md:text-6xl">
+            <h1 className="text-[#FFFFFF] font-bold text-3xl sm:text-[51px]">
               <Counter endValue={item.value} suffix={item.suffix} />
             </h1>
-            <p className="text-sm sm:text-lg md:text-[24px] pt-2 text-center text-[#C6C7C8] px-2">
+            <p className="text-sm sm:text-[17px] font-semibold pt-2 text-center text-[#01D89F] px-2">
               {item.label}
             </p>
           </div>
