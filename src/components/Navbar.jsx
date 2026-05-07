@@ -41,60 +41,60 @@ const Navbar = () => {
   return (
     <div className="sticky top-0 left-0 z-50 w-full">
       {/* Topbar */}
-      <div className="bg-[#033C53] w-full">
+      <div className="bg-[#081D32] w-full">
         <div className="max-w-350 mx-auto flex flex-row justify-between items-center px-6 py-1.5 text-white">
-          <div className="flex flex-row items-center  gap-2 sm:gap-10">
+          <div className="flex flex-row items-center  gap-2 sm:gap-5">
             <a
               href="mailto:info@minhatech.org"
-              className="flex text-xs sm:text-base items-center gap-3 hover:text-[#06B8FF] transition-colors"
+              className="flex text-xs  items-center gap-2 text-[#FFFFFFED] hover:text-[#06B8FF] transition-colors"
             >
-              <MdEmail size={20} />
+              <MdEmail size={14} className="text-[#60C1E7]" />
               info@minhatech.org
             </a>
             <a
               href="tel:+923154666899"
-              className="hidden sm:flex text-xs sm:text-base items-center gap-3  hover:text-[#06B8FF] transition-colors"
+              className="hidden sm:flex text-xs  items-center gap-2 text-[#FFFFFFED] hover:text-[#06B8FF] transition-colors"
             >
-              <IoMdCall size={20} />
+              <IoMdCall size={14} className="text-[#60C1E7]" />
               +92 315 4666899
             </a>
           </div>
           <a
             href="tel:+923154666899"
-            className="flex sm:hidden text-xs sm:text-base items-center gap-3 hover:text-[#06B8FF] transition-colors"
+            className="flex sm:hidden text-xs  items-center gap-2 text-[#FFFFFFED] hover:text-[#06B8FF] transition-colors"
           >
-            <IoMdCall size={20} />
+            <IoMdCall size={14} className="text-[#60C1E7]" />
             +92 315 4666899
           </a>
           <div className="hidden sm:flex items-center gap-3 lg:gap-5">
             <a href="https://www.linkedin.com/company/minhatech/" target="_blank">
-              <FaLinkedinIn size={14} className="hover:text-[#06B8FF] cursor-pointer" />
+              <FaLinkedinIn size={14} className="hover:text-[#06B8FF] text-[#60C1E7] cursor-pointer" />
             </a>
             <a href="https://www.instagram.com/minhatechofficial/" target="_blank">
-              <FaInstagram size={14} className="hover:text-[#06B8FF] cursor-pointer" />
+              <FaInstagram size={14} className="hover:text-[#06B8FF] text-[#60C1E7] cursor-pointer" />
             </a>
             <a href="https://www.facebook.com/minhatechofficial/" target="_blank">
-              <FaFacebookF size={14} className="hover:text-[#06B8FF] cursor-pointer " />
+              <FaFacebookF size={14} className="hover:text-[#06B8FF] text-[#60C1E7] cursor-pointer " />
             </a>
           </div>
         </div>
       </div>
-      <div className="w-full transition-all duration-300 shadow-xl p bg-[#0A0D21]/20 backdrop-blur-2xl">
-        <div className="max-w-350 mx-auto px-5 py-2">
-          <div className="w-full flex justify-between items-center px-5 py-2 bg-[#8EDFFF33] rounded-[10px]">
+      <div className="w-full transition-all duration-300 shadow-xl  bg-[#0A0D21]/20 backdrop-blur-2xl">
+        <div className="max-w-350 mx-auto px-5 pt-4 pb-2">
+          <div className="w-full flex justify-between items-center px-5 py-2 bg-[#0F1D3426] border-[0.075px] border-[#06B8FF] rounded-[15px]">
             <Link to="/">
-              <img className="w-18 sm:w-23 sm:h-15 object-contain" src="/MinhaTech.png" alt="MinhaTech Logo" />
+              <img className="w-15 h-10 sm:w-17 sm:h-11 object-contain" src="/MinhaTech.png" alt="MinhaTech Logo" />
             </Link>
 
             <div className="hidden md:flex gap-10 items-center">
               {navbarLink.map((item) => (
-                <ul key={item.id} className="group relative py-2">
+                <ul key={item.id} className="group relative py-2 flex flex-col items-center">
                   <HashLink smooth to={item.Link}>
-                    <li className="md:text-sm lg:text-base cursor-pointer text-center text-[#FFFFFF] font-medium">
+                    <li className="md:text-sm lg:text-base cursor-pointer text-center text-[#FFFFFF] hover:text-[#06B8FF] duration-300 font-medium">
                       {item.name}
                     </li>
                   </HashLink>
-                  <span className="absolute w-0 h-0.5 left-0 bottom-0 group-hover:w-full transition-all duration-300 bg-linear-to-r from-[#00FB94] to-[#06B8FF]"></span>
+                  <span className="absolute h-0.5 bottom-0 left-1/2 -translate-x-1/2 w-0 group-hover:w-7 transition-all duration-300 bg-linear-to-r from-[#00FB94] to-[#06B8FF]"></span>
                 </ul>
               ))}
             </div>
@@ -104,7 +104,7 @@ const Navbar = () => {
               className="hidden md:flex group cursor-pointer items-center"
             >
               <HashLink smooth to="/#contact">
-                <button className="text-[#ffffff] bg-linear-to-r from-[#00FB94] to-[#06B8FF] cursor-pointer w-39 rounded-xl h-12 border border-[#00FB94] hover:shadow-[0px_5px_10px_rgba(6,184,255,0.45)]  font-medium hover:scale-105 duration-300">
+                <button className="text-[#ffffff] bg-linear-to-r from-[#00FB94] to-[#06B8FF] cursor-pointer w-29 text-[15px] rounded-xl h-9 border border-[#00FB94] hover:shadow-[0px_5px_10px_rgba(6,184,255,0.45)]   hover:scale-105 duration-300">
                   Contact Us
                 </button>
               </HashLink>
