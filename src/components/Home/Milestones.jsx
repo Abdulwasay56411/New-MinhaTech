@@ -65,11 +65,11 @@ const Milestones = () => {
         para="With innovative ideas and modern development techniques we have successfully built and published high quality mobile apps that continue to engage users and deliver real value" 
       />
 
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:py-6 items-start">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-10 lg:py-6 items-start">
         {milestonesData.map((item) => (
           <div 
             key={item.id} 
-            className="w-full md:w-66 h-37 rounded-[14px] bg-[#0F1D3426] opacity-80 border-[0.74px] border-[#06B8FF] flex flex-col justify-between py-8 items-center backdrop-blur-sm"
+            className="w-full h-37 rounded-[14px] bg-[#0F1D3426] opacity-80 border-[0.74px] border-[#06B8FF] flex flex-col justify-between py-8 items-center backdrop-blur-sm"
           >
             <h1 className="text-[#FFFFFF] font-bold text-3xl sm:text-[51px]">
               <Counter endValue={item.value} suffix={item.suffix} />
