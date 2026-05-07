@@ -97,7 +97,7 @@ const ToolMagic = () => {
               <div key={item.id} className="relative z-10 flex flex-col items-center group">
 
                 <div className="w-20 h-20 sm:w-24  sm:h-24 rounded-lg sm:rounded-2xl bg-linear-to-t p-0.5 from-[#06B8FF] to-[#00FB94B2] sm:shadow-[0px_4px_20px_0px_rgba(6,184,255,0.38)] cursor-pointer hover:scale-105 duration-200">
-                  <div className="w-full h-full bg-[#09182B] rounded-[5px] sm:rounded-2xl flex items-center justify-center">
+                  <div className="w-full h-full bg-[#0A1522] rounded-[5px] sm:rounded-2xl flex items-center justify-center">
                     <img className="w-8 h-8 sm:w-10 sm:h-10 object-contain" src={item.image} />
                   </div>
                 </div>

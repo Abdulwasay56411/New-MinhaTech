@@ -125,7 +125,7 @@ const Navbar = () => {
               <div className={`absolute right-0 top-10 w-41 h-auto shadow-2xl rounded-lg px-5 py-4 text-white bg-[#0A1E38] transform transition-all duration-300 z-50 ${isOpen ? "translate-x-0 opacity-100 scale-100" : "translate-x-10 opacity-0 scale-95 pointer-events-none"}`}>
                 {menuNavbar.map((item) => (
                   <HashLink key={item.id} smooth to={item.Link} onClick={() => setIsOpen(false)}>
-                    <h1 className="leading-10 hover:font-bold hover:text-[#00FB94] duration-300 transition-all">{item.name}</h1>
+                    <h1 className="leading-10 hover:font-bold hover:text-[#06B8FF] duration-300 transition-all">{item.name}</h1>
                   </HashLink>
                 ))}
               </div>
