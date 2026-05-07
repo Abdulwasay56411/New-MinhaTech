@@ -34,7 +34,7 @@ const HeroSection = () => {
   return (
     <div
       id='home'
-      className='relative isolate w-full bg-[url("/bg.png")] bg-no-repeat bg-cover bg-center overflow-hidden lg:-mt-33.75 -mt-27.5'
+      className='relative isolate w-full bg-[url("/herobg.png")] bg-no-repeat bg-cover bg-center overflow-hidden lg:-mt-33.75 -mt-27.5'
     >
       <AnimatePresence>
         {isLoaded && (
@@ -53,7 +53,7 @@ const HeroSection = () => {
                 opacity: { duration: 2 }
               }}
               className='hidden lg:block absolute -bottom-[20%] left-[-20%] md:left-[-5%] w-75 md:w-125 h-75 md:h-125 rounded-full blur-[100px] md:blur-[140px] pointer-events-none z-[-1]'
-              style={{ backgroundColor: '' }}
+              style={{ backgroundColor: 'green' }}
             />
 
             <motion.div
