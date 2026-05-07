@@ -34,7 +34,7 @@ const HeroSection = () => {
   return (
     <div
       id='home'
-      className='relative isolate w-full bg-[url("/Background.png")] bg-no-repeat bg-cover bg-center overflow-hidden lg:-mt-33.75 -mt-27.5'
+      className='relative isolate w-full bg-[url("/bg.png")] bg-no-repeat bg-cover bg-center overflow-hidden lg:-mt-33.75 -mt-27.5'
     >
       <AnimatePresence>
         {isLoaded && (
