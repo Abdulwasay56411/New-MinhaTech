@@ -117,7 +117,7 @@ const HeroSection = () => {
                 </button>
               </HashLink>
             </div>
-            <div className='flex justify-center lg:justify-start gap-2 my-6 '>
+            <div className='flex justify-center lg:justify-start gap-3 my-10 lg:my-12 '>
               <img className='w-23 h-10' src="/four img.png" alt="" />
               <div>
                 <p className='text-[#06B8FF] font-semibold text-2xl leading-1 '>*****</p>
