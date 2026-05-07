@@ -86,11 +86,11 @@ const HeroSection = () => {
           className='flex flex-col lg:flex-row items-stretch justify-between gap-8 lg:gap-12'
         >
           {/* TEXT SECTION */}
-          <div className='relative w-full pt-10 lg:pt-20 text-center lg:text-left space-y-3 md:space-y-5'>
-            <h1 className='font-bold text-[51px] text-[#0ACF83] leading-tight tracking-wide'>
-              Building<span className='text-[#F2F6F7] text-[81px]'> <br /> iOS & Andriod </span> <span className='text-[#06A9EA] block text-[45px]'>Apps that Transform</span>
+          <div className='relative w-full pt-10 lg:pt-20 space-y-3 md:space-y-5'>
+            <h1 className='font-bold text-2xl sm:text-3xl text-center lg:text-left md:text-[41px] lg:text-[51px] text-[#0ACF83] lg:leading-tight tracking-wide'>
+              Building<span className='text-[#F2F6F7] text-5xl sm:text-6xl md:text-[71px] lg:text-[81px]'> <br /> iOS & Andriod </span> <span className='text-[#06A9EA] block text-xl sm:text-2xl md:text-[35px] lg:text-[45px]'>Apps that Transform</span>
             </h1>
-            <p className='text-[#D9E3EF] lg:max-w-152 tracking-wide text-sm sm:text-base'>
+            <p className='text-[#D9E3EF] lg:max-w-152 text-center lg:text-left tracking-wide text-sm sm:text-base'>
               From concept to market leadership, MinhaTech engineers high performance, secure, and intuitive mobile solutions that set new industry standards
             </p>
 
@@ -112,13 +112,20 @@ const HeroSection = () => {
               </HashLink>
 
               <HashLink smooth to="/#pricing">
-                <button className='group flex items-center gap-1  border border-white/30 px-2 sm:px-4 py-3 md:py-4 rounded-3xl text-white text-xs sm:text-sm md:text-base cursor-pointer hover:bg-white/10 transition-all'>
+                <button className='group flex items-center gap-1 border border-[#06B8FF] px-2 sm:px-4 py-3 md:py-4 rounded-4xl text-white text-xs sm:text-sm md:text-base cursor-pointer hover:bg-[#0F1D3433] transition-all'>
                   Explore Options <img className='w-6 h-6 transition-transform duration-300 group-hover:translate-y-1' src="/down arrow.png" alt="" />
                 </button>
               </HashLink>
             </div>
+            <div className='flex justify-center lg:justify-start gap-2 my-6 '>
+              <img className='w-23 h-10' src="/four img.png" alt="" />
+              <div>
+                <p className='text-[#06B8FF] font-semibold text-2xl leading-1 '>*****</p>
+                <h1 className='text-[#0ACF83]'>98% on time delivery</h1>
+                <p className='text-[#C6C7C8]'>join 100+ brands scaling with us.</p>
+              </div>
+            </div>
           </div>
-
           {/* IMAGE SECTION */}
           <div className='relative w-full lg:w-[50%] flex justify-center lg:justify-end items-start lg:-mt-20 overflow-hidden'>
             {/* MOBILE */}

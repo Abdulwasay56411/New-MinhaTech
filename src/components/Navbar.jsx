@@ -43,17 +43,19 @@ const Navbar = () => {
       {/* Topbar */}
       <div className="bg-[#081D32] w-full">
         <div className="max-w-350 mx-auto flex flex-row justify-between items-center px-6 py-1.5 text-white">
-          <div className="flex flex-row items-center  gap-2 sm:gap-5">
+          <div className="flex flex-row items-center gap-3">
             <a
               href="mailto:info@minhatech.org"
-              className="flex text-xs  items-center gap-2 text-[#FFFFFFED] hover:text-[#06B8FF] transition-colors"
+              className="flex text-xs items-center gap-2 text-[#FFFFFFED] hover:text-[#06B8FF] transition-colors"
             >
               <MdEmail size={14} className="text-[#60C1E7]" />
               info@minhatech.org
             </a>
+            <span className="hidden sm:block text-[#FFFFFFED] text-xs">|</span>
+
             <a
               href="tel:+923154666899"
-              className="hidden sm:flex text-xs  items-center gap-2 text-[#FFFFFFED] hover:text-[#06B8FF] transition-colors"
+              className="hidden sm:flex text-xs items-center gap-2 text-[#FFFFFFED] hover:text-[#06B8FF] transition-colors"
             >
               <IoMdCall size={14} className="text-[#60C1E7]" />
               +92 315 4666899
