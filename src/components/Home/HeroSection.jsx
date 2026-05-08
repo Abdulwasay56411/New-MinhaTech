@@ -233,26 +233,25 @@ const HeroSection = () => {
                   with the right next step, delievery, approach and time line guidence.
                 </p>
 
-                <form  className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+                <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <div className="space-y-2">
-                      <label className="block text-[11px] text-[#FFFFFF] uppercase tracking-widest">Your Name*</label>
-                      <input type="text" placeholder="John Smith" className="w-full bg-[#02081E] border border-[#06B8FF80] rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#06A9EA]" required/>
+                      <label className="block text-[11px] pl-2 text-[#FFFFFF] uppercase tracking-widest">Your Name*</label>
+                      <input type="text" placeholder="John Smith" className="w-full bg-[#02081E] border border-[#06B8FF80] rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#06A9EA]" required />
                     </div>
                     <div className="space-y-2">
-                      <label className="block text-[11px] text-[#FFFFFF] uppercase tracking-widest">Company</label>
-                      <input type="text" placeholder="Your Company" className="w-full bg-[#02081E] border border-[#06B8FF80] rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#06A9EA]" required/>
+                      <label className="block text-[11px] pl-2 text-[#FFFFFF] uppercase tracking-widest">Company</label>
+                      <input type="text" placeholder="Your Company" className="w-full bg-[#02081E] border border-[#06B8FF80] rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#06A9EA]" required />
                     </div>
                   </div>
 
                   <div className="space-y-2">
-                    <label className="block text-[11px] text-[#FFFFFF] uppercase tracking-widest">Work Email*</label>
-                    <input type="email" placeholder="john@company.com" className="w-full bg-[#02081E] border border-[#06B8FF80] rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#06A9EA]" required/>
+                    <label className="block text-[11px] pl-2 text-[#FFFFFF] uppercase tracking-widest">Work Email*</label>
+                    <input type="email" placeholder="john@company.com" className="w-full bg-[#02081E] border border-[#06B8FF80] rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#06A9EA]" required />
                   </div>
 
-                  {/* SERVICE DROPDOWN START */}
                   <div className="space-y-2">
-                    <label className="block text-[#FFFFFF] text-[11px] font-bold tracking-[0.2em] uppercase">
+                    <label className="block pl-2 text-[#FFFFFF] text-[11px] font-bold tracking-[0.2em] uppercase">
                       What do you need help with?
                     </label>
                     <div className="border border-[#06B8FF80] rounded-2xl bg-[#02081E] overflow-hidden shadow-2xl transition-all duration-300">
@@ -307,14 +306,13 @@ const HeroSection = () => {
                       )}
                     </div>
                   </div>
-                  {/* SERVICE DROPDOWN END */}
 
                   <div className="space-y-2">
-                    <label className="block text-[10px] font-bold text-gray-400 uppercase tracking-widest">Tell us about your project</label>
+                    <label className="block text-[10px] font-bold text-[#FFFFFF] pl-2 uppercase tracking-widest">Tell us about your project</label>
                     <textarea rows="3" placeholder="Briefly describe your product, team stages, timeline, and the outcome you want us to help deliver" className="w-full text-[11px] bg-[#02081E] border border-[#06B8FF80] rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#06A9EA] resize-none"></textarea>
                   </div>
 
-                  <div className="flex items-center gap-2 text-[8px] text-[#FFFFFF] bg-[#02081E] p-4 rounded-xl border border-white/5">
+                  <div className="flex items-center gap-2 text-[10px] text-[#FFFFFF] bg-[#02081E] p-4 rounded-xl border border-[#06B8FF80]">
                     <img className='w-4 h-4' src="/shield.png" alt="" />
                     <span>Your information stays private and is only used to prepare your consultation and follow-up.</span>
                   </div>
