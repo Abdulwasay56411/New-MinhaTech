@@ -80,7 +80,7 @@ const ToolMagic = () => {
         viewport={{ once: true, amount: 0.2 }}
       >
         <div className="max-w-350 mx-auto px-10">
-          <Heading title="Our Process" para="A proven methodology from concept to market success" />
+          <Heading title="Our" subtitle="Process" para="A proven methodology from concept to market success" />
           <div className="relative flex flex-wrap justify-center lg:justify-between gap-x-5 gap-y-4 pb-5 sm:py-5 ">
 
             <div className="hidden lg:block absolute top-18 left-0 w-full h-0.5 bg-linear-to-r from-[#06B8FF33] via-[#06B8FF] to-[#06B8FF33] -translate-y-1/2 z-0"></div>

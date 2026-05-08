@@ -49,7 +49,7 @@ const hire = [
     id: 1,
     image: "/Designer.png",
     title: "Developer Resources",
-    price: "$&32/ hr",
+    price: "$32/ hr",
     para: "Hire skilled developers with flexible pricing based on your project timeline. Rates update automatically as your scope evolves.",
     btn: "Hire Developer"
   },
@@ -57,7 +57,7 @@ const hire = [
     id: 2,
     image: "/Developer.png",
     title: "Designer Resources",
-    price: "$&28/ hr",
+    price: "$20/ hr",
     para: "Work with creative designers and get better rates based on your needs. Pricing adjusts automatically with project duration.",
     btn: "Hire Designer"
   },
