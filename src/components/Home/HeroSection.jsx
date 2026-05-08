@@ -321,11 +321,11 @@ const HeroSection = () => {
 
                   <button className="w-full bg-linear-to-r from-[#06A9EA] to-[#06D27E] hover:bg-white text-[#FFFFFF] flex items-center justify-between p-4 rounded-2xl transition-all group/btn mt-4">
                     <div className="text-left">
-                      <p className="font-bold text-lg leading-tight">Book Your Free Consultation</p>
-                      <p className="text-[11px] opacity-60">We'll reply with the right next step within 24 hours</p>
+                      <p className="font-bold text-sm sm:text-lg leading-tight">Book Your Free Consultation</p>
+                      <p className="text-[9px] sm:text-[11px] opacity-60">We'll reply with the right next step within 24 hours</p>
                     </div>
-                    <div className="bg-[#D9D9D9B2] p-3 rounded-full text-white transition-transform duration-300 group-hover/btn:translate-x-1">
-                      <FaArrowRight className="w-4 h-4" />
+                    <div className="bg-[#D9D9D9B2] p-2 sm:p-3 rounded-full text-white transition-transform duration-300 group-hover/btn:translate-x-1">
+                      <FaArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
                     </div>
                   </button>
                 </form>
