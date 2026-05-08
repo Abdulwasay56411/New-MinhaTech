@@ -13,7 +13,7 @@ const OurServices = () => {
       <Heading title="Core" subtitle="Services" para="End to end mobile apps solutions tailored for startups and enterprises" />
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-items-center mx-5 lg:my-5 gap-5'>
         {serviceBox.map((item) => (
-          <div key={item.id} className='w-full px-5 py-10 max-w-95 h-auto bg-[#0F1D3426] border border-[#06B8FF] shadow-[0px_0px_61px_0px_rgba(6,184,255,0.14)] rounded-3xl'>
+          <div key={item.id} className='w-full px-5 py-10 max-w-95 h-auto bg-[#0F1D3426] opacity-80 border border-[#06B8FF]/40 shadow-[0px_0px_61px_0px_rgba(6,184,255,0.14)] rounded-3xl'>
             <div className='flex flex-col text-center items-center hover:scale-105 duration-300 cursor-pointer'>
               <img className='w-15 h-15 object-cover' src={item.image} alt="" />
               <h1 className='text-[#FFFFFF] font-bold text-2xl tracking-wider pt-9 pb-2'>

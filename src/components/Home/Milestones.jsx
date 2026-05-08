@@ -69,7 +69,7 @@ const Milestones = () => {
         {milestonesData.map((item) => (
           <div 
             key={item.id} 
-            className="w-full h-37 rounded-[14px] bg-[#0F1D3426] opacity-80 border-[0.74px] border-[#06B8FF] flex flex-col justify-between py-8 items-center backdrop-blur-sm"
+            className="w-full h-37 rounded-[14px] bg-[#0F1D3426] opacity-80 border-[0.74px] border-[#06B8FF]/40 flex flex-col justify-between py-8 items-center backdrop-blur-sm"
           >
             <h1 className="text-[#FFFFFF] font-bold text-3xl sm:text-[51px]">
               <Counter endValue={item.value} suffix={item.suffix} />
