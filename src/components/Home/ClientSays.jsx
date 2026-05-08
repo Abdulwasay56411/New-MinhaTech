@@ -44,7 +44,7 @@ const ClientSays = () => {
       viewport={{ once: true, amount: 0.2 }}
       className="max-w-350 mx-auto overflow-hidden px-5 pb-10"
     >
-      <Heading title="Clients Success Stories" para="Hear from founders and teams we've helped succeed" />
+      <Heading title="Clients Success" subtitle="Stories" para="Hear from founders and teams we've helped succeed" />
 
       <div className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-16">
         <div className="relative w-50 h-50 sm:w-80 sm:h-80 flex shrink-0 items-center justify-center md:order-1">

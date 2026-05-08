@@ -1,17 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import Heading from "../Heading";
 import { motion } from "framer-motion";
-
-
-const toolImages = [
-  { id: 1, image: "/Tool 3.png" },
-  { id: 2, image: "/Tool 5.png" },
-  { id: 3, image: "/Tool 4.png" },
-  { id: 4, image: "/Tool 6.png" },
-  { id: 5, image: "/Tool 1.png" },
-  { id: 6, image: "/Tool 2.png" },
-  { id: 7, image: "/Tool 7.png" },
-];
 
 const processImage = [
   {
@@ -51,13 +40,13 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.3, // Har box ke darmiyan 0.3s ka delay
-      delayChildren: 0.2,   // Shuru hone se pehle halka sa wait
+      staggerChildren: 0.3,
+      delayChildren: 0.2,
     },
   },
 };
 
-// Items Variants: Boxes niche se upar ayenge
+
 const itemVariants = {
   hidden: { opacity: 0, y: 30 },
   visible: {
@@ -67,7 +56,6 @@ const itemVariants = {
   },
 };
 
-// Line Variant: Line left se right grow karegi
 const lineVariants = {
   hidden: { width: 0, opacity: 0 },
   visible: {
@@ -78,6 +66,10 @@ const lineVariants = {
 };
 
 const ToolMagic = () => {
+
+  const [activeTab, setActiveTab] = useState(1);
+
+  const currentImage = technologiesImage.find((img) => img.id === activeTab);
 
   return (
     <div className="pb-14">
@@ -105,17 +97,36 @@ const ToolMagic = () => {
             ))}
           </div>
         </div>
-        <div className="bg-linear-to-t  from-[#112139] to-[#09182B00] pb-10">
-          <Heading title="Tools Behind Our Magic" para="Everything we use to make things happen" />
-          <div className="flex flex-wrap justify-center  gap-5 max-w-250 mx-auto px-5">
-            {toolImages.map((item) => (
-              <div key={item.id}
-                className="w-32 h-13 sm:w-56 sm:h-20 flex items-center justify-center rounded-xl p-0.5 bg-[#0F1D34]  border border-[#06B8FF]/40 cursor-pointer hover:scale-105 duration-300"
+        <div className="bg-[#0A0D21] pb-10">
+          <Heading
+            title="Technologies"
+            subtitle="We Have"
+            para="Everything we use to make things happen"
+          />
+          <div className="flex flex-wrap justify-center gap-5 max-w-350 mx-auto px-5 mb-10">
+            {technologies.map((tech) => (
+              <button
+                key={tech.id}
+                onClick={() => setActiveTab(tech.id)}
+                className={`px-6 py-2 rounded-lg transition-all duration-300 ${activeTab === tech.id
+                    ? "bg-[#12253E] text-[#06B8FF] border border-[#06B8FF]" 
+                    : "bg-[#12253E]/50 text-white border border-transparent" 
+                  }`}
               >
-                <img className="w-8 h-8 sm:w-10 sm:h-10 object-cover" src={item.image} alt="" />
-
-              </div>
+                {tech.title}
+              </button>
             ))}
+          </div>
+          <div className="flex justify-center max-w-350 mx-auto px-5">
+            <div>
+              {currentImage && (
+                <img
+                  src={currentImage.image}
+                  alt="Technology tools"
+                  className="w-full h-auto object-contain animate-in fade-in duration-500"
+                />
+              )}
+            </div>
           </div>
         </div>
       </motion.div>
@@ -124,3 +135,50 @@ const ToolMagic = () => {
 };
 
 export default ToolMagic;
+
+const technologies = [
+  {
+    id: 1,
+    title: "Design",
+  },
+  {
+    id: 2,
+    title: "Frontend",
+  },
+  {
+    id: 3,
+    title: "Backend",
+  },
+  {
+    id: 4,
+    title: "Database",
+  },
+  {
+    id: 5,
+    title: "Cloud",
+  },
+]
+
+
+const technologiesImage = [
+  {
+    id: 1,
+    image: "/Design.png",
+  },
+  {
+    id: 2,
+    image: "/Frontend.png",
+  },
+  {
+    id: 3,
+    image: "/Backend.png",
+  },
+  {
+    id: 4,
+    image: "/Database.png",
+  },
+  {
+    id: 5,
+    image: "/Cloud.png",
+  },
+]
