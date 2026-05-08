@@ -31,3 +31,24 @@ body {
 #home, #services, #project, #contact, #about {
   scroll-margin-top: 140px;
 }
+
+
+/* Custom Scrollbar Styling */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px; /* Scrollbar ki width */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #000000; /* Scrollbar ka background black */
+  border-radius: 0 24px 24px 0; /* Card ke rounded corners ke sath match karne ke liye */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #02081E; /* Scrollbar move hone wala hissa blue */
+  border-radius: 10px;
+  border: 2px solid #000000; /* Thumb ke charon taraf thori space dikhane ke liye */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #02081E; /* Hover karne par thora dark blue */
+}

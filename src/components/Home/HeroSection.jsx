@@ -206,7 +206,7 @@ const HeroSection = () => {
       {/* POPUP MODAL */}
       <AnimatePresence>
         {isModalOpen && (
-          <div className="fixed inset-0 z-999 overflow-y-scroll bg-[#0B324280]  backdrop-blur-md flex justify-center">
+          <div className="fixed inset-0 z-999 overflow-y-scroll bg-[#0B324280] custom-scrollbar  backdrop-blur-md flex justify-center">
             <div className="fixed inset-0 z-0" onClick={() => setIsModalOpen(false)} />
             <motion.div
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
@@ -319,8 +319,6 @@ const HeroSection = () => {
 
                   <button className="group w-full bg-linear-to-r from-[#06A9EA] to-[#06D27E] text-[#FFFFFF] flex items-center justify-between p-4 rounded-2xl transition-all mt-4 cursor-pointer overflow-hidden shadow-[0px_2.95px_44.1px_0px_rgba(6,184,255,0.2)]">
 
-                    {/* Left Side: Animated Text Content */}
-                    {/* grid-cols-1 aur items-center se text bilkul center mein rahega */}
                     <div className="relative overflow-hidden text-left h-10 sm:h-12">
 
                       <div className="flex flex-col h-full justify-center transition-all duration-500 ease-in-out group-hover:-translate-y-full">
