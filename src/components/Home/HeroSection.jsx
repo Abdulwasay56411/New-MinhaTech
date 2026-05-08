@@ -32,7 +32,7 @@ const HeroSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const [isOpen, setIsOpen] = useState(false);
-  // Initial state ko object banaya hai taaki desc bhi store ho sake
+
   const [selectedService, setSelectedService] = useState(null);
 
   useEffect(() => {
@@ -206,13 +206,13 @@ const HeroSection = () => {
       {/* POPUP MODAL */}
       <AnimatePresence>
         {isModalOpen && (
-          <div className="fixed inset-0 z-999 overflow-y-scroll bg-black/40 backdrop-blur-md flex justify-center">
+          <div className="fixed inset-0 z-999 overflow-y-scroll bg-[#0B324280]  backdrop-blur-md flex justify-center">
             <div className="fixed inset-0 z-0" onClick={() => setIsModalOpen(false)} />
             <motion.div
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
-              className="relative z-10 w-full max-w-xl bg-[#02081E] border-[0.74] border-[#06B8FF80] rounded-3xl shadow-2xl my-32 mx-4 h-fit"
+              className="relative z-10 w-full max-w-xl bg-[#02081E] shadow-[0px_2.95px_44.1px_0px_rgba(6,184,255,0.2)] border-[0.74] border-[#06B8FF80] rounded-3xl my-32 mx-4 h-fit"
             >
               <button
                 onClick={() => setIsModalOpen(false)}
@@ -224,7 +224,7 @@ const HeroSection = () => {
               <div className="p-6 md:p-10">
                 <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 px-3 py-1 rounded-full mb-6">
                   <img className='w-3.5 h-3.5' src="/timer.png" alt="" />
-                  <span className="text-[10px] text-[#07D580] uppercase tracking-widest font-medium italic">30-minute discovery call</span>
+                  <span className="text-[10px] text-[#07D580] uppercase tracking-widest font-medium">30-minute discovery call</span>
                 </div>
 
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">Book a Free <span className='text-[#06B8FF]'>Consultation</span></h2>
@@ -237,24 +237,24 @@ const HeroSection = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <div className="space-y-2">
                       <label className="block text-[11px] pl-2 text-[#FFFFFF] uppercase tracking-widest">Your Name*</label>
-                      <input type="text" placeholder="John Smith" className="w-full bg-[#02081E] border border-[#06B8FF80] rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#06A9EA]" required />
+                      <input type="text" placeholder="John Smith" className="w-full bg-[#02081E] shadow-[0px_2.95px_44.1px_0px_rgba(6,184,255,0.1)] border border-[#06B8FF80] rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#06A9EA]" required />
                     </div>
                     <div className="space-y-2">
                       <label className="block text-[11px] pl-2 text-[#FFFFFF] uppercase tracking-widest">Company</label>
-                      <input type="text" placeholder="Your Company" className="w-full bg-[#02081E] border border-[#06B8FF80] rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#06A9EA]" required />
+                      <input type="text" placeholder="Your Company" className="w-full bg-[#02081E] shadow-[0px_2.95px_44.1px_0px_rgba(6,184,255,0.1)] border border-[#06B8FF80] rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#06A9EA]" required />
                     </div>
                   </div>
 
                   <div className="space-y-2">
                     <label className="block text-[11px] pl-2 text-[#FFFFFF] uppercase tracking-widest">Work Email*</label>
-                    <input type="email" placeholder="john@company.com" className="w-full bg-[#02081E] border border-[#06B8FF80] rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#06A9EA]" required />
+                    <input type="email" placeholder="john@company.com" className="w-full bg-[#02081E] shadow-[0px_2.95px_44.1px_0px_rgba(6,184,255,0.1)] border border-[#06B8FF80] rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#06A9EA]" required />
                   </div>
 
                   <div className="space-y-2">
                     <label className="block pl-2 text-[#FFFFFF] text-[11px] font-bold tracking-[0.2em] uppercase">
                       What do you need help with?
                     </label>
-                    <div className="border border-[#06B8FF80] rounded-2xl bg-[#02081E] overflow-hidden shadow-2xl transition-all duration-300">
+                    <div className="border border-[#06B8FF80] rounded-2xl bg-[#02081E] shadow-[0px_2.95px_44.1px_0px_rgba(6,184,255,0.1)] overflow-hidden  transition-all duration-300">
                       <div
                         onClick={() => setIsOpen(!isOpen)}
                         className="w-full flex items-center justify-between p-5 cursor-pointer hover:bg-white/5 transition-colors"
@@ -312,17 +312,28 @@ const HeroSection = () => {
                     <textarea rows="3" placeholder="Briefly describe your product, team stages, timeline, and the outcome you want us to help deliver" className="w-full text-[11px] bg-[#02081E] border border-[#06B8FF80] rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#06A9EA] resize-none"></textarea>
                   </div>
 
-                  <div className="flex items-center gap-2 text-[10px] text-[#FFFFFF] bg-[#02081E] p-4 rounded-xl border border-[#06B8FF80]">
+                  <div className="flex items-center gap-2 text-[10px] text-[#FFFFFF] bg-[#02081E] shadow-[0px_2.95px_44.1px_0px_rgba(6,184,255,0.1)] p-4 rounded-xl border border-[#06B8FF80]">
                     <img className='w-4 h-4' src="/shield.png" alt="" />
                     <span>Your information stays private and is only used to prepare your consultation and follow-up.</span>
                   </div>
 
-                  <button className="w-full bg-linear-to-r from-[#06A9EA] to-[#06D27E] hover:bg-white text-[#FFFFFF] flex items-center justify-between p-4 rounded-2xl transition-all group/btn mt-4">
-                    <div className="text-left">
-                      <p className="font-bold text-sm sm:text-lg leading-tight">Book Your Free Consultation</p>
-                      <p className="text-[9px] sm:text-[11px] opacity-60">We'll reply with the right next step within 24 hours</p>
+                  <button className="group w-full bg-linear-to-r from-[#06A9EA] to-[#06D27E] text-[#FFFFFF] flex items-center justify-between p-4 rounded-2xl transition-all mt-4 cursor-pointer overflow-hidden shadow-[0px_2.95px_44.1px_0px_rgba(6,184,255,0.2)]">
+
+                    {/* Left Side: Animated Text Content */}
+                    {/* grid-cols-1 aur items-center se text bilkul center mein rahega */}
+                    <div className="relative overflow-hidden text-left h-10 sm:h-12">
+
+                      <div className="flex flex-col h-full justify-center transition-all duration-500 ease-in-out group-hover:-translate-y-full">
+                        <p className="font-bold text-sm sm:text-lg leading-tight">Book Your Free Consultation</p>
+                        <p className="text-[9px] sm:text-[11px] opacity-60">We'll reply with the right next step within 24 hours</p>
+                      </div>
+                      <div className="absolute inset-0 flex flex-col h-full justify-center translate-y-full transition-all duration-500 ease-in-out group-hover:translate-y-0">
+                        <p className="font-bold text-sm sm:text-lg leading-tight">Book Your Free Consultation</p>
+                        <p className="text-[9px] sm:text-[11px] opacity-60">We'll reply with the right next step within 24 hours</p>
+                      </div>
                     </div>
-                    <div className="bg-[#D9D9D9B2] p-2 sm:p-3 rounded-full text-white transition-transform duration-300 group-hover/btn:translate-x-1">
+
+                    <div className="bg-[#D9D9D9B2] p-2 sm:p-3 rounded-full text-white transition-transform duration-300 group-hover:translate-x-1 shrink-0">
                       <FaArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
                     </div>
                   </button>
