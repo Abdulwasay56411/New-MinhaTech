@@ -135,7 +135,7 @@ const HeroSection = () => {
             <div className='flex flex-wrap gap-3 sm:gap-4 pt-3 justify-center lg:justify-start'>
               <button
                 onClick={() => setIsModalOpen(true)}
-                className='group relative flex items-center gap-1 bg-linear-to-r from-[#06A9EA] to-[#06D27E] px-6 sm:px-4 py-3 md:py-4 rounded-4xl text-white font-semibold shadow-lg shadow-blue-500/20 text-xs sm:text-sm md:text-base cursor-pointer overflow-hidden'
+                className='group relative flex items-center gap-1 bg-linear-to-r from-[#06A9EA] to-[#06D27E] px-2 sm:px-4 py-3 md:py-4 rounded-4xl text-white font-semibold shadow-lg shadow-blue-500/20 text-xs sm:text-sm md:text-base cursor-pointer overflow-hidden'
               >
                 <div className="relative h-6 flex flex-col overflow-hidden">
                   <span className="flex items-center gap-1 transition-all duration-500 ease-in-out group-hover:-translate-y-full">
@@ -157,9 +157,9 @@ const HeroSection = () => {
             <div className='flex justify-center lg:justify-start gap-3 my-10 lg:my-12 '>
               <img className='w-23 h-10' src="/four img.png" alt="" />
               <div>
-                <p className='text-[#06B8FF] font-semibold text-2xl leading-1 '>*****</p>
+                <p className='text-[#06B8FF] font-semibold text-lg sm:text-2xl leading-1 '>*****</p>
                 <h1 className='text-[#0ACF83]'>98% on time delivery</h1>
-                <p className='text-[#C6C7C8]'>join 100+ brands scaling with us.</p>
+                <p className='text-[#C6C7C8] text-xs sm:text-base'>join 100+ brands scaling with us.</p>
               </div>
             </div>
           </div>
