@@ -55,8 +55,8 @@ const ClientSays = () => {
           >
             <svg viewBox="0 0 400 400" className="w-full h-full">
               <path id="circlePath" d="M200,200 m-150,0 a150,150 0 1,1 300,0 a150,150 0 1,1 -300,0" fill="none" />
-              <text className="text-[26px] fill-[#01ff95] font-medium tracking-[0.25em] uppercase">
-                <textPath href="#circlePath">MinhaTech App Development IT Company Minhatech</textPath>
+              <text className="text-[28px] fill-[#01ff95] font-medium tracking-[0.30em] uppercase">
+                <textPath href="#circlePath">MinhaTech App Development IT Company</textPath>
               </text>
             </svg>
           </motion.div>

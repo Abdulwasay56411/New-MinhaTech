@@ -26,7 +26,7 @@ const processImage = [
   {
     id: 5,
     image: "/launch.png",
-    title: "Lunch",
+    title: "Launch",
   },
   {
     id: 6,
@@ -108,7 +108,7 @@ const ToolMagic = () => {
               <button
                 key={tech.id}
                 onClick={() => setActiveTab(tech.id)}
-                className={`px-6 py-2 rounded-lg transition-all duration-300 ${activeTab === tech.id
+                className={`px-6 cursor-pointer py-2 rounded-lg transition-all duration-300 ${activeTab === tech.id
                     ? "bg-[#12253E] shadow-[0px_2.95px_44.1px_0px_rgba(6,184,255,0.2)] text-[#06B8FF] border border-[#06B8FF]" 
                     : "bg-[#12253E]/50 text-white border border-transparent" 
                   }`}
