@@ -109,24 +109,27 @@ const ToolMagic = () => {
                 key={tech.id}
                 onClick={() => setActiveTab(tech.id)}
                 className={`px-6 cursor-pointer py-2 rounded-lg transition-all duration-300 ${activeTab === tech.id
-                    ? "bg-[#12253E] shadow-[0px_2.95px_44.1px_0px_rgba(6,184,255,0.2)] text-[#06B8FF] border border-[#06B8FF]" 
-                    : "bg-[#12253E]/50 text-white border border-transparent" 
+                  ? "bg-[#12253E] shadow-[0px_2.95px_44.1px_0px_rgba(6,184,255,0.2)] text-[#06B8FF] border border-[#06B8FF]"
+                  : "bg-[#12253E]/50 text-white border border-transparent"
                   }`}
               >
                 {tech.title}
               </button>
             ))}
           </div>
-          <div className="flex justify-center max-w-350 mx-auto px-5">
-            <div>
-              {currentImage && (
-                <img
-                  src={currentImage.image}
-                  alt="Technology tools"
-                  className="w-full rounded-xl h-auto shadow-[0px_2.95px_44.1px_0px_rgba(6,184,255,0.2)] object-contain animate-in fade-in duration-500"
-                />
-              )}
+          <div className="max-w-300 mx-auto px-5">
+            <div className="flex items-center h-23 border border-[#06B8FF] bg-[#0B0F23] rounded-[17px]">
+
+              <div className="flex items-center gap-20 px-5 w-fit mx-auto">
+                {currentImage && currentImage.image.map((tool, index) => (
+                  <div key={index} className="flex  gap-2 items-center">
+                    <img className="w-9 h-9" src={tool.src} alt="" />
+                    <p className="text-[#F7F7F7] text-2xl font-medium">{tool.name}</p>
+                  </div>
+                ))}
+              </div>
             </div>
+
           </div>
         </div>
       </motion.div>
@@ -163,22 +166,52 @@ const technologies = [
 const technologiesImage = [
   {
     id: 1,
-    image: "/Design.png",
+    image: [
+      { src: "/Design1.png", name: "Figma" },
+      { src: "/Design2.png", name: "Adobe XD" },
+      { src: "/Design3.png", name: "Illustrator" },
+      { src: "/Design4.png", name: "Photoshop" },
+      { src: "/Design5.png", name: "Canva" },
+    ]
   },
   {
     id: 2,
-    image: "/Frontend.png",
+    image: [
+      { src: "/frontend1.png", name: "Kotlin" },
+      { src: "/frontend2.png", name: "Flutter" },
+      { src: "/frontend3.png", name: "React Native" },
+      { src: "/frontend 4.png", name: "Jetpack Compose" },
+    ]
+
   },
   {
     id: 3,
-    image: "/Backend.png",
+    image: [
+      { src: "/backend1.png", name: "Firebase" },
+      { src: "/backend2.png", name: "Node.js" },
+      { src: "/backend3.png", name: "Laravel" },
+      { src: "/backend4.png", name: "Django" },
+      { src: "/backend5.png", name: "Spring Boot" },
+    ]
+
   },
   {
     id: 4,
-    image: "/Database.png",
+    image: [
+      { src: "/backend1.png", name: "Firebase" },
+      { src: "/database1.png", name: "MYSQL" },
+      { src: "/database2.png", name: "PostgreSQL" },
+      { src: "/database3.png", name: "MongoDB" }
+    ]
+
   },
   {
     id: 5,
-    image: "/Cloud.png",
+    image: [
+      { src: "/cloud1.png", name: "Google Cloud Platform" },
+      { src: "/cloud2.png", name: "Amazon Web Services" },
+      { src: "/cloud3.png", name: "Microsoft Azure" },
+    ]
+
   },
 ]
