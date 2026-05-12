@@ -14,7 +14,7 @@ const ourPlans = [
     text3: "Android OR iOS (single platform)",
     text4: "Simple Backend (if needed)",
     text5: "1 Revision Round",
-    text6: "Delivery Time (e.g., 2-3 weeks)",
+    text6: "Delivery Time (e.g, 2-3 weeks)",
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ const ourPlans = [
     text3: "Android + iOS (cross-platform)",
     text4: "API Integration",
     text5: "2-3 Revisions",
-    text6: "Delivery Time (e.g., 2-6 weeks)",
+    text6: "Delivery Time (e.g, 2-6 weeks)",
   },
   {
     id: 3,
@@ -69,11 +69,11 @@ const hire = [
 const Plans = () => {
   return (
     <motion.div
-    initial={{opacity: 0, y:50}}
-    whileInView={{opacity: 1, y:0}}
-    transition={{duration: 1.2, ease: "easeOut"}}
-    viewport={{once: true, amount: 0.05}}
-    className="max-w-350 mx-auto px-5 py-7" id="pricing" >
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1.2, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.05 }}
+      className="max-w-350 mx-auto px-5 py-7" id="pricing" >
       <Heading title="Transparent" subtitle="Pricing" para="Choose the perfect plan for your project" />
       <div className="grid grid-cols-1 lg:grid-cols-3 justify-items-center gap-5">
         {ourPlans.map((item) => (

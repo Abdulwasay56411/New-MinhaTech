@@ -5,7 +5,7 @@ import Heading from "../Heading";
 
 const ourClient = [
   { id: 1, para: "We hired Minhatech to develop our Voice Drive GPS application and the experience was excellent from start to finish. They understood our vision perfectly and delivered a high quality app with smooth voice navigation and smart route planning features", image: "/Client.png", name: "Founder", text: "Viral Studio" },
-  { id: 2, para: "What really sets Minhatech apart is not just their technical skills but the way they approach a project with ownership, clarity and attention to every small detail. The entire process felt structured, stress-free and well managed.", image: "/client 2.png", name: "Sulman Ahmad", text: "Founder & Ceo Sartaj Develoeprs" },
+  { id: 2, para: "What really sets Minhatech apart is not just their technical skills but the way they approach a project with ownership, clarity and attention to every small detail. The entire process felt structured, stress-free and well managed.", image: "/client 2.png", name: "Sulman Ahmad", text: "Founder & Ceo Sartaj Developers" },
   { id: 3, para: "Wasiq and his team showed a strong sense of responsibility and professionalism throughout the project. Everything was delivered on time with great attention to detail. It was a pleasure working with Minhatech and I would be happy to collaborate again.", image: "/client 3.png", name: " Ahmed Al-Farsi ", text: "Entrepreneur (UAE)" },
   { id: 4, para: "We approached Minhatech with a highly complex idea that required strong technical expertise and careful execution. From day one, the team demonstrated a deep overall understanding of the challenges and handled everything with confidence and clarity.", image: "/client 4.png", name: "James Walker ", text: "CTO (UK)" },
 ];
