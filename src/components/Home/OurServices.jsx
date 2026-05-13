@@ -11,12 +11,12 @@ const OurServices = () => {
       viewport={{ once: true, amount: 0.2 }}
       id='services' className='max-w-350 mx-auto px-5'>
       <Heading title="Core" subtitle="Services" para="End to end mobile apps solutions tailored for startups and enterprises" />
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-items-center mx-5 lg:my-5 gap-5'>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 justify-items-center mx-5 lg:my-5 gap-5'>
         {serviceBox.map((item) => (
-          <div key={item.id} className='w-full px-5 py-10 max-w-95 h-auto bg-[#0F1D3426] opacity-80 border border-[#06B8FF]/40 shadow-[0px_0px_61px_0px_rgba(6,184,255,0.14)] rounded-3xl'>
+          <div key={item.id} className='w-full px-2 py-10 max-w-95 h-auto bg-[#0F1D3426] opacity-80 border border-[#06B8FF]/40 shadow-[0px_0px_61px_0px_rgba(6,184,255,0.14)] rounded-3xl'>
             <div className='flex flex-col text-center items-center hover:scale-105 duration-300 cursor-pointer'>
               <img className='w-15 h-15 object-cover' src={item.image} alt="" />
-              <h1 className='text-[#FFFFFF] font-bold text-2xl tracking-wider pt-9 pb-2'>
+              <h1 className='text-[#FFFFFF] font-bold text-xl tracking-wider pt-9 pb-2'>
                 {item.title}
                 <span className='sm:block'> {item.span}</span>
               </h1>
@@ -34,30 +34,38 @@ export default OurServices
 const serviceBox = [
   {
     id: 1,
-    image: "/Andriod.png",
-    title: "Android App",
-    span: "Development",
-    para: "Native Android Apps built with Kotlin & Java for optimal performance and user experience "
+    image: "/UIUX.png",
+    title: "UI/UX",
+    span: "Design",
+    para: "Beautiful, intuitive design that engage users and strengthen your brand."
   },
-  {
+   {
     id: 2,
     image: "/Ios.png",
-    title: "IOS App",
+    title: "iOS App",
     span: "Development",
-    para: "Crafting premium iOS experiences using Swift and SwiftUI optimized for  Apple ecosystem."
+    para: "High-performance iOS apps built with Swift and the latest technologies."
   },
   {
     id: 3,
-    image: "/flutter.png",
-    title: "Flutter / Cross",
-    span: "Platforms App",
-    para: "Cost effective cross platforms solutions with a single codebase for IOS & Android"
+    image: "/Andriod.png",
+    title: "Android App",
+    span: "Development",
+    para: "Scalable Andriod apps built with kotlin for seamless performance."
   },
+ 
   {
     id: 4,
+    image: "/flutter.png",
+    title: "Cross-Platform",
+    span: "Development",
+    para: "one codebase, multiple platform with Flutter and React Native."
+  },
+  {
+    id: 5,
     image: "/Aso.png",
-    title: "App Monetization &",
-    span: "ASO",
-    para: "Maximize revenue with in app purchases, ads and App Store optimization strategies"
+    title: "App Maintenance",
+    span: "& Support",
+    para: "Ongoing support, updates & performance optimization you can rely on."
   }
 ]

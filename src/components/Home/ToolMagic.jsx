@@ -118,7 +118,7 @@ const ToolMagic = () => {
             ))}
           </div>
           <div className="max-w-300 mx-auto px-5">
-            <div className="flex items-center h-auto py-5 border border-[#06B8FF] bg-[#0B0F23] rounded-[17px]">
+            <div className="flex items-center h-auto py-5 border border-[#06B8FF] bg-[#0B0F23] shadow-[0px_0px_61px_0px_rgba(6,184,255,0.14)] rounded-[17px]">
               <div className="flex items-center justify-center flex-wrap gap-5 lg:gap-20 px-5 w-fit mx-auto">
                 {currentImage && currentImage.image.map((tool, index) => (
                   <div key={index} className="flex  gap-2 items-center">

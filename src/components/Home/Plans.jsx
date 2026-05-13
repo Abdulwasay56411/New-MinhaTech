@@ -110,7 +110,7 @@ const Plans = () => {
                 item.text5,
                 item.text6,
               ].map((text, idx) => (
-                <div key={idx} className="flex items-center gap-3 sm:gap-4 pt-2 sm:pt-4">
+                <div key={idx} className="flex  gap-3 sm:gap-4 pt-2 sm:pt-4">
                   <img className="w-4 h-4" src="/Tick.png" alt="" />
                   <p className="text-lg text-[#C6C7C8] ">
                     {text}
