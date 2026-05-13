@@ -39,7 +39,7 @@ const serviceBox = [
     span: "Design",
     para: "Beautiful, intuitive design that engage users and strengthen your brand."
   },
-   {
+  {
     id: 2,
     image: "/Ios.png",
     title: "iOS App",
@@ -53,7 +53,6 @@ const serviceBox = [
     span: "Development",
     para: "Scalable Andriod apps built with kotlin for seamless performance."
   },
- 
   {
     id: 4,
     image: "/flutter.png",
